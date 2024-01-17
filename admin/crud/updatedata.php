@@ -2,14 +2,6 @@
 
 include('../koneksi.php');
 
-  
-$nopolisi = $_GET['nopolisi'];
-  
-$query = "SELECT * FROM kendaraan WHERE nopolisi = $nopolisi";
-
-$result = mysqli_query($con, $query);
-
-$row = mysqli_fetch_array($result);
 
 $nama               = $_POST['nama'];
 $jeniskendaraan     = $_POST['jeniskendaraan'];

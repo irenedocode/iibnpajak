@@ -1,16 +1,19 @@
 <?php 
   
   include('koneksi.php');
+
+    $nopolisi = $_GET['nopolisi'];
   
-  $nopolisi = $_GET['nopolisi'];
+    $query = "SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'";
+
+    $result = mysqli_query($con, $query);
+
+    $row = mysqli_fetch_array($result);
+
   
-  $query = "SELECT * FROM kendaraan WHERE nopo lisi = $nopolisi";
+  
 
-  $result = mysqli_query($con, $query);
-
-  $row = mysqli_fetch_array($result);
-
-  ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -123,11 +126,10 @@
             
                 <div class="col-lg-6">
                     <div class="p-5">
+                        
                         <form action="crud/updatedata.php" method="POST" name="add" class="user">
                             <div class="form-group">
                             <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
-
-                            
                             </div>
                             <div class="form-group">
                             <input type="text" name="jeniskendaraan" value="<?php echo $row['jeniskendaraan'] ?>" placeholder="Masukkan Jenis Kendaraan" class="form-control form-control-user" >
