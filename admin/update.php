@@ -4,7 +4,7 @@
   
   $nopolisi = $_GET['nopolisi'];
   
-  $query = "SELECT * FROM kendaraan WHERE nopo lisi = $nopolisi";
+  $query = "SELECT * FROM kendaraan WHERE nopo lisi = '$nopolisi'";
 
   $result = mysqli_query($con, $query);
 
