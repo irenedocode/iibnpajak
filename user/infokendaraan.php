@@ -174,24 +174,27 @@
                                         <th>Nomor Rangka/Mesin</th>
                                         <th>Masa Pajak</th>
                                     </tr>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>Mobil</td>
-                                        <td>SUV</td>
-                                        <td>BP 2345 OO</td>
-                                        <td>25/04/2022</td>
-                                        <td>12345678912345678</td>
-                                        <td>10/27</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Mobil</td>
-                                        <td>Sedan</td>
-                                        <td>BP 4561 KO</td>
-                                        <td>08/12/2023</td>
-                                        <td>98765432198765432</td>
-                                        <td>12/35</td>
-                                    </tr>
+                                    <?php
+
+                                    include ('cari.php')
+
+
+                                    $query = mysqli_query($con,"SELECT * FROM kendaraan WHERE nama = '$nama'");
+                                        
+                                        while ($row = mysqli_fetch_array($query)) {
+                                            echo "<tr>";
+                                            echo "<td>".$row['no']."</td>";
+                                            echo "<td>".$row['nama']."</td>";
+                                            echo "<td>".$row['jeniskendaraan']."</td>";
+                                            echo "<td>".$row['jenismobilmotor']."</td>";	
+                                            echo "<td>".$row['nopolisi']."</td>";
+                                            echo "<td>".$row['pembuatan']."</td>";
+                                            echo "<td>".$row['rangka']."</td>";			
+                                            echo "<td><a href=\"edit.php?no=$row[no]\">Edit</a> | 
+                                            <a href=\"delete.php?no=$row[no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+                                        }
+                                    }
+                                    ?>
                             </table>
                         
                         </div>
