@@ -120,7 +120,8 @@
                                                 <td><?php echo $data["masapajak"];   ?></td>
                                                 <td class="text-center">
                                                 <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" onclick=return confirm(‘Yakin Hapus?’)” class="btn btn-sm btn-danger">Hapus </a>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-danger">Hapus</a>
+                                                </a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -193,6 +194,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
     
     
 
