@@ -17,6 +17,34 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4a756e;
+          color: white;
+        }
+
+    </style>         
+
 </head>
 
 <body id="page-top">
@@ -184,67 +212,26 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800">Data Diri</h1>
-                </div>
+                <ul class="navbar-nav ml-auto">
+                    <h1 style="left: 235px;position: absolute; top: 80px; font-size: 35px; color:#4a756e">Data Diri</h1>
+
 
                  <div class="row">
                     <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
-                        <img style="width:150px; margin-left: 80px; margin-right: 70px; " src="img/profil.jpg" alt="">
+                        <img style="width:150px; margin-left: 150px; margin-right: 70px; " src="img/profil.jpg" alt="">
                     </a>
-                    
                     <div class="col-lg-6">
                         <div class="p-5">
-                            <div class="text-left">
-                                <h1 class="h4 text-gray-900 mb-2">Nama                              :</h1>
-                                <h1 class="h4 text-gray-900 mb-2">Username                          :</h1>
-                                <h1 class="h4 text-gray-900 mb-2">Tanggal Lahir                     :</h1>
+                            <div class="text-left" style="color:#4a756e; margin-left: 80px;";>
+                                <h1 class="h4 mb-2">Nama                   :</h1>
+                                <h1 class="h4 mb-2">Username               :</h1>
+                                <h1 class="h4 mb-2">Tanggal Lahir          :</h1>
                             </div>
                         </div>
-                    </div>
-                    <tbody>
-                        
-                            
-                                <style>
-                                    table {
-                                        border-collapse: collapse;
-                                    }
-                                    table, th, td {
-                                        left: 505;
-                                        border: 2px solid black;
-                                    }
-                                    th, td {
-                                        padding: 10px;
-                                    }
-                                    th {
-                                        background-color: #ffa7a7;
-                                        color: rgb(2, 1, 1);
-                                    }
-                                    button{
-                                        left: 50%;
-                                        color: #000;
-                                        background: #ffb39a;
-                                        color: whitesmoke;
-                                        padding: 10px 20px;
-                                        border: 1px solid;
-                                    }
-                                </style>
-                                
-                        <table style="margin-left:auto;margin-right:auto" border="2" celpaading="10" width="960px">
-                            <div class="container-fluid">
-                                <h3 style="padding:10px; margin:15px;" class="h3 mb-4 text-gray-800">Informasi Kendaraan</h3>
-                            </div>
-
-                            <a href="#" style="margin:5px; margin-left: 80px; " class="btn btn-success btn-icon-split">
-                                <span class="text">Hapus</span>
-                        </a>
-                        <a href="#" style="margin:5px;" class="btn btn-success btn-icon-split">
-                            <span class="text">Edit</span>
-                    </a> 
-                            <a href="#" style="margin:5px;" class="btn btn-success btn-icon-split">
-                                <span class="text">Tambahkan Kendaraan</span>
-                        </a>
-                            
+                    </div> 
+                    <h1 style="font-size: 30px; margin-left: 30px; color:#4a756e">Riwayat Pembayaran</h1>        
+                        <table id="customers">
+                            <br>
                             <tr>
                               <th>Jenis Kendaraan</th>
                               <th>Nomor Polisi</th>
@@ -252,64 +239,16 @@
                               <th>Pajak Berlaku</th>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td ></td>
-                            </tr>
-                            <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>gatau</td>
+                                <td>gatau</td>
+                                <td>gatau</td>
+                                <td>gatau</td>
                               </tr>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                          </table>
-                          </div>
-                          </div>
-                    </tbody>
-
-                    <tbody>
-        
-
-                                <style>
-                                    table {
-                                        border-collapse: collapse;
-                                    }
-                                    table, th, td {
-                                        border: 2px solid black;
-                                    }
-                                    th, td {
-                                        padding: 10px;
-                                    }
-                                    th {
-                                        background-color: #ffa7a7;
-                                        color: rgb(2, 1, 1);
-                                    }
-                                </style>
-                        <table style="margin-left:auto;margin-right:auto" border="2" celpaading="10" width="960px">
-                            <div class="container-fluid">
-                                
-                                <h3 style="padding:10px; margin:15px;" class="h3 mb-4 text-gray-800">History</h3>
-                            </div>
-                            
+                        </table>
+                  
+            <hr class="sidebar-divider my-10">
+                        <h1 style="font-size: 30px; margin-left: 30px; color:#4a756e">Riwayat Pembayaran</h1>
+                        <table id="customers">
                             <tr>
                                 <th>Jenis Kendaraan</th>
                                 <th>Nomor Polisi</th>
@@ -346,11 +285,9 @@
                               <td>20 Januari 2025</td>
                               <td>5.000.000/tahun</td>
                               </tr>
-                          </table>
-                          </div>
-                          </div>
-                    </tbody>
-                
+                        </table>
+                     </div>
+                  </div>
                 </div>
             </div>
             <!-- End of Main Content -->
