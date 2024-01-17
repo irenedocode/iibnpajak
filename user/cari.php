@@ -191,9 +191,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Kembali
                     </a>
-                    <a href="add.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
-                        Tambah Data
-                    </a>
                 </div>
             </div>
             <!-- End of Main Content -->

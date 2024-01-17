@@ -1,6 +1,6 @@
 <?php
 
-include ('koneksi.php')
+include ('../koneksi.php')
 
 ?>
 
@@ -19,7 +19,7 @@ $masapajak          = $_POST['masapajak'];
 
 
 $sql = "INSERT INTO kendaraan (nama, jeniskendaraan, jenismobilmotor, nopolisi, pembuatan, rangka, masapajak) VALUES ('$nama', '$jeniskendaraan', '$jenismobilmotor', '$nopolisi', '$pembuatan', '$rangka', '$masapajak')";
-$query = mysqli_query($db, $sql);
+$query = mysqli_query($con, $sql);
 
     if( $query ) {
     

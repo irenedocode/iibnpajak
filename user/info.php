@@ -169,9 +169,9 @@
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
+                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
                                     id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan. Cth: yyyy-mm-dd">
+                                    placeholder="Tahun Pembuatan.">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"

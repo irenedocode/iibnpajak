@@ -153,6 +153,7 @@
                                         <th>Tahun Pembuatan</th>
                                         <th>Nomor Rangka/Mesin</th>
                                         <th>Masa Pajak</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 
@@ -185,6 +186,10 @@
                                                 <td><?php echo $data["pembuatan"];   ?></td>
                                                 <td><?php echo $data["rangka"];   ?></td>
                                                 <td><?php echo $data["masapajak"];   ?></td>
+                                                <td class="text-center">
+                                                <a href="edit-siswa.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" onclick=return confirm(‘Yakin Hapus?’)” class="btn btn-sm btn-danger">Hapus </a>
+                                                </td>
                                             </tr>
                                             </tbody>
                                             <?php
@@ -256,6 +261,14 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    
+    <script language="JavaScript" type="text/javascript">
+      function hapusData(id){
+        if (confirm("Apakah anda yakin akan menghapus data ini?")){
+          window.location.href = 'hapus.php?id=' + id;
+        }
+      }
+    </script>
 
 </body>
 

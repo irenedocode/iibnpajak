@@ -127,13 +127,13 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
+                                    id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
+                                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
                                     id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan. Cth: yyyy-mm-dd">
+                                    placeholder="Tahun Pembuatan.">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
@@ -141,15 +141,22 @@
                                     placeholder="Nomor Rangka/Mesin">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
+                            <input
+                            type="text"
+                            onfocus="(this.type='date')"
+                            onblur="(this.type='text')"
+                            id="date"  class="form-control form-control-user"
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
-                                    placeholder="Masa Pajak. Cth: yyyy-mm-dd">
+                                    placeholder="Masa Pajak.">
                             </div>
 
                         
                             <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
                                 Tambahkan
                             </button>
+                            <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
+                        Kembali
+                    </a>
                         </form>
                     </div>
                 </div>
