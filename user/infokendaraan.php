@@ -1,7 +1,3 @@
-<?php
- include ('cari.php')
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -180,13 +176,27 @@
                                     </tr>
                                     <?php
 
-                                    if(isset($_POST['cari'])){
+                                            $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
+                                    ?>
+                                    <?
+                                            if(isset($_GET['cari'])){
+                                                $nama = $_GET['cari'];
+                                                $query = mysqli_query($con,"SELECT * FROM kendaraan WHERE nama = '$nama'");		
 
-                                    $query = mysqli_query($con,"SELECT * FROM kendaraan WHERE nama = '$nama'");
+                                                $hitung = mysqli_num_rows($query);//max 1 min 0
+                                                if($hitung == 0){
+                                                    echo "data tidak ditemukan";
+                                                    header('location:infokendaraan');
+                                                } else {
+                                                        header('location:infokendaraan');
+                                                }
+
+                                            
+
+
                                         
                                         while ($row = mysqli_fetch_array($query)) {
                                             echo "<tr>";
-                                            echo "<td>".$row['no']."</td>";
                                             echo "<td>".$row['nama']."</td>";
                                             echo "<td>".$row['jeniskendaraan']."</td>";
                                             echo "<td>".$row['jenismobilmotor']."</td>";	
@@ -196,10 +206,8 @@
                                             echo "<td>".$row['masapajak']."</td>";	
 
                                         }
-
-                                    } else {
-                                        echo "data tidak ditemukan";
                                     }
+
 
                                     ?>
                             </table>

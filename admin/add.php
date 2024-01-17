@@ -95,39 +95,8 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <h1 style="left: 10px;position: absolute; top: 10px;">Cari Info Pajak</h1>
+                        <h1 style="left: 10px;position: absolute; top: 10px;">Tambah Data</h1>
                         <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="infouser.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
 
                     </ul>
 
@@ -154,7 +123,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="jenismobilmotor" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Mobil/Motor. Cth: SUV">
+                                    placeholder="Jenis Mobil/Motor. Cth: SUV, Sport, ATV">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
@@ -162,9 +131,9 @@
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
                             </div>
                             <div class="form-group">
-                                <input type="date" class="form-control form-control-user"
+                                <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan. Cth: dd/mm/yyyy">
+                                    placeholder="Tahun Pembuatan. Cth: yyyy-mm-dd">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
@@ -172,9 +141,9 @@
                                     placeholder="Nomor Rangka/Mesin">
                             </div>
                             <div class="form-group">
-                                <input type="date" class="form-control form-control-user"
+                                <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
-                                    placeholder="Masa Pajak">
+                                    placeholder="Masa Pajak. Cth: yyyy-mm-dd">
                             </div>
 
                         

@@ -168,8 +168,8 @@
                     <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Kembali
                     </a>
-                    <a href="riwayatpembayaran.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
-                        History
+                    <a href="add.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
+                        Tambah Data
                     </a>
                 </div>
             </div>
