@@ -1,3 +1,7 @@
+<?php
+ include ('cari.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -176,8 +180,7 @@
                                     </tr>
                                     <?php
 
-                                    include ('cari.php')
-
+                                    if(isset($_POST['cari'])){
 
                                     $query = mysqli_query($con,"SELECT * FROM kendaraan WHERE nama = '$nama'");
                                         
@@ -189,11 +192,15 @@
                                             echo "<td>".$row['jenismobilmotor']."</td>";	
                                             echo "<td>".$row['nopolisi']."</td>";
                                             echo "<td>".$row['pembuatan']."</td>";
-                                            echo "<td>".$row['rangka']."</td>";			
-                                            echo "<td><a href=\"edit.php?no=$row[no]\">Edit</a> | 
-                                            <a href=\"delete.php?no=$row[no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+                                            echo "<td>".$row['rangka']."</td>";		
+                                            echo "<td>".$row['masapajak']."</td>";	
+
                                         }
+
+                                    } else {
+                                        echo "data tidak ditemukan";
                                     }
+
                                     ?>
                             </table>
                         
