@@ -1,3 +1,17 @@
+<?php 
+  
+  include('koneksi.php');
+  
+  $nopolisi = $_GET['nopolisi'];
+  
+  $query = "SELECT * FROM kendaraan WHERE nopo lisi = $nopolisi";
+
+  $result = mysqli_query($con, $query);
+
+  $row = mysqli_fetch_array($result);
+
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +109,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <h1 style="left: 10px;position: absolute; top: 10px;">Tambah Data</h1>
+                        <h1 style="left: 10px;position: absolute; top: 10px;">Update Data</h1>
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                     </ul>
@@ -109,50 +123,40 @@
             
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <form action="crud/addnew.php" method="POST" name="add" class="user">
+                        <form action="crud/updatedata.php" method="POST" name="add" class="user">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="nama" name="nama" aria-describedby="emailHelp" required
-                                    placeholder="Nama Pemilik (Lengkap)">
+                            <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
+
+                            
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="jeniskendaraan" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Kendaraan. Cth: Mobil">
+                            <input type="text" name="jeniskendaraan" value="<?php echo $row['jeniskendaraan'] ?>" placeholder="Masukkan Jenis Kendaraan" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="jenismobilmotor" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Mobil/Motor. Cth: SUV, Sport, ATV">
+                            <input type="text" name="jenismobilmotor" value="<?php echo $row['jenismobilmotor'] ?>" placeholder="Masukkan Mobil Motor" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Polisi. Cth: BP XXXX XX">
+                            <input type="text" name="nopolisi" value="<?php echo $row['nopolisi'] ?>" placeholder="Masukkan No Polisi" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan.">
+                            <input type="text"
+                            onfocus="(this.type='date')"
+                            onblur="(this.type='text')" name="pembuatan" value="<?php echo $row['pembuatan'] ?>" placeholder="Masukkan Tanggal Pembuatan" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Rangka/Mesin">
+                            <input type="text" name="rangka" value="<?php echo $row['rangka'] ?>" placeholder="Masukkan No Rangka" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
                             <input
                             type="text"
                             onfocus="(this.type='date')"
                             onblur="(this.type='text')"
-                            id="date"  class="form-control form-control-user"
-                                    id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
-                                    placeholder="Masa Pajak.">
+                            name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
 
                         
                             <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
-                                Tambahkan
+                                Update
                             </button>
                             <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
                         Kembali

@@ -23,10 +23,10 @@ $query = mysqli_query($con, $sql);
 
     if( $query ) {
     
-    header('Location: infoadmin.php?status=sukses');
+    header('Location: ../infoadmin.php?status=sukses');
     } else {
 
-    header('Location: infoadmin.php?status=gagal');
+    header('Location: ../infoadmin.php?status=gagal');
     }
 
 
