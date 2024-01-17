@@ -17,6 +17,31 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #f2f2f2;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4a756e;
+          color: white;
+        }
+        </style>
+
 </head>
 
 <body id="page-top">
@@ -153,17 +178,13 @@
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
+                            <table id="customers" width="100%" cellspacing="0">
                                     <tr>
                                         <th>Tahun/Masa Pajak</th>
                                         <th>Tanggal Bayar</th>
                                         <th>NTPN</th>
                                         <th>Status</th>
                                     </tr>
-                                </thead>
-                                
-                                <tbody>
                                     <tr>
                                         <td>Tiger Nixon</td>
                                         <td>Mobil</td>
@@ -176,8 +197,6 @@
                                         <td>Sedan</td>
                                         <td>BP 4561 KO</td>
                                     </tr>
-                                   
-                                </tbody>
                             </table>
                         
                     
