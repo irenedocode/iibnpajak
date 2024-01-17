@@ -163,9 +163,11 @@
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                     <div class="col-md-4 text-right"> <button id="exporttable" class="btn btn-primary">Export</button> </div>
+                    
                         <div class="table-responsive">
                             <table id="customers">
                                     <tr>
+                                        
                                         <th>Nama Pemilik</th>
                                         <th>Jenis Kendaraan</th>
                                         <th>Jenis Mobil Motor</th>
@@ -176,40 +178,37 @@
                                     </tr>
                                     <?php
 
-                                            $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
-                                    ?>
-                                    <?
-                                            if(isset($_GET['cari'])){
-                                                $nama = $_GET['cari'];
-                                                $query = mysqli_query($con,"SELECT * FROM kendaraan WHERE nama = '$nama'");		
+                                        include "cari.php";
+                                        if (isset($_POST['nama'])) {
+                                            $nama=trim($_POST['nama']);
+                                            $sql="select * from kendaraan where nama like '%".$nama." order by nama asc";
 
-                                                $hitung = mysqli_num_rows($query);//max 1 min 0
-                                                if($hitung == 0){
-                                                    echo "data tidak ditemukan";
-                                                    header('location:infokendaraan');
-                                                } else {
-                                                        header('location:infokendaraan');
-                                                }
-
-                                            
-
-
-                                        
-                                        while ($row = mysqli_fetch_array($query)) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['nama']."</td>";
-                                            echo "<td>".$row['jeniskendaraan']."</td>";
-                                            echo "<td>".$row['jenismobilmotor']."</td>";	
-                                            echo "<td>".$row['nopolisi']."</td>";
-                                            echo "<td>".$row['pembuatan']."</td>";
-                                            echo "<td>".$row['rangka']."</td>";		
-                                            echo "<td>".$row['masapajak']."</td>";	
-
+                                        }else {
+                                            $sql="select * from kendaraan order by nama asc";
                                         }
-                                    }
 
 
-                                    ?>
+                                        $hasil=mysqli_query($con,$sql);
+                                        $no=0;
+                                        while ($data = mysqli_fetch_array($hasil)) {
+                                            $no++;
+
+                                            ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $no;?></td>
+                                                <td><?php echo $data["nama"];   ?></td>
+                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                                <td><?php echo $data["nopolisi"];   ?></td>
+                                                <td><?php echo $data["pembuatan"];   ?></td>
+                                                <td><?php echo $data["rangka"];   ?></td>
+                                                <td><?php echo $data["masapajak"];   ?></td>
+                                            </tr>
+                                            </tbody>
+                                            <?php
+                                        }
+                                        ?>
                             </table>
                         
                         </div>

@@ -126,6 +126,21 @@
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                     <div class="col-md-4 text-right"> <button id="exporttable" class="btn btn-primary">Export</button> </div>
+                    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+                        <div class="form-group">
+                            <label style="margin-left: 70px;" for="sel1">Nama:</label>
+                            <?php
+                            $nama="";
+                            if (isset($_POST['nama'])) {
+                                $nama=$_POST['nama'];
+                            }
+                            ?>
+                            <input style="margin-left: 70px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control"  required/>
+                        </div>
+                        <div class="form-group">
+                            <input style="margin-left: 70px;" type="submit" class="btn btn-primary" value="Pilih">
+                        </div>
+                    </form>
                         <div class="table-responsive">
                             <table class="table table-bordered" id="htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
                                 <thead>
@@ -142,21 +157,37 @@
                                 </thead>
                                 
                                 <tbody>
-                                <?php   
-                                    include('koneksi.php');
-                                    $query = mysqli_query($db,"SELECT * FROM kendaraan");
-                                        
-                                        while ($row = mysqli_fetch_array($query)) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['no']."</td>";
-                                            echo "<td>".$row['nama']."</td>";
-                                            echo "<td>".$row['jeniskendaraan']."</td>";
-                                            echo "<td>".$row['jenismobilmotor']."</td>";	
-                                            echo "<td>".$row['nopolisi']."</td>";
-                                            echo "<td>".$row['pembuatan']."</td>";
-                                            echo "<td>".$row['rangka']."</td>";			
-                                            echo "<td><a href=\"edit.php?no=$row[no]\">Edit</a> | 
-                                            <a href=\"delete.php?no=$row[no]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+                                <?php
+
+                                        include ('cari.php');
+                                        if (isset($_POST['nama'])) {
+                                            $nama=trim($_POST['nama']);
+                                            $sql="select * from kendaraan where nama = '$nama' order by nama asc";
+
+                                        }else {
+                                            $sql="select * from kendaraan order by nama asc";
+                                        }
+
+
+                                        $hasil=mysqli_query($con,$sql);
+                                        $no=0;
+                                        while ($data = mysqli_fetch_array($hasil)) {
+                                            $no++;
+
+                                            ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $no;?></td>
+                                                <td><?php echo $data["nama"];   ?></td>
+                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                                <td><?php echo $data["nopolisi"];   ?></td>
+                                                <td><?php echo $data["pembuatan"];   ?></td>
+                                                <td><?php echo $data["rangka"];   ?></td>
+                                                <td><?php echo $data["masapajak"];   ?></td>
+                                            </tr>
+                                            </tbody>
+                                            <?php
                                         }
                                         ?>
                                    

@@ -147,7 +147,7 @@
                             
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <form action="infokendaraan.php" method="get" class="user">
+                        <form action="cari.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
                                     id="nama" name="nama" aria-describedby="emailHelp" required
@@ -179,9 +179,11 @@
                                     placeholder="Nomor Rangka/Mesin">
                             </div>
                         
-                            <button name="cari" class="btn btn-primary btn-user btn-block">
+                            <button name="cari" value="cari" class="btn btn-primary btn-user btn-block">
                                 Cari
                             </button>
+
+                            
                         </form>
                     </div>
                 </div>
