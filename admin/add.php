@@ -24,44 +24,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <img style="width: 100px; " src="img/logo.png" alt="">
-           
-            </a>
-                <br>
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="infoadmin.php.">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Tabel Data</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-       
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item ">
-                <a class="nav-link" href="../login.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Login</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars"></i>
-            </button>
-
-        </ul>
-        <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
