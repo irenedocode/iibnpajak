@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Info Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -51,13 +52,12 @@
 
                 <!-- Begin Page Content -->
             <div>
-                <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.table2excel.min.js"></script>
                 <div class="row">
                     <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
                         
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
-                    <div class="col-md-4 text-right"> <button id="exporttable" class="btn btn-primary">Export</button> </div>
+                    <button id="" onclick="exportTableToExcel('tblData', 'members-data')">Export Table Data To Excel File</button>
                     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
                         <div class="form-group">
                             <label style="margin-left: 70px;" for="sel1">Nama:</label>
@@ -185,19 +185,20 @@
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript-->  
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+
+
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     
-    
-
 </body>
 
 </html>
