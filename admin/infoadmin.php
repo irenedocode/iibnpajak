@@ -17,6 +17,7 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
+
 </head>
 
 <body id="page-top">
@@ -51,26 +52,24 @@
 
                 <!-- Begin Page Content -->
             <div>
-                <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.table2excel.min.js"></script>
                 <div class="row">
                     <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
                         
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
-                    <div class="col-md-4 text-right"> <button id="exporttable" class="btn btn-primary">Export</button> </div>
                     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
                         <div class="form-group">
-                            <label style="margin-left: 70px;" for="sel1">Nama:</label>
+                            <label style="margin-left: -930px;" for="sel1">Nama:</label>
                             <?php
                             $nama="";
                             if (isset($_POST['nama'])) {
                                 $nama=$_POST['nama'];
                             }
                             ?>
-                            <input style="margin-left: 70px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control"  required/>
+                            <input style="margin-left: -930px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control"  required/>
                         </div>
                         <div class="form-group">
-                            <input style="margin-left: 70px;" type="submit" class="btn btn-primary" value="Pilih">
+                            <input style="margin-left: -930px;" type="submit" class="btn btn-primary" value="Pilih">
                         </div>
                     </form>
                         <div class="table-responsive">
@@ -137,8 +136,11 @@
                     <a href="add.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 240px">
                         Tambah Data
                     </a>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
+                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
                         Kembali
+                    </a>
+                    <a href="datatable.php" class="btn btn-primary btn-user btn-block" style="margin-left: 100px; margin-right: 100px;">
+                        Export
                     </a>
                 </div>
             </div>
@@ -146,7 +148,7 @@
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
+                <div  class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
                     </div>
@@ -185,19 +187,20 @@
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript-->  
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+
+
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     
-    
-
 </body>
 
 </html>
