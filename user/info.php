@@ -24,64 +24,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <img style="width: 100px; " src="img/logo.png" alt="">
-            </a>
-                <br>
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="info.html">
-                    <span>Cari Info Pajak</span>
-            </li>
-             <li class="nav-item">
-                <a class="nav-link" href="informasi.html">
-                    <span>Data Diri</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="infokendaraan.html">
-                    <span>Informasi Pajak Kendaraan</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="riwayatpembayaran.html">
-                    <span>Riwayat Pembayaran</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="add.html">
-                    <span>Menambahkan Kendaraan</span>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-       
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item ">
-                <a class="nav-link" href="login.html">
-                    <span>Login</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="register.html">
-                    <span>Register</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="index.html">
-                    <span>Home</span></a>
-            </li>
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars"></i>
-            </button>
-
-        </ul>
-        <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -106,13 +48,8 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
+                        <h3>User</h3>
+                        
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
@@ -190,9 +127,9 @@
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="sticky-footerinfo bg-white">
+            <footer style="margin-top: 350px" class="sticky-footerinfo bg-white">
                 <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
+                    <div class="copyright">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>
                 </div>

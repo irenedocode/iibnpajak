@@ -33,24 +33,11 @@
            
             </a>
                 <br>
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-             <li class="nav-item">
-                <a class="nav-link" href="keterangan.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Keterangan Kendaraan</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="tambahken.html">
+                <a class="nav-link" href="infoadmin.php.">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Form</span></a>
+                    <span>Tabel Data</span></a>
             </li>
 
             <!-- Divider -->
@@ -59,7 +46,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item ">
-                <a class="nav-link" href="login.html">
+                <a class="nav-link" href="../login.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Login</span></a>
             </li>

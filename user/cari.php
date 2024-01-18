@@ -161,7 +161,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                         }
 
 
-                                        $hasil=mysqli_query($con,$sql);
+                                        $hasil=mysqli_query($con, $sql);
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                             $no++;
