@@ -29,7 +29,7 @@ if($con->query($query)) {
     header("location: ../infoadmin.php");
 } else {
    
-    echo "Data Gagal Diupate!";
+    echo "Data Gagal Di Update!";
 }
 
 ?>
