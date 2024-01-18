@@ -137,7 +137,7 @@
                     <a href="add.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 240px">
                         Tambah Data
                     </a>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 200px; margin-right: 200px;">
+                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
                         Kembali
                     </a>
                 </div>
