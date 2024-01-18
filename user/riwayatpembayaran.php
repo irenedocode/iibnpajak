@@ -123,7 +123,7 @@
                         
                     
                         </div>
-                    <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Kembali
                     </a>
                 </div>
