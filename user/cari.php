@@ -125,13 +125,11 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
 
                 <!-- Begin Page Content -->
             <div>
-                <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.table2excel.min.js"></script>
                 <div class="row">
                     <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
                         
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
-                    <div class="col-md-4 text-right"> <button id="exporttable" class="btn btn-primary">Export</button> </div>
                         <div class="table-responsive">
                             <table class="table table-bordered" id="htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
                                 <thead>
@@ -185,10 +183,12 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                    
                                 </tbody>
                             </table>
-                        
                     
                         </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                    <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                        History
+                    </a>
+                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
                         Kembali
                     </a>
                 </div>

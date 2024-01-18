@@ -1,3 +1,9 @@
+<?php 
+  
+  include('koneksi.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +25,7 @@
 
     <style>
         #customers {
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: Poppins;
           border-collapse: collapse;
           width: 100%;
         }
@@ -173,35 +179,46 @@
                 
 
                 <div class="row">
-                    <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
-                        
-                    </a>
-                    <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                         <div class="table-responsive">
                             <table id="customers" width="100%" cellspacing="0">
                                     <tr>
+                                        <th>No Polisi</th>
                                         <th>Tahun/Masa Pajak</th>
                                         <th>Tanggal Bayar</th>
                                         <th>NTPN</th>
                                         <th>Status</th>
                                     </tr>
+                                <tbody>
+                                    <?php
+                                    $nama="";
+                                    if (isset($_GET['nopolisi'])) {
+                                        $nopolisi=$_POST['nopolisi'];
+                                    }
+                                    ?>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>Mobil</td>
-                                        <td>SUV</td>
-                                        <td>BP 2345 OO</td>
+                                    <?php
+                                    $query = "SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'";
+
+
+                                    $hasil=mysqli_query($con, $query);
+                                        $no=0;
+                                        while ($data = mysqli_fetch_array($hasil)) {
+                                    ?>
+
+                                                <td><?php echo $no;?></td>
+                                                <td><?php echo $data["nopolisi"];   ?></td>
+                                                <td><?php echo $data["masapajak"];   ?></td>
+                                                <td><?php echo $data["bayar"];   ?></td>
+                                                <td><?php echo $data["ntpn"];   ?></td>
+                                                <td><?php echo $data["status"];   ?></td>
                                     </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Mobil</td>
-                                        <td>Sedan</td>
-                                        <td>BP 4561 KO</td>
-                                    </tr>
+                                </tbody>
+                                    <?php } ?> 
                             </table>
                         
                     
                         </div>
-                    <a href="infokendaraan.html" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                    <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Kembali
                     </a>
                 </div>
