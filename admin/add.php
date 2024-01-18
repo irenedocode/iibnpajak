@@ -69,7 +69,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg- topbar mb-4 static-top shadow">
+                 <nav class="navbar navbar-expand navbar-light bg- topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -83,8 +83,7 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <h1 style="left: 10px;position: absolute; top: 10px;">Tambah Data</h1>
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
+                        <h1>Admin</h1>
                     </ul>
 
                 </nav>

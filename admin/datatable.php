@@ -76,7 +76,8 @@ require ('koneksi.php');
                     
                         </div>
                         
-                        <button style="margin-left: 70px;"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
+                        
+                        <button style="margin-left: 70px; color: green"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
 
                         <script>
                                 var tableToExcel = (function() {
@@ -91,8 +92,12 @@ require ('koneksi.php');
                                             var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
                                             //window.location.href = uri + base64(format(template, ctx))
                                             document.getElementById("dlink").href = uri + base64(format(template, ctx));
-                                            document.getElementById("dlink").download = 'Data.xls';
+                                            document.getElementById("dlink").download = 'Data Pajak.xls';
                                             document.getElementById("dlink").click();
                                     }
                                 })()
                         </script>
+
+                        <a href="infoadmin.php" style="margin-top: 100px;margin-left: 40px; width: 300px" class="btn btn-primary btn-user btn-block">
+                        Kembali
+                        </a>
