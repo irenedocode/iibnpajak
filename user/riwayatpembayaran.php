@@ -190,23 +190,21 @@
                                     </tr>
                                 <tbody>
                                     <?php
-                                    $nama="";
-                                    if (isset($_GET['nopolisi'])) {
-                                        $nopolisi=$_POST['nopolisi'];
+                                    $nopolisi='';
+                                    if(isset($_POST['history'])) {
+                                        $nopolisi=$_GET['nopolisi'];
                                     }
-                                    ?>
-                                    <tr>
-                                    <?php
-                                    $query = "SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'";
+                                    
+                                    
+                                    
+                                    $query = ("SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'");
 
 
                                     $hasil=mysqli_query($con, $query);
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
-
-                                                <td><?php echo $no;?></td>
-                                                <td><?php echo $data["nopolisi"];   ?></td>
+                                    <tr>        <td><?php echo $data["nopolisi"];   ?></td>
                                                 <td><?php echo $data["masapajak"];   ?></td>
                                                 <td><?php echo $data["bayar"];   ?></td>
                                                 <td><?php echo $data["ntpn"];   ?></td>
