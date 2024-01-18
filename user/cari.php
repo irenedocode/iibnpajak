@@ -30,51 +30,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <img style="width: 120px; margin-top: 20px; " src="img/logo.png" alt="">
-           
-            </a>
-                <br>
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="keterangan.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Keterangan Kendaraan</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tambahken.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Form</span></a>
-            </li>
-        
-         
-
-           
-            
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -167,10 +122,10 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                             </table>
                     
                         </div>
-                    <button name="history" id="history" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                        <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
                         History
-                            </button>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
+                    </a>
+                    <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
                         Kembali
                     </a>
                 </div>

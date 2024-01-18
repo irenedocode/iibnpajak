@@ -55,64 +55,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-           <!-- Sidebar - Brand -->
-           <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <img style="width: 100px; " src="img/logo.png" alt="">
-        </a>
-            <br>
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="info.html">
-                <span>Cari Info Pajak</span>
-        </li>
-         <li class="nav-item">
-            <a class="nav-link" href="informasi.html">
-                <span>Data Diri</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="infokendaraan.html">
-                <span>Informasi Pajak Kendaraan</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="riwayatpembayaran.html">
-                <span>Riwayat Pembayaran</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="add.html">
-                <span>Menambahkan Kendaraan</span>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-   
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item ">
-            <a class="nav-link" href="login.html">
-                <span>Login</span></a>
-        </li>
-        <li class="nav-item ">
-            <a class="nav-link" href="register.html">
-                <span>Register</span></a>
-        </li>
-        <li class="nav-item ">
-            <a class="nav-link" href="index.html">
-                <span>Home</span></a>
-        </li>
-
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -134,42 +76,7 @@
 
                        <h1 style="display: flexbox; left: 10px;position: absolute; top: 10px;">Riwayat Pembayaran Pajak</h1>
                        <h1 style="">User</h1>
-                  
-                        
-
                         <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="infouser.html" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
                     </ul>
 
                 </nav>
@@ -216,7 +123,7 @@
                         
                     
                         </div>
-                    <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Kembali
                     </a>
                 </div>
