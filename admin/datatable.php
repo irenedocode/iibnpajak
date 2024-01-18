@@ -101,3 +101,10 @@ require ('koneksi.php');
                         <a href="infoadmin.php" style="margin-top: 100px;margin-left: 40px; width: 300px" class="btn btn-primary btn-user btn-block">
                         Kembali
                         </a>
+            <footer class="sticky-footerinfo bg-white">
+                <div style="position: relative; top: 300px;" class="container my-auto justify-content-center">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
+                    </div>
+                </div>
+            </footer>
