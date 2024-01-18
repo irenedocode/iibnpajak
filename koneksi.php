@@ -1,6 +1,6 @@
 <?php
 
-$koneksi = mysqli_connect("localhost","root","","iibn1");
+$koneksi = mysqli_connect("localhost","root","","login"); //ganti ke iibn1
 
 //login
 
