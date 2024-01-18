@@ -133,7 +133,7 @@
                     <ul class="navbar-nav ml-auto">
 
                        <h1 style="display: flexbox; left: 10px;position: absolute; top: 10px;">Riwayat Pembayaran Pajak</h1>
-
+                       <h1 style="">User</h1>
                   
                         
 

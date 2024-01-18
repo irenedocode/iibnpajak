@@ -83,7 +83,7 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <h1 style="left: 10px;position: absolute; top: 10px;">Tambah Data</h1>
-                        <h1>Admin</h1>
+                        <h1 style="">Admin</h1>
                     </ul>
 
                 </nav>

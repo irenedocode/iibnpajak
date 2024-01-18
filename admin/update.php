@@ -39,55 +39,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <img style="width: 100px; " src="img/logo.png" alt="">
-           
-            </a>
-                <br>
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-             <li class="nav-item">
-                <a class="nav-link" href="keterangan.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Keterangan Kendaraan</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tambahken.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Form</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-       
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item ">
-                <a class="nav-link" href="login.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Login</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars"></i>
-            </button>
-
-        </ul>
-        <!-- End of Sidebar -->
+        
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -110,7 +62,7 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <h1 style="left: 10px;position: absolute; top: 10px;">Update Data</h1>
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <h1 style="">Admin</h1>
 
                     </ul>
 
@@ -148,7 +100,7 @@
                             <div class="form-group">
                             <input
                             type="text"
-                            onfocus="(this.type='date')"
+                            onfocus="(this.type='month')"
                             onblur="(this.type='text')"
                             name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>

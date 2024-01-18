@@ -45,10 +45,8 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <h1 style="left: 10px;position: absolute; top: 10px;">Cari Info Pajak</h1>
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <h1 style="">User</h1>
 
-                        <!-- Nav Item - User Information -->
-                        <h3>User</h3>
                         
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -106,7 +104,7 @@
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
                             </div>
                             <div class="form-group">
-                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
+                            <input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" class="form-control form-control-user"
                                     id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
                                     placeholder="Tahun Pembuatan.">
                             </div>
