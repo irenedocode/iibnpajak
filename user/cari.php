@@ -61,38 +61,29 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg- topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                   
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                       <h1 style="left: 10px;position: absolute; top: 10px;">Informasi Pajak Kendaraan</h1>
-                       <h1 style="">User</h1>
-        
-                    </ul>
-
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                <a class="navbar-brand" href="index.html">Indo Baru</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-            <div>
-                <div class="row">
-                    <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
-                        
+        
+                <div class="row">     
                     </a>
-                    <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
-                        <div class="table-responsive">
+                        <div class="table-responsive" style="margin-top: 100px;">
                         <table id="customers" width="100%" cellspacing="0">                                
                             <thead>
                                 <tr>
-                                    <th>No</th>
                                     <th>Nama Pemilik</th>
                                     <th>Jenis Kendaraan</th>
                                     <th>Jenis Mobil Motor</th>
@@ -106,26 +97,21 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                 <tbody>
                                 <?php
 
-                                        if (isset($_POST['nama'])) {
-                                            $nama=trim($_POST['nama']);
-                                            $jeniskendaraan=trim($_POST['jeniskendaraan']);
+                                        if (isset($_POST['cari'])) {
                                             $nopolisi=trim($_POST['nopolisi']);
-                                            $sql="select * from kendaraan where nama = '$nama' && jeniskendaraan = '$jeniskendaraan' && nopolisi = '$nopolisi'";
+                                            $rangka=trim($_POST['rangka']);
+                                            $sql= "select * from kendaraan where rangka = '$rangka' and nopolisi = '$nopolisi'";
 
                                         }else {
                                             echo "data tidak ditemukan";
                                         }
-
-
+                                    
                                         $hasil=mysqli_query($con, $sql);
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
-                                            $no++;
-
                                             ?>
                                             <tbody>
                                             <tr>
-                                                <td><?php echo $no;?></td>
                                                 <td><?php echo $data["nama"];   ?></td>
                                                 <td><?php echo $data["jeniskendaraan"];   ?></td>
                                                 <td><?php echo $data["jenismobilmotor"];   ?></td>
@@ -154,7 +140,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white" style="margin-top: 300px;">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
@@ -174,35 +160,35 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     <!-- Logout Modal-->
+     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Logout" untuk keluar dari akun ini.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="../login.php">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
 
 </body>
 
