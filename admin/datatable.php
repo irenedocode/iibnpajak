@@ -113,11 +113,11 @@ require ('koneksi.php');
                                             //window.location.href = uri + base64(format(template, ctx))
                                             document.getElementById("dlink").href = uri + base64(format(template, ctx));
                                             document.getElementById("dlink").download = 'Data Pajak.xls';
-                                            document.getElementById("dlink").click();
+                                    
                                     }
                                 })()
                         </script>
 
-                        <a href="infoadmin.php" style="margin-top: 100px;margin-left: 40px; width: 300px" class="btn btn-primary btn-user btn-block">
+                        <a href="infoadmin.php" style="margin-top: 100px;margin-left: 70px; width: 300px" class="btn btn-primary btn-user btn-block">
                         Kembali
                         </a>
