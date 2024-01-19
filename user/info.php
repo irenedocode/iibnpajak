@@ -31,49 +31,9 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg- topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars">
-                        
-                        </i>
-                    </button>
-
-                  
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <h1 style="left: 10px;position: absolute; top: 10px;">Cari Info Pajak</h1>
-                        <h1 style="">User</h1>
-
-                        
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="infouser.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                <a class="navbar-brand" href="index.html">Indo Baru</a>
+            </nav>
                 <!-- End of Topbar -->
 
                 <!-- /.container-fluid -->
@@ -85,28 +45,8 @@
                         <form action="cari.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
-                                    id="nama" name="nama" aria-describedby="emailHelp" required
-                                    placeholder="Nama Pemilik (Lengkap)">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="jeniskendaraan" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Kendaraan. Cth: Mobil">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="jenismobilmotor" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Mobil/Motor. Cth: SUV">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
-                            </div>
-                            <div class="form-group">
-                            <input type="text" onfocus="(this.type='month')" onblur="(this.type='text')" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan.">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
@@ -127,7 +67,7 @@
             <!-- Footer -->
             <footer style="margin-top: 350px" class="sticky-footerinfo bg-white">
                 <div class="container my-auto">
-                    <div class="copyright">
+                    <div class="copyright text-center">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>
                 </div>

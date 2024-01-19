@@ -1,3 +1,6 @@
+TO DO LIST!! irene
+
+
 1. di bagian cari kendaraan, gausah pakai nama, dst. cuman perlu nomor polisi dan nomor rangka
 
 2. nanti bagian nama dan lainnya, muncul pas udah cari dan data2nya bakal keluar, so it's unecessary.
