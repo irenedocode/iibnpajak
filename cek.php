@@ -56,6 +56,9 @@ if($cek > 0){
 	header("location:index.php?pesan=gagal");
 }
 
+      unset($_SESSION['logged_in']);  
+      session_destroy();  
+
 
 
 ?>

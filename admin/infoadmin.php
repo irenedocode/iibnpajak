@@ -78,7 +78,7 @@
                     <a class="nav-link" href="datatable.php">Export</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="../login  .php">Logout</a>
+                    <a class="nav-link" href="../login.php">Logout</a>
                     </li>
                 </ul>
                 </div>
@@ -93,7 +93,7 @@
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-                        <div class="form-group">
+                        <div class="form-group"style="margin-top: 50px;" >
                             <label style="margin-left: -930px;" for="sel1">Nama:</label>
                             <?php
                             $nama="";
@@ -101,14 +101,14 @@
                                 $nama=$_POST['nama'];
                             }
                             ?>
-                            <input style="margin-left: -930px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control"  required/>
+                            <input style="margin-left: -930px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control" required/>
                         </div>
                         <div class="form-group">
                             <input style="margin-left: -930px;" type="submit" class="btn btn-primary" value="Pilih">
                         </div>
                     </form>
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
+                            <table class="table table-bordered" id="data" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -176,8 +176,8 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div  class="container my-auto">
+            <footer class="sticky-footer bg-white" style="margin-top: 400px;">
+                <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>
