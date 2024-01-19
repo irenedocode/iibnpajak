@@ -15,13 +15,38 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Info Pajak-User</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        #customers {
+          font-family: Poppins;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #f2f2f2;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4a756e;
+          color: white;
+        }
+        </style>
 
 </head>
 
@@ -68,19 +93,19 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Pemilik</th>
-                                        <th>Jenis Kendaraan</th>
-                                        <th>Jenis Mobil Motor</th>
-                                        <th>No Polisi</th>
-                                        <th>Tahun Pembuatan</th>
-                                        <th>Nomor Rangka/Mesin</th>
-                                        <th>Masa Pajak</th>
-                                    </tr>
-                                </thead>
+                        <table id="customers" width="100%" cellspacing="0">                                
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Pemilik</th>
+                                    <th>Jenis Kendaraan</th>
+                                    <th>Jenis Mobil Motor</th>
+                                    <th>No Polisi</th>
+                                    <th>Tahun Pembuatan</th>
+                                    <th>Nomor Rangka/Mesin</th>
+                                    <th>Masa Pajak</th>
+                                </tr>
+                            </thead>
                                 
                                 <tbody>
                                 <?php
@@ -122,7 +147,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                             </table>
                     
                         </div>
-                        <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px;">
+                        <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         History
                     </a>
                     <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
