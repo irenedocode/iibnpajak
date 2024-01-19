@@ -108,7 +108,7 @@
                         </div>
                     </form>
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="data" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
+                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
