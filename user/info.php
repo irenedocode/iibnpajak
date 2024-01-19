@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="sb-admin-2.min.css" rel="stylesheet">
+    <link href="sb-admin-2.min(1).css" rel="stylesheet">
 
 </head>
 
@@ -41,20 +41,20 @@
                 <div class="col-lg-6 d-none d-lg-block"></div>
                             
                 <div class="col-lg-6">
-                    <div class="p-5">
+                    <div class="p-5" style="margin-top: 10%;">
                         <form action="cari.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
+                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
+                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
                                     id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
                                     placeholder="Nomor Rangka/Mesin">
                             </div>
                         
-                            <button name="cari" value="cari" class="btn btn-primary btn-user btn-block">
+                            <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 1000px; margin-left: 400px">
                                 Cari
                             </button>
 
