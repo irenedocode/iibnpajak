@@ -153,7 +153,7 @@
                                                 <td><?php echo $data["masapajak"];   ?></td>
                                                 <td class="text-center">
                                                 <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="crud/hapusdata.php?<?php echo $nopolisi?>" onclick="return confirm('Yakin mau delete data?')"><button type="button" class="btn btn-danger">Delete</button></a>
                                                 </a>
                                                 </td>
                                             </tr>
@@ -167,7 +167,7 @@
                         
                     
                         </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
+                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px; margin-top: 50px;">
                         Kembali
                     </a>
                 </div>
@@ -224,6 +224,13 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
+
+    
+    <script>
+       function preventBack() {window.history.forward();}
+       setTimeout(preventBack(), 0);
+       window.onunload = function() {null};
+    </script>   
 
     
 </body>
