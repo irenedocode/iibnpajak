@@ -19,9 +19,8 @@ require ('koneksi.php');
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
-<!-- Topbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                 <!-- Topbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
                 <a class="navbar-brand" href="index.html">Indo Baru</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,10 +30,10 @@ require ('koneksi.php');
                             <li class="nav-item">
                             <a class="nav-link" href="infoadmin.php">Info</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                             <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                             <a class="nav-link" href="datatable.php">Export</a>
                             </li>
                         </ul>
@@ -98,7 +97,7 @@ require ('koneksi.php');
                         </div>
                         
                         
-                        <button class="btn btn-primary btn-user btn-block" style="width: 150px; margin-left: 70px;"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
+                        <button class="btn btn-primary btn-user btn-block" style="margin-left: 70px; width: 150px; color: white"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
 
                         <script>
                                 var tableToExcel = (function() {
@@ -119,6 +118,6 @@ require ('koneksi.php');
                                 })()
                         </script>
 
-                        <a href="infoadmin.php" style="margin-top: 100px;margin-left: 70px; width: 300px" class="btn btn-primary btn-user btn-block">
+                        <a href="infoadmin.php" style="margin-top: 100px;margin-left: 40px; width: 300px" class="btn btn-primary btn-user btn-block">
                         Kembali
                         </a>
