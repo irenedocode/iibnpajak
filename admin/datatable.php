@@ -10,7 +10,7 @@ require ('koneksi.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Export Excel</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
@@ -18,10 +18,35 @@ require ('koneksi.php');
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        #customers {
+          font-family: Poppins;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #f2f2f2;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4a756e;
+          color: white;
+        }
+        </style>
+
 </head>
 
                     <div class="table-responsive">
-                            <table class="table table-bordered" id="htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
+                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -101,8 +126,8 @@ require ('koneksi.php');
                         <a href="infoadmin.php" style="margin-top: 100px;margin-left: 40px; width: 300px" class="btn btn-primary btn-user btn-block">
                         Kembali
                         </a>
-            <footer class="sticky-footerinfo bg-white">
-                <div style="position: relative; top: 300px;" class="container my-auto justify-content-center">
+            <footer>
+                <div style="position: relative; font-size: .8rem; top: 300px;" class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>

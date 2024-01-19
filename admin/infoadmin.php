@@ -17,6 +17,31 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        #customers {
+          font-family: Poppins;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #f2f2f2;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4a756e;
+          color: white;
+        }
+        </style>
+
 
 </head>
 
@@ -40,11 +65,9 @@
                    
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <h1 style="left: 10px;position: absolute; top: 10px;">Informasi Kendaraan User</h1>
+                        <h1 style="">Admin</h1>
 
-                       <h1 style="left: 10px;position: absolute; top: 10px;">Informasi Pajak Kendaraan</h1>
-                       <h1 style="">Admin</h1>
-                  
-                    <div class="topbar-divider d-none d-sm-block"></div>
                     </ul>
 
                 </nav>
@@ -73,7 +96,7 @@
                         </div>
                     </form>
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
+                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
