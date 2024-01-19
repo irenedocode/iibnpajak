@@ -45,6 +45,29 @@ require ('koneksi.php');
 
 </head>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                <a class="navbar-brand" href="index.html">Indo Baru</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a class="nav-link" href="infoadmin.php">Info</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="add.php">Tambah Data</a>
+                            </li>
+                            <li class="nav-item active">
+                            <a class="nav-link" href="datatable.php">Export  <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="../login.php">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+
                     <div class="table-responsive">
                             <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
                                 <thead>

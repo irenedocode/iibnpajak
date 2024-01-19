@@ -31,24 +31,28 @@
             <div id="content">
 
                 <!-- Topbar -->
-                 <nav class="navbar navbar-expand navbar-light bg- topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars">
-                        
-                        </i>
-                    </button>
-
-                  
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <h1 style="left: 10px;position: absolute; top: 10px;">Tambah Data</h1>
-                        <h1 style="">Admin</h1>
-                    </ul>
-
-                </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                <a class="navbar-brand" href="index.html">Indo Baru</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a class="nav-link" href="infoadmin.php">Info</a>
+                            </li>
+                            <li class="nav-item active">
+                            <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="datatable.php">Export</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="../login.php">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
                 <!-- End of Topbar -->
 
                 <!-- /.container-fluid -->
@@ -112,7 +116,7 @@
 
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="sticky-footerinfo bg-white">
+            <footer class="sticky-footerinfo bg-white" style="margin-top: 150px;">
                 <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
