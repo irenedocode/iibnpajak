@@ -36,25 +36,35 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg- topbar mb-4 static-top shadow">
-                   
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                       <h1 style="left: 10px;position: absolute; top: 10px;">Informasi Pajak Kendaraan</h1>
-                       <h1 style="">Admin</h1>
-                  
-                    <div class="topbar-divider d-none d-sm-block"></div>
-                    </ul>
-
-                </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                <a class="navbar-brand" href="index.html">Indo Baru</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="infoadmin.php">Info <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="add.php">Tambah Data</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="datatable.php">Export</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../login  .php">Logout</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+</nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
             <div>
                 <div class="row">
                     <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
-                        
                     </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
@@ -133,14 +143,8 @@
                         
                     
                         </div>
-                    <a href="add.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 240px">
-                        Tambah Data
-                    </a>
                     <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
                         Kembali
-                    </a>
-                    <a href="datatable.php" class="btn btn-primary btn-user btn-block" style="margin-left: 100px; margin-right: 100px;">
-                        Export
                     </a>
                 </div>
             </div>
@@ -191,6 +195,9 @@
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
