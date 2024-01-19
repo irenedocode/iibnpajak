@@ -108,7 +108,7 @@
                         </div>
                     </form>
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="data" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
+                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -177,7 +177,7 @@
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white" style="margin-top: 330px;">
-                <div  class="container my-auto">
+                <div  class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>

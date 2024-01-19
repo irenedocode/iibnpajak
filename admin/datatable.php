@@ -18,6 +18,31 @@ require ('koneksi.php');
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+    #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4a756e;
+    color: white;
+}
+</style>
+
 </head>
                  <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -41,7 +66,7 @@ require ('koneksi.php');
             </nav>
 
                     <div class="table-responsive">
-                            <table class="table table-bordered" id="htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
+                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>

@@ -141,7 +141,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white" style="margin-top: 300px;">
-                <div class="container my-auto">
+                <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
                     </div>
