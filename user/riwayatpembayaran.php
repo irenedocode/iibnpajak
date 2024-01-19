@@ -176,6 +176,12 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
+    <script>
+       function preventBack() {window.history.forward();}
+       setTimeout(preventBack(), 0);
+       window.onunload = function() {null};
+    </script>
+
 </body>
 
 </html
