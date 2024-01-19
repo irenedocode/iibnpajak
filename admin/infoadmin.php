@@ -101,6 +101,7 @@
                             }
                             ?>
                             <input style="margin-left: -930px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control" required/>
+                            
                         </div>
                         <div class="form-group">
                             <input style="margin-left: -930px;" type="submit" class="btn btn-primary" value="Pilih">
@@ -153,7 +154,7 @@
                                                 <td><?php echo $data["masapajak"];   ?></td>
                                                 <td class="text-center">
                                                 <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?<?php echo $nopolisi?>" onclick="return confirm('Yakin mau delete data?')"><button type="button" class="btn btn-danger">Delete</button></a>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
                                                 </a>
                                                 </td>
                                             </tr>
@@ -225,7 +226,7 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
-    
+
     <script>
        function preventBack() {window.history.forward();}
        setTimeout(preventBack(), 0);
