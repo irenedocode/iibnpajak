@@ -74,9 +74,9 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                       <h1 style="display: flexbox; left: 10px;position: absolute; top: 10px;">Riwayat Pembayaran Pajak</h1>
+                       <h1 style="left: 10px;position: absolute; top: 10px;">Informasi Pajak Kendaraan</h1>
                        <h1 style="">User</h1>
-                        <div class="topbar-divider d-none d-sm-block"></div>
+        
                     </ul>
 
                 </nav>
