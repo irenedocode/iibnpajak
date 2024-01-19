@@ -1,0 +1,16 @@
+
+1. Index (umum)
+
+User:
+1. index user untuk mulai pencarian
+2. form nomorpolisi dan rangka
+3. hasil pencarian
+4. history pembayaran (still not sure:) )
+
+Admin:
+1. index admin untuk melihat data
+2. table data
+3. export
+4. edit data
+5. tambah data
+

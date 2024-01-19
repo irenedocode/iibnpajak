@@ -1,5 +1,4 @@
 <?php
-
 include('../koneksi.php');
 
 $nopolisi = $_GET['nopolisi'];
