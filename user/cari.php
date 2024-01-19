@@ -75,11 +75,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
 
                        <h1 style="left: 10px;position: absolute; top: 10px;">Informasi Pajak Kendaraan</h1>
                        <h1 style="">User</h1>
-                  
-                        
-
-                        
-
+        
                     </ul>
 
                 </nav>
