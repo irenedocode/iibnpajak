@@ -23,6 +23,7 @@ OWEN :
 2. kasih css co
 3. gada si kekurangan
 4. cobaa kasih background goru co mintak sama pembimbing foto univ
+5. itu nya harus panjang? kenapa ga pendek aja terus di di susun gitu jangan panjang jadi keliatan ksong kali
 
 FREDICO :
 1. header gaje masa info kendaraan logout
