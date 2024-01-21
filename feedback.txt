@@ -19,7 +19,8 @@ DARREL :
 4. batik indo
 
 OWEN : 
-1. 
+1. baguss
+2. kasih css co
 
 FREDICO :
 1. header gaje masa info kendaraan logout
