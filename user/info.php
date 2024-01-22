@@ -46,6 +46,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
           background-color: #4a756e;
           color: white;
         }
+
         </style>
 
 </head>
@@ -79,7 +80,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                 <!-- Begin Page Content -->
         
                 <div class="row">     
-                    <img src="bg.png" alt="">
                         <div class="table-responsive" style="margin-top: 100px;">
                         <table id="customers" width="100%" cellspacing="0">                                
                             <thead>
