@@ -17,30 +17,7 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
-    <style>
-        #customers {
-          font-family: Poppins;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        #customers td, #customers th {
-          border: 1px solid #f2f2f2;
-          padding: 8px;
-        }
-        
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
-        
-        #customers tr:hover {background-color: #ddd;}
-        
-        #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: #4a756e;
-          color: white;
-        }
-        </style>
+    
 
 
 </head>
@@ -61,7 +38,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light-gray shadow">
                 <a class="navbar-brand" href="index.html">Indo Baru</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -93,22 +70,22 @@
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
                     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
                         <div class="form-group"style="margin-top: 50px;" >
-                            <label style="margin-left: -930px;" for="sel1">Nama:</label>
+                            <label style="margin-left: -880px;" for="sel1">Nama:</label>
                             <?php
                             $nama="";
                             if (isset($_POST['nama'])) {
                                 $nama=$_POST['nama'];
                             }
                             ?>
-                            <input style="margin-left: -930px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control" required/>
+                            <input style="margin-left: -880px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control" required/>
                             
                         </div>
                         <div class="form-group">
-                            <input style="margin-left: -930px;" type="submit" class="btn btn-primary" value="Pilih">
+                            <input style="margin-left: -880px;" type="submit" class="btn btn-primary" value="Pilih">
                         </div>
                     </form>
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px;" cellspacing="0">
+                            <table class="table table-bordered" style="width: 90%; margin-left: 100px; margin-right: 50px;" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -168,7 +145,7 @@
                         
                     
                         </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px; margin-top: 50px;">
+                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 120px; margin-right: 75px; margin-top: 50px; width: 100px">
                         Kembali
                     </a>
                 </div>
