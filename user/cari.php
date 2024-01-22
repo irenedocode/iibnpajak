@@ -86,8 +86,8 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                 <tr>
                                     <th>Nama Pemilik</th>
                                     <th>Jenis Kendaraan</th>
-                                    <th>Jenis Mobil Motor</th>
-                                    <th>No Polisi</th>
+                                    <th>Jenis Mobil/Motor</th>
+                                    <th>No Plat</th>
                                     <th>Tahun Pembuatan</th>
                                     <th>Nomor Rangka/Mesin</th>
                                     <th>Masa Pajak</th>
@@ -130,7 +130,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     
                         </div>
                         <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
-                        History
+                        Riwayat Pembayaran
                     </a>
                     <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
                         Kembali

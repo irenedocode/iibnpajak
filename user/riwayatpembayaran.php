@@ -85,7 +85,7 @@
                         <div class="table-responsive" style="margin-top: 100px;">
                             <table id="customers" width="100%" cellspacing="0">
                                     <tr>
-                                        <th>No Polisi</th>
+                                        <th>No Plat</th>
                                         <th>Tahun/Masa Pajak</th>
                                         <th>Tanggal Bayar</th>
                                         <th>NTPN</th>

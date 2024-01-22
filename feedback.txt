@@ -6,10 +6,10 @@ CALVIN :
 3. Masukkin nama terlalu kepanjangan
 4. motif dipinggiran pencarian soalnya kek putihnya lebar?
 5. tulisan info kendaraan
-6. pake bahasa indonesia, kenapa history?
-7. jenis mobil motor jadi jenis mobil/motor
+6. pake bahasa indonesia, kenapa history? [done]
+7. jenis mobil motor jadi jenis mobil/motor [done]
 8. awalnya welcom terus pas masuk kok selamat datang (emot batu)
-9. itu nomor polisi apaan? nomor plat gasih harusnya?
+9. itu nomor polisi apaan? nomor plat gasih harusnya? [done]
 
  
 DARREL :

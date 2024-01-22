@@ -72,8 +72,8 @@ require ('koneksi.php');
                                         <th>No</th>
                                         <th>Nama Pemilik</th>
                                         <th>Jenis Kendaraan</th>
-                                        <th>Jenis Mobil Motor</th>
-                                        <th>No Polisi</th>
+                                        <th>Jenis Mobil/Motor</th>
+                                        <th>No Plat</th>
                                         <th>Tahun Pembuatan</th>
                                         <th>Nomor Rangka/Mesin</th>
                                         <th>Masa Pajak</th>
