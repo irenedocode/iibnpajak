@@ -32,7 +32,7 @@ FREDICO :
 4. spacenya kemakan sampe atas??
 5. nomor polisi, nomor rangka
 6. makan tempat webnya
-7. gaperlu back button lagi karna ada header
+7. gaperlu back button lagi karna ada header.
 
 
 RICCO :
