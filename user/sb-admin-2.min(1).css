@@ -2714,8 +2714,8 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #4a756e;
-    border-color: #4a756e
+    background-color: #97b9b4;
+    border-color: #97b9b4
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -11099,7 +11099,7 @@ a:focus {
 }
 
 .bg-gradient-primary {
-    background-color: #4a756e;
+    background-color: #97b9b4;
     background-size: cover
 }
 

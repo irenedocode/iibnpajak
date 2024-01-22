@@ -2749,37 +2749,37 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #4a756e;
-    border-color: #4a756e;
+    background-color: #97b9b4;
+    border-color: #97b9b4;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #4a756e;
-    border-color: #4a756e
+    background-color: #97b9b4;
+    border-color: #97b9b4
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
     color: #fff;
-    background-color: #4a756e;
-    border-color: #4a756e;
+    background-color: #97b9b4;
+    border-color: #97b9b4;
     box-shadow: 0 0 0 .2rem rgba(105, 136, 228, .5)
 }
 
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #4a756e;
-    border-color: #4a756e
+    background-color: #97b9b4;
+    border-color: #97b9b4
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #4a756e;
-    border-color: #4a756e
+    background-color: #97b9b4;
+    border-color: #97b9b4
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -3365,12 +3365,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #4a756e;
+    color: #97b9b4;
     text-decoration: none
 }
 
 .btn-link:hover {
-    color: #4a756e;
+    color: #97b9b4;
     text-decoration: underline
 }
 
@@ -11174,7 +11174,7 @@ a:focus {
 }
 
 .bg-gradient-primary {
-    background-color: #4a756e;
+    background-color: #97b9b4;
     background-size: cover
 }
 
@@ -12292,7 +12292,7 @@ form.user .btn-user {
     position: relative;
     top: 300px;
     color: #fff;
-    background-color: #4a756e;
+    background-color: #97b9b4;
     border-color: #fff
 }
 
