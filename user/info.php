@@ -1,3 +1,9 @@
+<?php
+
+$con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +15,38 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cari Info Pajak</title>
+    <title>Info Pajak-User</title>
 
-    </li> <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="sb-admin-2.min(1).css" rel="stylesheet">
+    <link href="sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        #customers {
+          font-family: Poppins;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #f2f2f2;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4a756e;
+          color: white;
+        }
+        </style>
 
 </head>
 
@@ -30,8 +61,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
                 <a class="navbar-brand" href="index.html">Indo Baru</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,39 +76,74 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- /.container-fluid -->
-                        
-                <div class="col-lg-6 d-none d-lg-block"></div>
-                            
-                <div class="col-lg-6">
-                    <div class="p-5" style="margin-top: 10%;">
-                        <form action="cari.php" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                    id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Polisi. Cth: BP XXXX XX">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                    id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Rangka 17 Digit">
-                            </div>
-                        
-                            <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 1000px; margin-left: 400px">
-                                Cari
-                            </button>
+                <!-- Begin Page Content -->
+        
+                <div class="row">     
+                    <img src="bg.png" alt="">
+                        <div class="table-responsive" style="margin-top: 100px;">
+                        <table id="customers" width="100%" cellspacing="0">                                
+                            <thead>
+                                <tr>
+                                    <th>Nama Pemilik</th>
+                                    <th>Jenis Kendaraan</th>
+                                    <th>Jenis Mobil/Motor</th>
+                                    <th>No Plat</th>
+                                    <th>Tahun Pembuatan</th>
+                                    <th>Nomor Rangka/Mesin</th>
+                                    <th>Masa Pajak</th>
+                                </tr>
+                            </thead>
+                                
+                                <tbody>
+                                <?php
 
-                            
-                        </form>
-                    </div>
+                                        if (isset($_POST['cari'])) {
+                                            $nopolisi=trim($_POST['nopolisi']);
+                                            $rangka=trim($_POST['rangka']);
+                                            $sql= "select * from kendaraan where rangka = '$rangka' and nopolisi = '$nopolisi'";
+
+                                        }else {
+                                            echo "data tidak ditemukan";
+                                        }
+                                    
+                                        $hasil=mysqli_query($con, $sql);
+                                        $no=0;
+                                        while ($data = mysqli_fetch_array($hasil)) {
+                                            ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $data["nama"];   ?></td>
+                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                                <td><?php echo $data["nopolisi"];   ?></td>
+                                                <td><?php echo $data["pembuatan"];   ?></td>
+                                                <td><?php echo $data["rangka"];   ?></td>
+                                                <td><?php echo $data["masapajak"];   ?></td>
+                                            </tr>
+                                            </tbody>
+                                            <?php
+                                        }
+                                        ?>
+                                   
+                                </tbody>
+                            </table>
+                    
+                        </div>
+                        <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                        Riwayat Pembayaran
+                    </a>
+                    <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
+                        Kembali
+                    </a>
                 </div>
             </div>
             <!-- End of Main Content -->
+
             <!-- Footer -->
-            <footer style="margin-top: 350px" class="sticky-footerinfo bg-white">
+            <footer class="sticky-footer bg-white" style="margin-top: 300px;">
                 <div class="container my-auto justify-content-center">
-                    <div class="copyright text-center">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
                     </div>
                 </div>
             </footer>
@@ -134,3 +199,4 @@
 </body>
 
 </html>
+
