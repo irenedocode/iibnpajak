@@ -1787,7 +1787,7 @@ pre code {
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #24302ad8
+    color: #5f453bd8
 }
 
 .table td,
@@ -1799,7 +1799,7 @@ pre code {
 
 .table thead th {
     vertical-align: bottom;
-    background-color: #b2b997;
+    background-color: #d1b9a0;
 }
 
 .table-sm td,
@@ -1808,11 +1808,11 @@ pre code {
 }
 
 .table-bordered {
-    border: 1px solid #b2b997
+    border: 1px solid rgba(0, 0, 0, 0.6)
 }
 
 .table-bordered td {
-    border: 1px solid #b2b997
+    border: 1px solid #ffffff
 }
 
 .table-bordered thead td,
@@ -1846,7 +1846,7 @@ pre code {
 .table-primary td,
 .table-primary th,
 .table-primary thead th {
-    border-color: #a3b6ee
+    border-color: #ffffff
 }
 
 .table-hover .table-primary:hover {
@@ -2785,43 +2785,43 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff;
-    background-color: #db4d4d;
+    background-color: #bd6767;
     border-color: #ffffff
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #db4d4d;
+    background-color: #bd6767;
     border-color: #ffffff
 }
 
 .btn-secondary.focus,
 .btn-secondary:focus {
     color: #fff;
-    background-color: #db4d4d;
-    border-color: #db4d4d;
+    background-color: ##bd6767;
+    border-color: #bd6767;
     box-shadow: 0 0 0 .2rem rgba(151, 153, 166, .5)
 }
 
 .btn-secondary.disabled,
 .btn-secondary:disabled {
     color: #fff;
-    background-color: #db4d4d;
-    border-color: #db4d4d
+    background-color: #bd6767;
+    border-color: #bd6767
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show>.btn-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #db4d4d;
-    border-color: #db4d4d
+    background-color: #bd6767;
+    border-color: #bd6767
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
 .btn-secondary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #db4d4d
+    box-shadow: 0 0 0 .2rem #f59c9c
 }
 
 .btn-success {
@@ -12707,23 +12707,17 @@ form.user .btn-user {
 
 footer.sticky-footer {
     position: relative;
-    top: 100px;
-    padding: 2rem 0;
-    flex-shrink: 0
 }
 
 footer.sticky-footerinfo {
     position: relative;
     top: -10px;
-    padding: 2rem 0;
-    flex-shrink: 0
 }
 
 footer.sticky-footer .copyright {
     display: flex;
     position: sticky;
     left: 35%;
-    line-height: 1;
     font-size: .8rem
 }
 

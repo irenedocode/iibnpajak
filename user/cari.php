@@ -50,9 +50,7 @@
 
                 <!-- /.container-fluid -->
         <div class="container">
-            <div class="card-body p-0">
-                        
-                            
+            <div class="card-body p-0">        
                 <div class="col-lg-6">
                     <div class="p-5" style="margin-top: 10%;">
                         <form action="info.php" method="post">
@@ -70,21 +68,19 @@
                             <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 50%; margin-left: 24%;">
                                 Cari
                             </button>
-
-                            
                         </form>
                     </div>
+                </div>
             </div>
         </div>
-</div>
-            </div>
+    </div>
             <!-- End of Main Content -->
 
            <!-- Footer -->
-           <footer class="sticky-footer bg-white shadow" style="margin-top: 1px;">
+           <footer class="sticky-footer bg-white" style="margin-top: -35px">
                 <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
+                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>
                 </div>
             </footer>

@@ -12711,22 +12711,17 @@ form.user .btn-user {
 }
 
 footer.sticky-footer {
-    padding: 2rem 0;
-    flex-shrink: 0
+    position: relative;
 }
 
 footer.sticky-footerinfo {
     position: relative;
-    top: -10px;
-    padding: 2rem 0;
-    flex-shrink: 0
 }
 
 footer.sticky-footer .copyright {
     display: flex;
     position: sticky;
     left: 35%;
-    line-height: 1;
     font-size: .8rem
 }
 
@@ -12734,7 +12729,6 @@ footer.sticky-footerinfo .copyright {
     display: flex;
     position: sticky;
     left: 35%;
-    line-height: 1;
     font-size: .8rem
 }
 
