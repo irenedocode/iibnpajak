@@ -38,7 +38,7 @@ require ('koneksi.php');
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #97b9b4;
+    background-color: #6c8b86;
     color: white;
 }
 </style>

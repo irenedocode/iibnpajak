@@ -55,7 +55,7 @@
                             
                 <div class="col-lg-6">
                     <div class="p-5" style="margin-top: 10%;">
-                        <form action="cari.php" method="post">
+                        <form action="info.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
