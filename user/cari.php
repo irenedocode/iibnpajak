@@ -34,7 +34,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                <a class="navbar-brand" href="index.html"> <img src="logo.png" alt="" style="width: 180px"> </a>
+                <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +48,13 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- /.container-fluid -->
+        
+<div class="col-xl-10 col-lg-12 col-md-9">
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+        <div class="kotak">
+
         <div class="container">
             <div class="card-body p-0">        
                 <div class="col-lg-6">
@@ -77,7 +83,7 @@
             <!-- End of Main Content -->
 
            <!-- Footer -->
-           <footer class="sticky-footer bg-white" style="margin-top: -35px">
+           <footer class="sticky-footer bg-white" style="margin-top: 105px">
                 <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
@@ -92,10 +98,6 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
      <!-- Logout Modal-->
      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -127,11 +129,6 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
-    <script>
-       function preventBack() {window.history.forward();}
-       setTimeout(preventBack(), 0);
-       window.onunload = function() {null};
-    </script>
 
 </body>
 
