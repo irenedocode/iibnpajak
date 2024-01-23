@@ -11267,15 +11267,23 @@ form.user .btn-user {
 }
 
 footer.sticky-footer {
-  padding: 2rem 0;
-  flex-shrink: 0;
+  position: relative;
+}
+
+footer.sticky-footerinfo {
+  position: relative;
 }
 
 footer.sticky-footer .copyright {
-  line-height: 1;
-  font-size: 0.8rem;
+  display: flex;
+  position: sticky;
+  left: 35%;
+  font-size: .8rem
 }
 
-body.sidebar-toggled footer.sticky-footer {
-  width: 100%;
+footer.sticky-footerinfo .copyright {
+  display: flex;
+  position: sticky;
+  left: 35%;
+  font-size: .8rem
 }
