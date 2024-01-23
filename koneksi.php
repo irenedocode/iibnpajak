@@ -1,6 +1,6 @@
 <?php
 
-$koneksi = mysqli_connect("localhost","root","","login"); //ganti ke iibn1
+$koneksi = mysqli_connect("localhost","root","","data"); //ganti ke iibn1
 
 //login
 
@@ -8,7 +8,7 @@ if(isset($_POST['Login'])) {
     $email = $_POST['email'];//"reza"
     $password = $_POST['password'];//3210
 
-    $cekuser = mysqli_query($koneksi,"select role from user where email= '$email' and password='$password'");
+    $cekuser = mysqli_query($koneksi,"select role from login where email= '$email' and password='$password'");
     //role ==> pelanggan <> nullv
 
     $role = mysqli_fetch_assoc($cekuser)["role"];
