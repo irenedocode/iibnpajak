@@ -79,11 +79,12 @@
 </div>
             </div>
             <!-- End of Main Content -->
-            <!-- Footer -->
-            <footer style="margin-top: 20px" class="sticky-footerinfo bg-white">
-                <div class="container my-auto justify-content-center" style="height: 100px">
-                    <div class="copyright text-center">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
+
+           <!-- Footer -->
+           <footer class="sticky-footer bg-white shadow" style="margin-top: 1px;">
+                <div class="container my-auto justify-content-center">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
                     </div>
                 </div>
             </footer>

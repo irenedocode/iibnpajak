@@ -132,7 +132,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                         <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Riwayat Pembayaran
                     </a>
-                    <a href="info.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
+                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
                         Kembali
                     </a>
                 </div>
@@ -140,7 +140,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top: 300px;">
+            <footer class="sticky-footer bg-white" style="margin-top: 400px;">
                 <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights reserved</span>
