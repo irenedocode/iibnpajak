@@ -30,8 +30,13 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
           width: 100%;
         }
         
-        #customers td, #customers th {
-          border: 1px solid #f2f2f2;
+        #customers td{
+          border: 0.5px solid #5f6366;
+          padding: 8px;
+        }
+
+        #customers th {
+          border: 0.5px solid #99ced3;
           padding: 8px;
         }
         
@@ -43,7 +48,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
           padding-top: 12px;
           padding-bottom: 12px;
           text-align: left;
-          background-color: #6c8b86;
+          background-color: #99ced3;
           color: white;
         }
 
@@ -63,12 +68,15 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="index.html"> <img src="../img/logovertical.png" alt="" style="width: 180px"> </a>
+               <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a class="nav-link" href="riwayat.php" >Riwayat</a>
+                            </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
@@ -80,7 +88,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                 <!-- Begin Page Content -->
         
                 <div class="row">     
-                        <div class="table-responsive" style="margin-top: 100px;">
+                        <div class="table-responsive" style="margin-top: 100px; margin-left: 50px; margin-right: 50px">
                         <table id="customers" width="100%" cellspacing="0">                                
                             <thead>
                                 <tr>
@@ -129,10 +137,8 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                             </table>
                     
                         </div>
-                        <a href="riwayatpembayaran.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
-                        Riwayat Pembayaran
-                    </a>
-                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 75px; margin-right: 75px;">
+                        
+                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
                         Kembali
                     </a>
                 </div>
@@ -140,8 +146,8 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top: 425px;">
-                <div class="container my-auto justify-content-center">
+            <footer class="sticky-footer bg-white" style="margin-top: 225px; height: 50px">
+                <div class="container my-auto justify-content-center" style="height: 100%">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
                     </div>
@@ -154,11 +160,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
 
     </div>
     <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
      <!-- Logout Modal-->
      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

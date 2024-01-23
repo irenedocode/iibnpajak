@@ -43,7 +43,7 @@
           padding-top: 12px;
           padding-bottom: 12px;
           text-align: left;
-          background-color: #6c8b86;
+          background-color: #99ced3;
           color: white;
         }
         </style>
@@ -64,12 +64,15 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="index.html"> <img src="logo.png" alt="" style="width: 180px"> </a>
+               <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                            <a class="nav-link" href="riwayat.php" >Riwayat</a>
+                            </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
