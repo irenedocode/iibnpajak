@@ -54,32 +54,31 @@
 <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">
         <div class="kotak">
-
-        <div class="container">
-            <div class="card-body p-0">        
-                <div class="col-lg-6">
-                    <div class="p-5" style="margin-top: 10%;">
-                        <form action="info.php" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                    id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Polisi. Cth: BP XXXX XX">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                    id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Rangka 17 Digit">
-                            </div>
-                        
-                            <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 50%; margin-left: 24%;">
-                                Cari
-                            </button>
-                        </form>
+            <div class="container">
+                <div class="card-body p-0">        
+                    <div class="col-lg-6">
+                        <div class="p-5" style="margin-top: 10%;">
+                            <form action="info.php" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
+                                        id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
+                                        placeholder="Nomor Polisi. Cth: BP XXXX XX">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
+                                        id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
+                                        placeholder="Nomor Rangka 17 Digit">
+                                </div>
+                            
+                                <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 50%; margin-left: 24%;">
+                                    Cari
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
             <!-- End of Main Content -->
 
            <!-- Footer -->
