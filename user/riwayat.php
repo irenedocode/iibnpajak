@@ -97,18 +97,10 @@
                                     </tr>
                                 <tbody>
                                     <?php
-<<<<<<< HEAD
                                     $nopolisi = $_GET['nopolisi'];                    
                                     $query = ("SELECT * FROM history WHERE nopolisi = '$nopolisi'");
 
 
-=======
-                                    $nopolisi='';
-                                    if(isset($_POST['history'])) {
-                                        $nopolisi=$_GET['nopolisi'];
-                                    }
-                                    $query = ("SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'");
->>>>>>> 5105a4163f766a3438f2b545c8b362e306e7bf6c
                                     $hasil=mysqli_query($con, $query);
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
