@@ -43,7 +43,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #353e5f;
+    background-color: #7992af;
     color: white;
 }
 </style>
@@ -70,9 +70,6 @@
                 </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                            <a class="nav-link" href="riwayat.php" >Riwayat</a>
-                            </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
@@ -85,7 +82,7 @@
                 
 
                 <div class="row">
-                        <div class="table-responsive" style="margin-top: 100px;">
+                        <div class="table-responsive" style="margin-top: 100px; margin-left: 50px; margin-right: 50px">
                             <table id="customers" width="100%" cellspacing="0">
                                     <tr>
                                         <th>No Plat</th>
@@ -119,9 +116,9 @@
                                     ?> 
                             </table>
                         </div>
-                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
+                        <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-top: 100px; width: 20%">
                         Kembali
-                    </a>
+                        </a>
                 </div>
             <!-- End of Main Content -->
 

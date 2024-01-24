@@ -43,7 +43,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #353e5f;
+    background-color: #7992af;
     color: white;
 }
 </style>
@@ -90,6 +90,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                     <th>Tahun Pembuatan</th>
                                     <th>Nomor Rangka/Mesin</th>
                                     <th>Masa Pajak</th>
+                                    <th></th>
                                 </tr>
                             </thead>                                
                                 <tbody>
@@ -118,8 +119,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                                 <td><?php echo $data["masapajak"];   ?></td>
                                                 <td class="text-center">
                                                 <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block" style="">Riwayat</a>
-                                                </tr>
-                                                Riwayat
+                                                </tr>
                                                 </button>
                                                 </td>
                                             </tr>
@@ -132,7 +132,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     
                         </div>
                     
-                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
+                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-top: 100px; width: 20%">
                         Kembali
                         </a>
                 </div>
