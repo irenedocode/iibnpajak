@@ -24,29 +24,30 @@
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        #customers {
-          font-family: Poppins;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        #customers td, #customers th {
-          border: 1px solid #f2f2f2;
-          padding: 8px;
-        }
-        
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
-        
-        #customers tr:hover {background-color: #ddd;}
-        
-        #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: #99ced3;
-          color: white;
-        }
-        </style>
+    #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6c8b86;
+    color: white;
+    }
+    </style>
+
 
 </head>
 
@@ -96,25 +97,35 @@
                                     </tr>
                                 <tbody>
                                     <?php
+<<<<<<< HEAD
                                     $nopolisi = $_GET['nopolisi'];                    
                                     $query = ("SELECT * FROM history WHERE nopolisi = '$nopolisi'");
 
 
+=======
+                                    $nopolisi='';
+                                    if(isset($_POST['history'])) {
+                                        $nopolisi=$_GET['nopolisi'];
+                                    }
+                                    $query = ("SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'");
+>>>>>>> 5105a4163f766a3438f2b545c8b362e306e7bf6c
                                     $hasil=mysqli_query($con, $query);
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
-                                    <tr>        <td><?php echo $data["nopolisi"];   ?></td>
-                                                <td><?php echo $data["masapajak"];   ?></td>
-                                                <td><?php echo $data["bayar"];   ?></td>
-                                                <td><?php echo $data["ntpn"];   ?></td>
-                                                <td><?php echo $data["status"];   ?></td>
+
+                                    <tr>        
+                                        <td><?php echo $data["nopolisi"];   ?></td>
+                                        <td><?php echo $data["masapajak"];   ?></td>
+                                        <td><?php echo $data["bayar"];   ?></td>
+                                        <td><?php echo $data["ntpn"];   ?></td>
+                                        <td><?php echo $data["status"];   ?></td>
                                     </tr>
                                 </tbody>
-                                    <?php } ?> 
+                                    <?php 
+                                        } 
+                                    ?> 
                             </table>
-                        
-                    
                         </div>
                     <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-right: 50px; margin-top: 100px;">
                         Kembali

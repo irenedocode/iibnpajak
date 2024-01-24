@@ -1,13 +1,9 @@
 <?php 
   
   include('koneksi.php');
-
     $nopolisi = $_GET['nopolisi'];
-  
     $query = "SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'";
-
     $result = mysqli_query($con, $query);
-
     $row = mysqli_fetch_array($result);
 
 ?>
@@ -38,9 +34,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -53,24 +46,18 @@
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars">
-                        
                         </i>
                     </button>
-
-                  
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <h1 style="left: 10px;position: absolute; top: 10px;">Update Data</h1>
                         <h1 style="">Admin</h1>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- /.container-fluid -->
-                        
+                <!-- /.container-fluid -->      
                 <div class="col-lg-6 d-none d-lg-block"></div>
             
                 <div class="col-lg-6">
@@ -104,20 +91,19 @@
                             onblur="(this.type='text')"
                             name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
-
                         
                             <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
                                 Update
                             </button>
-                            <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
-                        Kembali
-                    </a>
+                                <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
+                                Kembali
+                                </a>
                         </form>
                     </div>
                 </div>
             </div>
-
             <!-- End of Main Content -->
+            
             <!-- Footer -->
             <footer class="sticky-footerinfo bg-white">
                 <div class="container my-auto justify-content-center">

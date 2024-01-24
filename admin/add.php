@@ -32,10 +32,10 @@
 
             <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse"  id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -49,18 +49,16 @@
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    Logout
-                                </a>
+                                Logout
+                            </a>
                             </li>
                         </ul>
                     </div>
             </nav>
-                <!-- End of Topbar -->
+            <!-- End of Topbar -->
 
-                <!-- /.container-fluid -->
-                        
-                <div class="col-lg-6 d-none d-lg-block"></div>
-            
+            <!-- /.container-fluid -->
+            <div class="col-lg-6 d-none d-lg-block"></div>
                 <div class="col-lg-6">
                     <div class="p-5">
                         <form action="crud/addnew.php" method="POST" name="add" class="user">
@@ -103,20 +101,18 @@
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
                                     placeholder="Masa Pajak.">
                             </div>
-
-                        
-                            <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
-                                Tambahkan
-                            </button>
-                            <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
-                        Kembali
+                        <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
+                            Tambahkan
+                        </button>
+                    <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
+                    Kembali
                     </a>
                         </form>
                     </div>
                 </div>
             </div>
-
             <!-- End of Main Content -->
+
             <!-- Footer -->
             <footer class="sticky-footerinfo bg-white" style="margin-top: 158px;">
                 <div class="container my-auto justify-content-center">
