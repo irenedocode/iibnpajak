@@ -94,6 +94,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                     <th>Tahun Pembuatan</th>
                                     <th>Nomor Rangka/Mesin</th>
                                     <th>Masa Pajak</th>
+                                    <th></th>
                                 </tr>
                             </thead>                                
                                 <tbody>
@@ -120,15 +121,26 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                                 <td><?php echo $data["pembuatan"];   ?></td>
                                                 <td><?php echo $data["rangka"];   ?></td>
                                                 <td><?php echo $data["masapajak"];   ?></td>
+                                                <td class="text-center">
+                                                <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block" style="">Riwayat</a>
                                             </tr>
                                             </tbody>
                                             <?php
+                                            
                                         }
                                         ?>
                                 </tbody>
+<<<<<<< HEAD
+                            </table>
+                    
+                        </div>
+                    
+                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
+=======
                         </table>
                     </div>
                         <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
+>>>>>>> 5105a4163f766a3438f2b545c8b362e306e7bf6c
                         Kembali
                         </a>
                 </div>

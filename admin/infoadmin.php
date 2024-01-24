@@ -131,27 +131,29 @@
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                             $no++;
-                                    ?>
-                                        <tbody>
-                                        <tr>
-                                            <td><?php echo $no;?></td>
-                                            <td><?php echo $data["nama"];   ?></td>
-                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                            <td><?php echo $data["nopolisi"];   ?></td>
-                                            <td><?php echo $data["pembuatan"];   ?></td>
-                                            <td><?php echo $data["rangka"];   ?></td>
-                                            <td><?php echo $data["masapajak"];   ?></td>
-                                            <td class="text-center">
-                                            <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                            <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                            </a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    <?php
-                                    }
-                                    ?>               
+
+                                            ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $no;?></td>
+                                                <td><?php echo $data["nama"];   ?></td>
+                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                                <td><?php echo $data["nopolisi"];   ?></td>
+                                                <td><?php echo $data["pembuatan"];   ?></td>
+                                                <td><?php echo $data["rangka"];   ?></td>
+                                                <td><?php echo $data["masapajak"];   ?></td>
+                                                <td class="text-center">
+                                                <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
+                                                </a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                            <?php
+                                        }
+                                        ?>
+                                   
                                 </tbody>
                             </table>
                         </div>
