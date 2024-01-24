@@ -39,8 +39,8 @@
     text-align: left;
     background-color: #6c8b86;
     color: white;
-}
-</style>
+    }
+    </style>
 
 </head>
 
@@ -49,10 +49,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        
-        <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -60,11 +56,11 @@
             <div id="content">
 
                 <!-- Topbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                    <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
@@ -81,50 +77,47 @@
                             </li>
                         </ul>
                     </div>
-            </nav>
+                </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-            <div>
-                <div class="row">
-                    <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
-                    </a>
+                <div>
+                    <div class="row">
+                        <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
+                        </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
-                    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-                        <div class="form-group"style="margin-top: 50px;" >
-                            <label style="margin-left: -880px;" for="sel1">Nama:</label>
-                            <?php
-                            $nama="";
-                            if (isset($_POST['nama'])) {
-                                $nama=$_POST['nama'];
-                            }
-                            ?>
-                            <input style="margin-left: -880px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control" required/>
-                            
-                        </div>
-                        <div class="form-group">
-                            <input style="margin-left: -880px;" type="submit" class="btn btn-primary" value="Pilih">
-                        </div>
-                    </form>
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="customers" style="width: 90%; margin-left: 100px; margin-right: 50px;" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Pemilik</th>
-                                        <th>Jenis Kendaraan</th>
-                                        <th>Jenis Mobil/Motor</th>
-                                        <th>No Plat</th>
-                                        <th>Tahun Pembuatan</th>
-                                        <th>Nomor Rangka/Mesin</th>
-                                        <th>Masa Pajak</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                
+                        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+                            <div class="form-group"style="margin-top: 50px;" >
+                                <label style="margin-left: -880px;" for="sel1">Nama:</label>
+                                    <?php
+                                        $nama="";
+                                        if (isset($_POST['nama'])) {
+                                        $nama=$_POST['nama'];
+                                        }
+                                    ?>
+                                <input style="margin-left: -880px; width: 200px;" type="text" name="nama" value="<?php echo $nama;?>" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <input style="margin-left: -880px;" type="submit" class="btn btn-primary" value="Pilih">
+                            </div>
+                        </form>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="customers" style="width: 90%; margin-left: 100px; margin-right: 50px;" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Pemilik</th>
+                                            <th>Jenis Kendaraan</th>
+                                            <th>Jenis Mobil/Motor</th>
+                                            <th>No Plat</th>
+                                            <th>Tahun Pembuatan</th>
+                                            <th>Nomor Rangka/Mesin</th>
+                                            <th>Masa Pajak</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
                                 <tbody>
-                                <?php
-
+                                    <?php
                                         include ('cari.php');
                                         if (isset($_POST['nama'])) {
                                             $nama=trim($_POST['nama']);
@@ -134,45 +127,40 @@
                                             $sql="select * from kendaraan order by nama asc";
                                         }
 
-
                                         $hasil=mysqli_query($con,$sql);
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                             $no++;
-
-                                            ?>
-                                            <tbody>
-                                            <tr>
-                                                <td><?php echo $no;?></td>
-                                                <td><?php echo $data["nama"];   ?></td>
-                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                                <td><?php echo $data["nopolisi"];   ?></td>
-                                                <td><?php echo $data["pembuatan"];   ?></td>
-                                                <td><?php echo $data["rangka"];   ?></td>
-                                                <td><?php echo $data["masapajak"];   ?></td>
-                                                <td class="text-center">
-                                                <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                                </a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                            <?php
-                                        }
-                                        ?>
-                                   
+                                    ?>
+                                        <tbody>
+                                        <tr>
+                                            <td><?php echo $no;?></td>
+                                            <td><?php echo $data["nama"];   ?></td>
+                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                            <td><?php echo $data["nopolisi"];   ?></td>
+                                            <td><?php echo $data["pembuatan"];   ?></td>
+                                            <td><?php echo $data["rangka"];   ?></td>
+                                            <td><?php echo $data["masapajak"];   ?></td>
+                                            <td class="text-center">
+                                            <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+                                            <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
+                                            </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    <?php
+                                    }
+                                    ?>               
                                 </tbody>
                             </table>
-                        
-                    
                         </div>
                     <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 120px; margin-right: 75px; margin-top: 50px; width: 100px">
-                        Kembali
-                    </a>
-                </div>
+                    Kembali
+                </a>
             </div>
-            <!-- End of Main Content -->
+        </div>
+        <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white" style="margin-top: 360px;">

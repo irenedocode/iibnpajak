@@ -21,65 +21,60 @@
 
 <body id="page-top">
     
-    
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
-            <div id="content">
+    <!-- Main Content -->
+        <div id="content">
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                    <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            <a class="nav-link" style="color: white" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                                <a class="nav-link" style="color: white" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
                 <!-- End of Topbar -->
 
-        
 <div class="col-xl-10 col-lg-12 col-md-9">
 
 <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">
-        <div class="kotak">
-
-        <div class="container">
-            <div class="card-body p-0">        
-                <div class="col-lg-6">
-                    <div class="p-5" style="margin-top: 10%;">
-                        <form action="info.php" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                    id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Polisi. Cth: BP XXXX XX">
+            <div class="kotak">
+                <div class="container">
+                    <div class="card-body p-0">        
+                        <div class="col-lg-6">
+                            <div class="p-5" style="margin-top: 10%;">
+                                <form action="info.php" method="post">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
+                                            id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
+                                            placeholder="Nomor Polisi. Cth: BP XXXX XX">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
+                                            id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
+                                            placeholder="Nomor Rangka 17 Digit">
+                                    </div>
+                                    <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 50%; margin-left: 24%;">
+                                        Cari
+                                    </button>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                    id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Rangka 17 Digit">
-                            </div>
-                        
-                            <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 50%; margin-left: 24%;">
-                                Cari
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
             <!-- End of Main Content -->
 
            <!-- Footer -->
@@ -98,9 +93,8 @@
     </div>
     <!-- End of Page Wrapper -->
 
-
-     <!-- Logout Modal-->
-     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

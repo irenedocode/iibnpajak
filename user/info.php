@@ -24,35 +24,30 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        #customers {
-          font-family: Poppins;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        #customers td{
-          border: 0.5px solid #5f6366;
-          padding: 8px;
-        }
+    #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
 
-        #customers th {
-          border: 0.5px solid #99ced3;
-          padding: 8px;
-        }
-        
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
-        
-        #customers tr:hover {background-color: #ddd;}
-        
-        #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: #99ced3;
-          color: white;
-        }
+    #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
 
-        </style>
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6c8b86;
+    color: white;
+}
+</style>
+
 
 </head>
 
@@ -100,11 +95,9 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                     <th>Nomor Rangka/Mesin</th>
                                     <th>Masa Pajak</th>
                                 </tr>
-                            </thead>
-                                
+                            </thead>                                
                                 <tbody>
-                                <?php
-
+                                    <?php
                                         if (isset($_POST['cari'])) {
                                             $nopolisi=trim($_POST['nopolisi']);
                                             $rangka=trim($_POST['rangka']);
@@ -132,15 +125,12 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                             <?php
                                         }
                                         ?>
-                                   
                                 </tbody>
-                            </table>
-                    
-                        </div>
-                        
-                    <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
+                        </table>
+                    </div>
+                        <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
                         Kembali
-                    </a>
+                        </a>
                 </div>
             </div>
             <!-- End of Main Content -->
