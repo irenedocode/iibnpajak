@@ -63,36 +63,43 @@
                     <div class="p-5">
                         <form action="crud/addnew.php" method="POST" name="add" class="user">
                             <div class="form-group">
+                            <label for="email">Nama Pemilik (Lengkap) :</label>
                                 <input type="text" class="form-control form-control-user"
                                     id="nama" name="nama" aria-describedby="emailHelp" required
                                     placeholder="Nama Pemilik (Lengkap)">
                             </div>
                             <div class="form-group">
+                            <label for="email">Jenis Kendaraan :</label>
                                 <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="jeniskendaraan" aria-describedby="emailHelp" required
                                     placeholder="Jenis Kendaraan. Cth: Mobil">
                             </div>
                             <div class="form-group">
+                            <label for="email">Jenis Mobil/Motor :</label>
                                 <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="jenismobilmotor" aria-describedby="emailHelp" required
                                     placeholder="Jenis Mobil/Motor. Cth: SUV, Sport, ATV">
                             </div>
                             <div class="form-group">
+                            <label for="email">Nopolisi :</label>
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
                                     placeholder="Nomor Polisi. Cth: BP XXXX XX">
                             </div>
                             <div class="form-group">
+                            <label for="email">Tahun Pembuatan :</label>
                                 <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
                                     id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
                                     placeholder="Tahun Pembuatan.">
                             </div>
                             <div class="form-group">
+                            <label for="email">Nomor Rangka :</label>
                                 <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
                                     placeholder="Nomor Rangka/Mesin">
                             </div>
                             <div class="form-group">
+                            <label for="email">Masa Pajak :</label>
                             <input
                             type="text"
                             onfocus="(this.type='date')"
