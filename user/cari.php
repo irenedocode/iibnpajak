@@ -49,7 +49,7 @@
 <div class="col-xl-10 col-lg-12 col-md-9">
 
 <div class="card o-hidden border-0 shadow-lg my-5">
-    <div class="card-body p-0">
+    <div>
         <div class="kotak">
             <div class="container">
                 <div class="card-body p-0">        
@@ -76,10 +76,10 @@
                 </div>
             </div>
         </div>
-            <!-- End of Main Content -->
+        <!-- End of Main Content -->
 
            <!-- Footer -->
-           <footer class="sticky-footer bg-white" style="margin-top: 105px">
+           <footer class="sticky-footer bg-white" style="margin-top: 9px">
                 <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
@@ -87,7 +87,7 @@
                 </div>
             </footer>
             <!-- End of Footer -->
-
+            
         </div>
         <!-- End of Content Wrapper -->
 

@@ -19,7 +19,7 @@ require 'koneksi.php';
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min(1).css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
 <body class="backgroundregister">
@@ -63,14 +63,14 @@ require 'koneksi.php';
             </div>
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto justify-content-center">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
+        <footer class="sticky-footer bg-white" style="margin-top: 1px">
+                <div class="container my-auto justify-content-center">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
+                    </div>
                 </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
+            </footer>
+            <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->

@@ -5025,10 +5025,12 @@ input[type=submit].btn-block {
 }
 
 .card-body {
-    height: 700px;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem
+        position: relative;
+        top: 90px;
+        height: 600px;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1.25rem;
 }
 
 .kotak {
@@ -12598,12 +12600,24 @@ form.user .btn-user {
 }
 
 footer.sticky-footer {
-    padding: 2rem 0;
-    flex-shrink: 0
+    position: relative;
+}
+
+footer.sticky-footerinfo {
+    position: relative;
 }
 
 footer.sticky-footer .copyright {
-    line-height: 1;
+    display: flex;
+    position: sticky;
+    left: 35%;
+    font-size: .8rem
+}
+
+footer.sticky-footerinfo .copyright {
+    display: flex;
+    position: sticky;
+    left: 35%;
     font-size: .8rem
 }
 

@@ -59,7 +59,7 @@
 
             <!-- /.container-fluid -->
             <div class="col-lg-6 d-none d-lg-block"></div>
-                <div class="col-lg-6">
+                
                     <div class="p-5">
                         <form action="crud/addnew.php" method="POST" name="add" class="user">
                             <div class="form-group">
