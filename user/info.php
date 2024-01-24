@@ -69,9 +69,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="riwayat.php" >Riwayat</a>
-                            </li>
-                            <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
                         </ul>
@@ -119,6 +116,12 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                                 <td><?php echo $data["pembuatan"];   ?></td>
                                                 <td><?php echo $data["rangka"];   ?></td>
                                                 <td><?php echo $data["masapajak"];   ?></td>
+                                                <td class="text-center">
+                                                <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block" style="">Riwayat</a>
+                                                </tr>
+                                                Riwayat
+                                                </button>
+                                                </td>
                                             </tr>
                                             </tbody>
                                         <?php     

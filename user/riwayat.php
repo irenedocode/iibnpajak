@@ -95,7 +95,8 @@
                                         <th>Status</th>
                                     </tr>
                                 <tbody>
-                                    <?php
+                                <?php
+
                                     $nopolisi = $_GET['nopolisi'];                    
                                     $query = ("SELECT * FROM history WHERE nopolisi = '$nopolisi'");
 
@@ -104,7 +105,6 @@
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
-
                                     <tr>        
                                         <td><?php echo $data["nopolisi"];   ?></td>
                                         <td><?php echo $data["masapajak"];   ?></td>
@@ -113,6 +113,7 @@
                                         <td><?php echo $data["status"];   ?></td>
                                     </tr>
                                 </tbody>
+                                
                                     <?php 
                                         } 
                                     ?> 
