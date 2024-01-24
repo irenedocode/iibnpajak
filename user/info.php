@@ -23,23 +23,23 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
-    <style>
+<style>
     #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    }
+}
 
-    #customers td, #customers th {
+#customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
-    }
+}
 
-    #customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
 
-    #customers tr:hover {background-color: #ddd;}
+#customers tr:hover {background-color: #ddd;}
 
-    #customers th {
+#customers th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
@@ -47,7 +47,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     color: white;
 }
 </style>
-
 
 </head>
 
@@ -94,7 +93,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                     <th>Tahun Pembuatan</th>
                                     <th>Nomor Rangka/Mesin</th>
                                     <th>Masa Pajak</th>
-                                    <th></th>
                                 </tr>
                             </thead>                                
                                 <tbody>
@@ -121,26 +119,17 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                                 <td><?php echo $data["pembuatan"];   ?></td>
                                                 <td><?php echo $data["rangka"];   ?></td>
                                                 <td><?php echo $data["masapajak"];   ?></td>
-                                                <td class="text-center">
-                                                <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block" style="">Riwayat</a>
                                             </tr>
                                             </tbody>
-                                            <?php
-                                            
+                                        <?php     
                                         }
                                         ?>
                                 </tbody>
-<<<<<<< HEAD
                             </table>
                     
                         </div>
                     
                     <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
-=======
-                        </table>
-                    </div>
-                        <a href="cari.php" class="btn btn-primary btn-user btn-block" style="margin-left: 35px; margin-top: 100px; width: 20%">
->>>>>>> 5105a4163f766a3438f2b545c8b362e306e7bf6c
                         Kembali
                         </a>
                 </div>
