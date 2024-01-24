@@ -23,32 +23,6 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
-    <style>
-    #customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    }
-
-    #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    }
-
-    #customers tr:nth-child(even){background-color: #f2f2f2;}
-
-    #customers tr:hover {background-color: #ddd;}
-
-    #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #6c8b86;
-    color: white;
-    }
-    </style>
-
-
 </head>
 
 <body id="page-top">
