@@ -65,7 +65,7 @@ require ('koneksi.php');
             </div>
     </nav>
         <div class="table-responsive">
-            <table class="table table-bordered" id="customers" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
+            <table class="table table-bordered" id="customers" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -110,24 +110,26 @@ require ('koneksi.php');
             </tbody>
             </table>
         </div>
-            <button class="btn btn-primary btn-user btn-block" style="margin-left: 70px; width: 150px; color: white"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
-                <script>
-                    var tableToExcel = (function() {
-                        var uri = 'data:application/vnd.ms-excel;base64,', 
-                        template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>',
-                        base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) },
-                        format = function(s, c) { 
-                            return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) 
-                        }
-                        return function(table, name) {
-                            if (!table.nodeType) table = document.getElementById(table)
-                                var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
-                                //window.location.href = uri + base64(format(template, ctx))
-                                document.getElementById("dlink").href = uri + base64(format(template, ctx));
-                                document.getElementById("dlink").download = 'Data Pajak.xls';
-                        }
-                    })()
-                </script>
+        <button class="btn btn-primary btn-user btn-block" style="margin-left: 70px; width: 150px; color: white"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
+
+    <script>
+        var tableToExcel = (function() {
+            var uri = 'data:application/vnd.ms-excel;base64,', 
+            template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>',
+            base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) },
+            format = function(s, c) { 
+                return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) 
+            }
+            return function(table, name) {
+                if (!table.nodeType) table = document.getElementById(table)
+                    var ctx = {worksheet: name || 'Worksheet'}
+                    //window.location.href = uri + base64(format(template, ctx))
+                    document.getElementById("dlink").href = uri + base64(format(template, ctx));
+                    document.getElementById("dlink").download = 'Data Pajak.xls';
+            
+            }
+        })()
+    </script>
                     <a href="infoadmin.php" style="margin-top: 100px;margin-left: 70px; width: 150px" class="btn btn-primary btn-user btn-block">
                     Kembali
                     </a>
