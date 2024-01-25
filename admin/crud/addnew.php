@@ -7,7 +7,7 @@ include ('../koneksi.php')
 <?php
 
 if (isset($_POST['submit'])) {
-    
+
 
 $nama               = $_POST['nama'];
 $jeniskendaraan     = $_POST['jeniskendaraan'];

@@ -57,7 +57,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                    <a class="navbar-brand" href="index.html"> <img src="../img/logo.png" alt="" style="width: 180px"> </a>
+                    <a class="navbar-brand" href="index.html"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -136,13 +136,13 @@
                                             <tbody>
                                             <tr>
                                                 <td><?php echo $no;?></td>
-                                                <td><?php echo $data["nama"];   ?></td>
-                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                                <td><?php echo $data["nopolisi"];   ?></td>
-                                                <td><?php echo $data["pembuatan"];   ?></td>
-                                                <td><?php echo $data["rangka"];   ?></td>
-                                                <td><?php echo $data["masapajak"];   ?></td>
+                                                <td><?php echo $data["nama"];?></td>
+                                                <td><?php echo $data["jeniskendaraan"];?></td>
+                                                <td><?php echo $data["jenismobilmotor"];?></td>
+                                                <td><?php echo $data["nopolisi"];?></td>
+                                                <td><?php echo $data["pembuatan"];?></td>
+                                                <td><?php echo $data["rangka"];?></td>
+                                                <td><?php echo $data["masapajak"];?></td>
                                                 <td class="text-center">
                                                 <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
                                                 <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
