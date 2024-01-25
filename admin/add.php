@@ -101,10 +101,10 @@
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
                                     placeholder="Masa Pajak.">
                             </div>
-                        <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
+                        <button type="submit" name="submit" class="btn btn-primary btn-user"  style="margin-left: 1483px; width: 300px">
                             Tambahkan
                         </button>
-                    <a href="infoadmin.php" class="btn btn-primary btn-user btn-block">
+                    <a href="infoadmin.php" class="btn btn-primary btn-user"  style="margin-left: 1483px; width: 300px; margin-top: 5px">
                     Kembali
                     </a>
                         </form>
