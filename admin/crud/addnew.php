@@ -17,6 +17,7 @@ $pembuatan          = $_POST['pembuatan'];
 $rangka             = $_POST['rangka'];
 $masapajak          = $_POST['masapajak'];
 
+$nopolisi = strtoupper($nopolisi);
 
 $sql = "INSERT INTO kendaraan (nama, jeniskendaraan, jenismobilmotor, nopolisi, pembuatan, rangka, masapajak) VALUES ('$nama', '$jeniskendaraan', '$jenismobilmotor', '$nopolisi', '$pembuatan', '$rangka', '$masapajak')";
 $query = mysqli_query($con, $sql);
