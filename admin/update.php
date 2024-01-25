@@ -70,7 +70,6 @@
             
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <h5>Nama</h5>
                         <form action="crud/updatedata.php" method="POST" name="add" class="user">
                             <div class="form-group">
                             <label for="nama">Nama Pemilik (lengkap) :</label>
