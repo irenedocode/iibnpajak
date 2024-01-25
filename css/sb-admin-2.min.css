@@ -12712,7 +12712,6 @@ form.user .btn-user {
 footer.sticky-footer {
     position: relative;
     background-color: #353e5f;
-    margin-bottom: 20px;
     flex-shrink: 0;
 }
 
