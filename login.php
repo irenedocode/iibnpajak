@@ -39,9 +39,7 @@ require 'koneksi.php';
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                         <div class="card-body p-4 p-lg-5 text-black">
 
-                            <form>
-
-                           
+                            <form action="koneksi.php" method="post">
 
                             <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login</h5>
 
@@ -56,7 +54,7 @@ require 'koneksi.php';
                             </div>
 
                             <div class="pt-1 mb-4">
-                                <button class="btn btn-dark btn-lg btn-block" type="button" name="login">Login</button>
+                                <button class="btn btn-dark btn-lg btn-block" type="Submit" name="Login">Login</button>
                             </div>
 
                             
