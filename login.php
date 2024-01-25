@@ -43,7 +43,7 @@ require 'koneksi.php';
 
                            
 
-                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login</h5>
 
                             <div class="form-outline mb-4">
                                 <input type="email" id="form2Example17" class="form-control form-control-lg" />
@@ -56,7 +56,7 @@ require 'koneksi.php';
                             </div>
 
                             <div class="pt-1 mb-4">
-                                <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                                <button class="btn btn-dark btn-lg btn-block" type="button" name="login">Login</button>
                             </div>
 
                             
