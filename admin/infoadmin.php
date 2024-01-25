@@ -121,6 +121,7 @@
                                         include ('cari.php');
                                         if (isset($_POST['nama'])) {
                                             $nama=trim($_POST['nama']);
+                                            $nopolisi = strtoupper($nopolisi); 
                                             $sql="select * from kendaraan where nama = '$nama' order by nama asc";
 
                                         }else {
@@ -135,6 +136,7 @@
                                             ?>
                                             <tbody>
                                             <tr>
+                                                
                                                 <td><?php echo $no;?></td>
                                                 <td><?php echo $data["nama"];?></td>
                                                 <td><?php echo $data["jeniskendaraan"];?></td>
