@@ -43,7 +43,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #6c8b86;
+    background-color: #9fcd84;
     color: white;
 }
 </style>

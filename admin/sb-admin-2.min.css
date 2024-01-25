@@ -2744,37 +2744,37 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #6c8b86;
-    border-color: #6c8b86;
+    background-color: #eda582;
+    border-color: #e49a75;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #6c8b86;
-    border-color: #6c8b86
+    background-color: #eda582;
+    border-color: #dd9774
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
     color: #fff;
-    background-color: #6c8b86;
-    border-color: #6c8b86;
+    background-color: #9fcd84;
+    border-color: #9fcd84;
     box-shadow: 0 0 0 .2rem rgba(105, 136, 228, .5)
 }
 
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #6c8b86;
-    border-color: #6c8b86
+    background-color: #9fcd84;
+    border-color: #9fcd84
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #6c8b86;
-    border-color: #6c8b86
+    background-color: #9fcd84;
+    border-color: #9fcd84
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -2798,7 +2798,7 @@ fieldset:disabled a.btn {
 .btn-secondary.focus,
 .btn-secondary:focus {
     color: #fff;
-    background-color: ##bd6767;
+    background-color: #bd6767;
     border-color: #bd6767;
     box-shadow: 0 0 0 .2rem rgba(151, 153, 166, .5)
 }
@@ -3360,12 +3360,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #6c8b86;
+    color: #9fcd84;
     text-decoration: none
 }
 
 .btn-link:hover {
-    color: #6c8b86;
+    color: #9fcd84;
     text-decoration: underline
 }
 
@@ -7158,7 +7158,7 @@ button.bg-danger:hover {
 }
 
 .bg-light {
-    background-color: #6c8b86 !important
+    background-color: #9fcd84!important
 }
 
 a.bg-light:focus,
@@ -11170,7 +11170,7 @@ a:focus {
 }
 
 .bg-gradient-primary {
-    background-color: #6c8b86;
+    background-color: #9fcd84;
     background-size: cover
 }
 
@@ -12288,7 +12288,7 @@ form.user .btn-user {
     position: relative;
     top: 300px;
     color: #fff;
-    background-color: #6c8b86;
+    background-color: #9fcd84;
     border-color: #fff
 }
 
