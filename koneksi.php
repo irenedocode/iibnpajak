@@ -19,9 +19,9 @@ if(isset($_POST['Login'])) {
         header('location:login');
     }else{
         if($role == 'user'){
-            header('location:user');
+            header('location:user/cari.php');
         }elseif($role =='admin'){
-            header('location:admin');
+            header('location:admin/infoadmin.php');
         }else{
             echo "role tidak ditemukan";
         }

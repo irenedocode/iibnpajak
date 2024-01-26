@@ -26,7 +26,7 @@ require 'koneksi.php';
 
 
         <!-- Outer Row -->
-        <div class="vh-100" style="background-color: #353e5f; height:">
+        <div class="vh-100" style="background-color: #353e5f;">
             <div class="container py-5 h-100">
                 <div class="row d-flex align-items-center h-100">
                 <div class="col col-xl-10">
@@ -70,7 +70,7 @@ require 'koneksi.php';
         </div>
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="sticky-footer">
                 <div class="container my-auto justify-content-center">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
