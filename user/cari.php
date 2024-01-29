@@ -15,20 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="sb-admin-2.min(1).css" rel="stylesheet">
+    <link href="sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
-    
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-    <!-- Main Content -->
-        <div id="content">
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -90,11 +81,10 @@
             </div>
         </div>
 
-       <!-- Footer -->
-       <?php
+
+        <?php
             require "../footer.php"
         ?>
-        <!-- End of Footer -->
             
         </div>
         <!-- End of Content Wrapper -->

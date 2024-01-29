@@ -56,10 +56,7 @@ require 'koneksi.php';
                             <div class="pt-1 mb-4">
                                 <button class="btn btn-dark btn-lg btn-block" type="Submit" name="Login">Login</button>
                             </div>
-
-                            
                             </form>
-
                         </div>
                         </div>
                     </div>
