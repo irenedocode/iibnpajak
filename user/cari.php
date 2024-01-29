@@ -90,9 +90,11 @@
             </div>
         </div>
 
-        <?php
+       <!-- Footer -->
+       <?php
             require "../footer.php"
         ?>
+        <!-- End of Footer -->
             
         </div>
         <!-- End of Content Wrapper -->

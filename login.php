@@ -70,14 +70,10 @@ require 'koneksi.php';
         </div>
 
         <!-- Footer -->
-        <footer class="sticky-footer">
-                <div class="container my-auto justify-content-center">
-                    <div class="copyright text-center my-auto" style="height: 30px">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+        <?php
+            require "footer.php"
+        ?>
+        <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->

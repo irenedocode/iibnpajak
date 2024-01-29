@@ -123,13 +123,9 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top: 225px; height: 50px">
-                <div class="container my-auto justify-content-center" style="height: 100%">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>
-            </footer>
+            <?php
+            require "../footer.php"
+            ?>
             <!-- End of Footer -->
 
         </div>

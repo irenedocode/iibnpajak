@@ -138,9 +138,11 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             </div>
             <!-- End of Main Content -->
 
+            <!-- Footer -->
             <?php
-            require "../footer.php"
-        ?>
+                require "../footer.php"
+            ?>
+            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->

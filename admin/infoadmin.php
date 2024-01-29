@@ -161,9 +161,11 @@
         </div>
         <!-- End of Main Content -->
 
+            <!-- Footer -->
             <?php
             require "../footer.php"
             ?>
+            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
