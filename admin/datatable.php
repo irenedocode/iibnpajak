@@ -129,6 +129,3 @@ require ('koneksi.php');
             }
         })()
     </script>
-                    <a href="infoadmin.php" style="margin-top: 100px;margin-left: 70px; width: 150px" class="btn btn-primary btn-user btn-block">
-                    Kembali
-                    </a>

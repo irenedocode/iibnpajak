@@ -157,10 +157,6 @@
                                    
                                 </tbody>
                             </table>
-                        </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block" style="margin-left: 120px; margin-right: 75px; margin-top: 50px; width: 100px">
-                    Kembali
-                </a>
             </div>
         </div>
         <!-- End of Main Content -->

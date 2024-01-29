@@ -104,9 +104,6 @@
                         <button type="submit" name="submit" class="btn btn-primary btn-user"  style="margin-left: 1483px; width: 300px">
                             Tambahkan
                         </button>
-                    <a href="infoadmin.php" class="btn btn-primary btn-user"  style="margin-left: 1483px; width: 300px; margin-top: 5px">
-                    Kembali
-                    </a>
                         </form>
                     </div>
                 </div>
