@@ -69,7 +69,7 @@
                             <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="datatable.php">Export</a>
+                            <a class="nav-link" href="export.php">Export</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
