@@ -9,19 +9,37 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Info Admin</title>
 
-    <!-- Custom fonts for this template -->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
-    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <style>
+    #customers {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #7992af;
+    color: white;
+    }
+    </style>
 
 </head>
 
@@ -30,11 +48,13 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
 
+                <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
                 <a class="navbar-brand" href="index.html"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,10 +79,45 @@
                         </ul>
                     </div>
             </nav>
+            <!-- End of Topbar -->
 
-                    <!-- Page Heading -->   
-                            <div class="table-responsive" style="margin-top: 100px; margin-left: 100px;">
-                                <table class="table table-bordered" id="dataTable" style="width: 110%;" cellspacing="0">
+                <!-- Begin Page Content -->
+                <div>
+                    <div class="row">
+                        <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
+                        </a>
+                    <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
+                        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+                            <div class="form-group"style="margin-top: 50px;" >
+                                <label style="margin-left: -880px;" for="sel1">Nama:</label>
+                                    <?php
+                                        $masapaja="";
+                                        if (isset($_POST['cari'])) {
+                                        $cari=$_POST['cari'];
+                                        $query = "SELECT * FROM kendaraan WHERE CONCAT(`nama`, `jeniskendaraan`, `jenismobilmotor`, `nopolisi`, `pembuatan`, `rangka`, `masapajak`) LIKE '%".$cari."%'";
+                                            $search_result = filterTable($query);
+                                            
+                                        }
+                                        else {
+                                            $query = "SELECT * FROM kendaraan";
+                                            $search_result = filterTable($query);
+                                        }
+
+                                        function filterTable($query)
+                                        {
+                                        $connect = mysqli_connect("localhost", "root", "", "data");
+                                        $filter_Result = mysqli_query($connect, $query);
+                                        return $filter_Result;
+                                        }
+                                    ?>
+                                <input style="margin-left: -880px; width: 200px;" type="text" name="cari" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <input style="margin-left: -880px;" type="submit" class="btn btn-primary" value="Pilih">
+                            </div>
+                        </form>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="customers" style="width: 90%; margin-left: 100px; margin-right: 50px;" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -92,7 +147,8 @@
                                         while ($data = mysqli_fetch_array($hasil)) {
                                             $no++;
 
-                                            ?>         
+                                            ?>
+                                            <tbody>
                                             <tr>
                                                 <td><?php echo $no;?></td>
                                                 <td><?php echo $data["nama"];?></td>
@@ -114,19 +170,14 @@
                                    
                                 </tbody>
                             </table>
-
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
-            <!-- End of Main Content -->
+        
+        <!-- End of Main Content -->
 
             <!-- Footer -->
-       <?php
-        require "../footer.php"
-       ?>
+            <?php
+            require "../footer.php"
+            ?>
             <!-- End of Footer -->
 
         </div>
@@ -140,25 +191,27 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     <!-- Logout Modal-->
+     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Logout" untuk keluar dari akun ini.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="../login.php">Logout</a>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -170,18 +223,12 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="../js/demo/datatables-demo.js"></script>
-
+    
     <script>
        function preventBack() {window.history.forward();}
        setTimeout(preventBack(), 0);
        window.onunload = function() {null};
-    </script> 
+    </script>   
 
 </body>
 
