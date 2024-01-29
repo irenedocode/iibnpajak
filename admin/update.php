@@ -42,7 +42,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                    <a class="navbar-brand" href="index.html"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                    <a class="navbar-brand" href="../index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -55,7 +55,7 @@
                             <a class="nav-link" href="add.php">Tambah Data</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="datatable.php">Export</a>
+                            <a class="nav-link" href="export.php">Export</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
@@ -106,10 +106,10 @@
                             name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
                         
-                            <button type="submit" name="submit" class="btn btn-primary btn-user" style="margin-left: 1483px; width: 300px">
+                            <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px">
                                 Update
                             </button>
-                                <a href="infoadmin.php" class="btn btn-primary btn-user" style="margin-left: 1483px; width: 300px; margin-top: 5px">
+                                <a href="infoadmin.php" class="btn btn-primary btn-user" style="width: 300px; margin-top: 5px">
                                 Kembali
                                 </a>
                         </form>

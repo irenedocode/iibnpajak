@@ -4,19 +4,23 @@
  <style>
 .footer {
    position: static;
+   margin-top: 232px;
+   height: 200px;
    left: 0;
    bottom: 0;
    width: 100%;
    font-size: 14px;
-   color: #6b7080d6;
+   background-color: #353e5f;
+   color: #f8f8f8;
    text-align: center;
+   padding: 20px;
 }
 </style>
 
 <!-- Footer -->
 <div class="footer">
-    <div  class="container my-auto justify-content-center">
-        <div class="copyright text-center my-auto">
+    <div  class="container my-auto justify-content-center" style="margin-top: 20px">
+        <div class="copyright text-center my-auto" style="line-height: 120px">
             <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
         </div>
     </div>    

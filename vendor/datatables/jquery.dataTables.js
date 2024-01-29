@@ -1004,7 +1004,7 @@
 				"fnServerData",
 				"fnFormatNumber",
 				"sServerMethod",
-				"aaSorting",
+				"aa",
 				"aaSortingFixed",
 				"aLengthMenu",
 				"sPaginationType",
@@ -1781,11 +1781,6 @@
 	
 			// Backwards compatibility - if there is no sEmptyTable given, then use the same as
 			// sZeroRecords - assuming that is given.
-			if ( ! lang.sEmptyTable && zeroRecords &&
-				defaults.sEmptyTable === "No data available in table" )
-			{
-				_fnMap( lang, lang, 'sZeroRecords', 'sEmptyTable' );
-			}
 	
 			// Likewise with loading records
 			if ( ! lang.sLoadingRecords && zeroRecords &&
@@ -3254,17 +3249,7 @@
 			}
 	
 			// 1.11 move into sorting
-			if ( oSettings.oFeatures.bSort ) {
-				cell.addClass( column.sSortingClass );
-	
-				if ( column.bSortable !== false ) {
-					cell
-						.attr( 'tabindex', oSettings.iTabIndex )
-						.attr( 'aria-controls', oSettings.sTableId );
-	
-					_fnSortAttachListener( oSettings, column.nTh, i );
-				}
-			}
+			
 	
 			if ( column.sTitle != cell[0].innerHTML ) {
 				cell.html( column.sTitle );
@@ -11494,7 +11479,7 @@
 			 * parameter - if it is not given, the value of `zeroRecords` will be used
 			 * instead (either the default or given value).
 			 *  @type string
-			 *  @default No data available in table
+			 *  @default ilable in table
 			 *
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.emptyTable
@@ -11503,12 +11488,12 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "emptyTable": "No data available in table"
+			 *          "emptyTable": "ilable in table"
 			 *        }
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "ilable in table",
 	
 	
 			/**
@@ -14606,89 +14591,7 @@
 						_fnPageChange( settings, e.data.action, true );
 					};
 	
-					for ( i=0, ien=buttons.length ; i<ien ; i++ ) {
-						button = buttons[i];
-	
-						if ( Array.isArray( button ) ) {
-							var inner = $( '<'+(button.DT_el || 'div')+'/>' )
-								.appendTo( container );
-							attach( inner, button );
-						}
-						else {
-							btnDisplay = null;
-							btnClass = button;
-							tabIndex = settings.iTabIndex;
-	
-							switch ( button ) {
-								case 'ellipsis':
-									container.append('<span class="ellipsis">&#x2026;</span>');
-									break;
-	
-								case 'first':
-									btnDisplay = lang.sFirst;
-	
-									if ( page === 0 ) {
-										tabIndex = -1;
-										btnClass += ' ' + disabledClass;
-									}
-									break;
-	
-								case 'previous':
-									btnDisplay = lang.sPrevious;
-	
-									if ( page === 0 ) {
-										tabIndex = -1;
-										btnClass += ' ' + disabledClass;
-									}
-									break;
-	
-								case 'next':
-									btnDisplay = lang.sNext;
-	
-									if ( pages === 0 || page === pages-1 ) {
-										tabIndex = -1;
-										btnClass += ' ' + disabledClass;
-									}
-									break;
-	
-								case 'last':
-									btnDisplay = lang.sLast;
-	
-									if ( pages === 0 || page === pages-1 ) {
-										tabIndex = -1;
-										btnClass += ' ' + disabledClass;
-									}
-									break;
-	
-								default:
-									btnDisplay = settings.fnFormatNumber( button + 1 );
-									btnClass = page === button ?
-										classes.sPageButtonActive : '';
-									break;
-							}
-	
-							if ( btnDisplay !== null ) {
-								node = $('<a>', {
-										'class': classes.sPageButton+' '+btnClass,
-										'aria-controls': settings.sTableId,
-										'aria-label': aria[ button ],
-										'data-dt-idx': counter,
-										'tabindex': tabIndex,
-										'id': idx === 0 && typeof button === 'string' ?
-											settings.sTableId +'_'+ button :
-											null
-									} )
-									.html( btnDisplay )
-									.appendTo( container );
-	
-								_fnBindAction(
-									node, {action: button}, clickHandler
-								);
-	
-								counter++;
-							}
-						}
-					}
+					
 				};
 	
 				// IE9 throws an 'unknown error' if document.activeElement is used

@@ -61,7 +61,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="index.html"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+               <a class="navbar-brand" href="../index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -139,9 +139,31 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php
-                require "../footer.php"
-            ?>
+            <style>
+            .footer {
+            position: static;
+            margin-top: 350px;
+            height: 150px;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            background-color: #353e5f;
+            color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+            }
+            </style>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div  class="container my-auto justify-content-center" style="margin-top: 20px">
+                    <div class="copyright text-center my-auto" style="line-height: 120px">
+                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
+                    </div>
+                </div>    
+            </footer>
+<!-- End of Footer -->
             <!-- End of Footer -->
 
         </div>

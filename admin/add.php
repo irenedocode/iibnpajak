@@ -21,18 +21,12 @@
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
 
             <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                <a class="navbar-brand" href="index.html"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                <a class="navbar-brand" href="../index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -45,7 +39,7 @@
                             <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="datatable.php">Export</a>
+                            <a class="nav-link" href="export.php">Export</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -101,7 +95,7 @@
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
                                     placeholder="Masa Pajak.">
                             </div>
-                        <button type="submit" name="submit" class="btn btn-primary btn-user"  style="margin-left: 1483px; width: 300px">
+                        <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
                             Tambahkan
                         </button>
                         </form>
@@ -116,12 +110,6 @@
                 require "../footer.php"
             ?>
             <!-- End of Footer -->
-
-        
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
