@@ -5091,20 +5091,10 @@ input[type=submit].btn-block {
 .card-body {
     position: relative;
     top: 90px;
-    height: 800px;
+    height: 600px;
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem
-}
-
-.card-bodya {
-    height: 700px;
-    position: relative;
-    top: 200px;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem
-    
 }
 
 

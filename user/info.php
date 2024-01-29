@@ -25,7 +25,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
 
 <style>
     #customers {
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -139,15 +138,9 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top: 225px; height: 50px">
-                <div class="container my-auto justify-content-center" style="height: 100%">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+            <?php
+            require "../footer.php"
+        ?>
 
         </div>
         <!-- End of Content Wrapper -->

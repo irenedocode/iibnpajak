@@ -46,47 +46,53 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <div class="col-xl-10 col-lg-12 col-md-9">
-                    
-<div class="card o-hidden border-0 shadow-lg my-5">
-    <div>
-        <div class="kotak">
-            <div class="container">
-                <div class="card-body p-0">        
-                    <div class="col-lg-6">
-                        <div class="p-5" style="margin-top: 10%;">
+               <!-- Outer Row -->
+        <div class="vh-100" style="margin-top: 20px; sbackground-color: #353e5f;">
+            <div class="container py-5">
+                <div class="row d-flex align-items-center">
+                <div class="col">
+                    <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-5 d-none d-md-block">
+                        <img src="../img/logovertical.png"
+                            alt="login form" class="img-fluid" style="border-radius: 1rem 1rem;" />
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                        <div class="card-body text-black">
+
                             <form action="info.php" method="post">
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                        id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
-                                        placeholder="Nomor Polisi. Cth: BP XXXX XX">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" style="border-radius: 30px; height: 60px; width: 70%; margin-left: 15%;"
-                                        id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                        placeholder="Nomor Rangka 17 Digit">
-                                </div>
+
+                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Cari</h5>
+
+                            <div class="form-outline mb-4">
+                                <input type="text" name="nopolisi" id="form2Example17" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="form2Example17" placeholder="BP XXXX XX">No Polisi</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="text" name="rangka" id="form2Example27" class="form-control form-control-lg" required/>
+                                <label class="form-label" for="form2Example27" placeholder="17 Huruf">No Rangka</label>
+                            </div>
+
+                            <div class="pt-1 mb-4">
+                                <button class="btn btn-dark btn-lg btn-block" type="Submit" name="cari" value="cari">Cari</button>
+                            </div>
+
                             
-                                <button name="cari" value="cari" class="btn btn-primary btn-user btn-block" style="border-radius: 30px; height: 60px; width: 50%; margin-left: 24%;">
-                                    Cari
-                                </button>
                             </form>
+
+                        </div>
                         </div>
                     </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
-        <!-- End of Main Content -->
 
-           <!-- Footer -->
-           <footer class="sticky-footer bg-white" style="margin-top: 9px">
-                <div class="container my-auto justify-content-center">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+        <?php
+            require "../footer.php"
+        ?>
             
         </div>
         <!-- End of Content Wrapper -->

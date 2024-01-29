@@ -19,7 +19,6 @@
 
     <style>
     #customers {
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     }
@@ -56,12 +55,31 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                    <?php 
-                    require "navbar.php";
-                    ?>
-                </nav>
-                <!-- End of Topbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                <a class="navbar-brand" href="index.html"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"  id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                            <a class="nav-link" href="infoadmin.php">Info</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="datatable.php">Export</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                                Logout
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+            <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div>
@@ -147,15 +165,9 @@
         </div>
         <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top: 360px;">
-                <div  class="container my-auto justify-content-center">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+            <?php
+            require "../footer.php"
+            ?>
 
         </div>
         <!-- End of Content Wrapper -->

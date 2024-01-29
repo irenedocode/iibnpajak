@@ -20,7 +20,6 @@ require ('koneksi.php');
 
     <style>
     #customers {
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     }
