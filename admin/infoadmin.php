@@ -146,8 +146,7 @@
                                                 <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?></td>
                                                 <td class="text-center">
                                                 <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                                </a>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif" data-toggle="modal" data-target="#hapusmodal">Hapus</a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -199,6 +198,25 @@
             </div>
         </div>
     </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="hapusmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Yakin ingin Hapus?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+        <a class="btn btn-primary" href="crud/hapusdata.php">Hapus</a>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
