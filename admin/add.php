@@ -50,9 +50,18 @@
                     </div>
             </nav>
             <!-- End of Topbar -->
+            <div class="backgroundtambahdata">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
 
             <!-- /.container-fluid -->
-            <div class="col-lg-6 d-none d-lg-block"></div>
+           
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
+                            </div>
                 
                     <div class="p-5">
                         <form action="crud/addnew.php" method="POST" name="add" class="user">
