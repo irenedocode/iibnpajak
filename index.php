@@ -35,7 +35,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="container">
-                        <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card o-hidden border-0 shadow-lg my-5" style="height: 800px">
                             <div class="card-body p-0">
                                 <!-- Nested Row within Card Body -->
                                 <div class="row">
@@ -59,13 +59,9 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer">
-                <div class="container my-auto justify-content-center">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>
-            </footer>
+             <?php
+             include 'footer.php'
+             ?>
             <!-- End of Footer -->
 
         </div>

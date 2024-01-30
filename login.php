@@ -26,11 +26,11 @@ require 'koneksi.php';
 
 
         <!-- Outer Row -->
-        <div class="vh-100" style="background-color: #353e5f;">
+        <div class="" style="background-color: #353e5f; display: background;">
             <div class="container py-5 h-100">
                 <div class="row d-flex align-items-center h-100">
                 <div class="col col-xl-10">
-                    <div class="card" style="border-radius: 1rem;">
+                    <div class="card" style="border-radius: 1rem; margin-top: 100px">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
                         <img src="img/logovertical.png"
@@ -64,13 +64,14 @@ require 'koneksi.php';
                 </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Footer -->
+            <!-- Footer -->
         <?php
             require "footer.php"
         ?>
         <!-- End of Footer -->
+        </div>
+
+        
 
     </div>
     <!-- End of Content Wrapper -->
