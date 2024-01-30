@@ -79,7 +79,7 @@ require ('koneksi.php');
                 </thead>
             <tbody>
             <?php
-                include ('index.php');
+                include ('koneksi.php');
                 if (isset($_POST['nama'])) {
                     $nama=trim($_POST['nama']);
                     $sql="select * from kendaraan where nama = '$nama' order by nama asc";

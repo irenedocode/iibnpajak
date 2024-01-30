@@ -87,37 +87,8 @@
                         <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
                         </a>
                     <img style="display: flex; position :relative; width: 500px; margin-left: 500px; " src="img/mobil.png" alt="">
-                        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-                            <div class="form-group"style="margin-top: 50px;" >
-                                <label style="margin-left: -880px;" for="sel1">Nama:</label>
-                                    <?php
-                                        $masapaja="";
-                                        if (isset($_POST['cari'])) {
-                                        $cari=$_POST['cari'];
-                                        $query = "SELECT * FROM kendaraan WHERE CONCAT(`nama`, `jeniskendaraan`, `jenismobilmotor`, `nopolisi`, `pembuatan`, `rangka`, `masapajak`) LIKE '%".$cari."%'";
-                                            $search_result = filterTable($query);
-                                            
-                                        }
-                                        else {
-                                            $query = "SELECT * FROM kendaraan";
-                                            $search_result = filterTable($query);
-                                        }
-
-                                        function filterTable($query)
-                                        {
-                                        $connect = mysqli_connect("localhost", "root", "", "data");
-                                        $filter_Result = mysqli_query($connect, $query);
-                                        return $filter_Result;
-                                        }
-                                    ?>
-                                <input style="margin-left: -880px; width: 200px;" type="text" name="cari" class="form-control" required/>
-                            </div>
-                            <div class="form-group">
-                                <input style="margin-left: -880px;" type="submit" class="btn btn-primary" value="Pilih">
-                            </div>
-                        </form>
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="customers" style="width: 90%; margin-left: 100px; margin-right: 50px;" cellspacing="0">
+                                <table class="table table-bordered" id="customers" style="width: 90%; margin-left: 100px; margin-right: 50px; margin-top: 100px;" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -133,7 +104,7 @@
                                     </thead>
                                 <tbody>
                                     <?php
-                                        include ('index.php');
+                                        include ('koneksi.php');
                                         if (isset($_POST['nama'])) {
                                             $nama=trim($_POST['nama']);
                                             $sql="select * from kendaraan where nama = '$nama' order by nama asc";
