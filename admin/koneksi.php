@@ -1,3 +1,3 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","data");
+$con = mysqli_connect("localhost","root","","data");
 ?>
