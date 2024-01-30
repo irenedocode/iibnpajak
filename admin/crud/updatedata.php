@@ -26,7 +26,7 @@ pembuatan = '$pembuatan', rangka = '$rangka' ,masapajak = '$masapajak' WHERE nop
 
 if($con->query($query)) {
   
-    header("location: ../infoadmin.php");
+    header("location: ../index.php");
 } else {
    
     echo "Data Gagal Di Update!";

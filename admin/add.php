@@ -26,14 +26,14 @@
 
             <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                <a class="navbar-brand" href="../index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                <a class="navbar-brand" href="index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse"  id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="infoadmin.php">Info</a>
+                            <a class="nav-link" href="index.php">Info</a>
                             </li>
                             <li class="nav-item active">
                             <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
@@ -119,11 +119,6 @@
                 require "../footer.php"
             ?>
             <!-- End of Footer -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
