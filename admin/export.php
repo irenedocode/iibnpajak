@@ -58,7 +58,7 @@ require ('koneksi.php');
                         <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="datatable.php">Export</a>
+                        <a class="nav-link" href="export.php">Export</a>
                     </li>
                 </ul>
             </div>

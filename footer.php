@@ -19,7 +19,7 @@
 
 <!-- Footer -->
 <div class="footer">
-    <div  class="container my-auto justify-content-center" style="margin-top: 20px">
+    <div  class="container my-auto justify-content-center shadow" style="margin-top: 20px">
         <div class="copyright text-center my-auto" style="line-height: 120px">
             <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
         </div>
