@@ -64,10 +64,11 @@
                         </a>
                     <form action="" class="form" style="margin-left: 70px; margin-top: 50px;">
                     <input type="text" id="1" class="cari" onkeyup="searchTable(1)" size="10" placeholder="Cari Nama">
-                    </form>                                                 
+                    </form>           
+                    <a href="export.php" class="btn btn-primary" style="height: 40px; margin-top: 50px; margin-left: 900px; display: flex">Export All</a>                                      
     
                     <div class="table-responsive">
-                        <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
+                        <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 50px;" cellspacing="0">
                             <thead>
                             <tr>
                                 <th onclick="sortTable('num',0)">No</th>
@@ -252,6 +253,23 @@
         if (dir == "asc") {col_header.textContent =  headerCol[n] + " \u2191";}
         if (dir == "desc") {col_header.textContent = headerCol[n] + " \u2193";}
         }
+
+        var tableToExcel = (function() {
+            var uri = 'data:application/vnd.ms-excel;base64,', 
+            template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>',
+            base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) },
+            format = function(s, c) { 
+                return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) 
+            }
+            return function(table, name) {
+                if (!table.nodeType) table = document.getElementById(table)
+                    var ctx = {worksheet: name || 'Worksheet'}
+                    //window.location.href = uri + base64(format(template, ctx))
+                    document.getElementById("dlink").href = uri + base64(format(template, ctx));
+                    document.getElementById("dlink").download = 'Data Pajak.xls';
+            
+            }
+        })()
 
     </script>   
 
