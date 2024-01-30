@@ -19,27 +19,7 @@ require ('koneksi.php');
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-    #customers {
-    border-collapse: collapse;
-    width: 100%;
-    }
-
-    #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    }
-
-    #customers tr:nth-child(even){background-color: #f2f2f2;}
-
-    #customers tr:hover {background-color: #ddd;}
-
-    #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #7992af;
-    color: white;
-    }
+    
     </style>
 </head>
 
@@ -64,7 +44,7 @@ require ('koneksi.php');
             </div>
     </nav>
         <div class="table-responsive">
-            <table class="table table-bordered" id="customers" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
+            <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 70px;" cellspacing="0">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -109,7 +89,7 @@ require ('koneksi.php');
             </tbody>
             </table>
         </div>
-        <button class="btn btn-primary btn-user btn-block" style="margin-left: 70px; width: 150px; color: white"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
+        <button class="btn btn-primary btn-user btn-block" style="margin-left: 70px; margin-top:50px; width: 150px; color: white"> <a onclick="tableToExcel('htmltable', 'W3C Example Table')" id="dlink">Export</button>
 
     <script>
         var tableToExcel = (function() {
