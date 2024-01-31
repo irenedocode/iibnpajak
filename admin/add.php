@@ -35,12 +35,6 @@
                             <li class="nav-item">
                             <a class="nav-link" href="index.php">Info</a>
                             </li>
-                            <li class="nav-item active">
-                            <a class="nav-link" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="export.php">Export</a>
-                            </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                                 Logout
@@ -107,6 +101,8 @@
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
                             Tambahkan
                         </button>
+                        <a href="index.php" class="btn btn-primary btn-user" style="width: 300px; margin-top: 5px">
+                                Kembali</a>
                         </form>
                     </div>
                 </div>

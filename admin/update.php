@@ -52,70 +52,68 @@
                             <a class="nav-link" href="index.php">Info <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="add.php">Tambah Data</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="export.php">Export</a>
-                            </li>
-                            <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
                 <!-- End of Topbar -->
+                <div class="backgroundtambahdata">
+                    <div class="container">
+                        <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0" style="height: 1025px";>
 
                 <!-- /.container-fluid -->      
-                <div class="col-lg-6 d-none d-lg-block"></div>
-            
-                <div class="col-lg-6">
+                <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
+                </div>
                     <div class="p-5">
                         <form action="crud/updatedata.php" method="POST" name="add" class="user">
                             <div class="form-group">
-                            <label for="nama">Nama Pemilik (lengkap) :</label>
-                            <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
+                                <label for="nama">Nama Pemilik (lengkap) :</label>
+                                    <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <label for="jeniskendaraan">Jenis Kendaraan :</label>
-                            <input type="text" name="jeniskendaraan" value="<?php echo $row['jeniskendaraan'] ?>" placeholder="Masukkan Jenis Kendaraan" class="form-control form-control-user" >
+                                <label for="jeniskendaraan">Jenis Kendaraan :</label>
+                                    <input type="text" name="jeniskendaraan" value="<?php echo $row['jeniskendaraan'] ?>" placeholder="Masukkan Jenis Kendaraan" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <label for="jenismobil/motor">Jenis Mobil/Motor :</label>
-                            <input type="text" name="jenismobilmotor" value="<?php echo $row['jenismobilmotor'] ?>" placeholder="Masukkan Mobil Motor" class="form-control form-control-user" >
+                                <label for="jenismobil/motor">Jenis Mobil/Motor :</label>
+                                    <input type="text" name="jenismobilmotor" value="<?php echo $row['jenismobilmotor'] ?>" placeholder="Masukkan Mobil Motor" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <label for="nopolisi">Nopolisi :</label>
-                            <input type="text" name="nopolisi" value="<?php echo $row['nopolisi'] ?>" placeholder="Masukkan No Polisi" class="form-control form-control-user" >
+                                <label for="nopolisi">Nopolisi :</label>
+                                    <input type="text" name="nopolisi" value="<?php echo $row['nopolisi'] ?>" placeholder="Masukkan No Polisi" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <label for="pembuatan">Tahun Pembuatan :</label>
-                            <input type="text"
-                            onfocus="(this.type='date')"
-                            onblur="(this.type='text')" name="pembuatan" value="<?php echo $row['pembuatan'] ?>" placeholder="Masukkan Tanggal Pembuatan" class="form-control form-control-user" >
+                                <label for="pembuatan">Tahun Pembuatan :</label>
+                                    <input type="text"
+                                    onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" name="pembuatan" value="<?php echo $row['pembuatan'] ?>" placeholder="Masukkan Tanggal Pembuatan" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <label for="rangka">Nomor Rangka :</label>
-                            <input type="text" name="rangka" value="<?php echo $row['rangka'] ?>" placeholder="Masukkan No Rangka" class="form-control form-control-user" >
+                                <label for="rangka">Nomor Rangka :</label>
+                                    <input type="text" name="rangka" value="<?php echo $row['rangka'] ?>" placeholder="Masukkan No Rangka" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <label for="masapajak">Masa Pajak :</label>
-                            <input
-                            type="text"
-                            onfocus="(this.type='date')"
-                            onblur="(this.type='text')"
-                            name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
+                                <label for="masapajak">Masa Pajak :</label>
+                                <input type="text"
+                                onfocus="(this.type='date')"
+                                onblur="(this.type='text')"
+                                name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
                         
                             <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px">
                                 Update
                             </button>
                                 <a href="index.php" class="btn btn-primary btn-user" style="width: 300px; margin-top: 5px">
-                                Kembali
-                                </a>
+                                Kembali</a>
                         </form>
                     </div>
                 </div>
             </div>
+</div>
+</div>
             <!-- End of Main Content -->
             
             <!-- Footer -->
@@ -123,14 +121,6 @@
                 require "../footer.php"
             ?>
             <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

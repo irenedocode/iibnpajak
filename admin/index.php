@@ -42,9 +42,6 @@
                             <a class="nav-link" href="index.php">Info</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="export.php">Export</a>
-                            </li>
-                            <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                                 Logout
                             </a>
@@ -59,14 +56,13 @@
                     <div class="row">
                         <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
                         </a>
-                        <form action="" class="form" style="margin-left: 80px; margin-top: 80px;">
-                    <input type="text" id="1" class="cari" onkeyup="searchTable(1)" size="10" placeholder="Cari Nama">
+                        <form action="" class="form" style="margin-left: 80px; margin-top: 50px; color:">
+                    <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" class="form-control form-control-user">
                     </form>  
                     <li class="nav-item">
-                            <a style="height: 40px; margin-top: 50px; margin-left: 900px; display: flex"class="btn btn-primary" href="add.php">Tambah Data <span class="sr-only">(current)</span></a>
-                            </li>   
-                    <a href="export.php" class="btn btn-primary" style="height: 40px; margin-top: 50px; margin-left: 1000px; display: flex">Export All</a>                                            
-    
+                    <a href="add.php" class="btn btn-primary" style="height: 40px; right: 0px; margin-left: 1590px;">Tambah Data</a>
+                    <a href="export.php" class="btn btn-primary" style="height: 40px; right: 0px;">Export All</a>                                            
+                    </li>   
                     <div class="table-responsive">
                         <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 50px;" cellspacing="0">
                             <thead>
