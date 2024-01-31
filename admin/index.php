@@ -56,13 +56,17 @@
                     <div class="row">
                         <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
                         </a>
-                        <form action="" class="form" style="margin-left: 80px; margin-top: 50px; color:">
-                    <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" class="form-control form-control-user">
+                    <form action="" class="form" style="margin-left: 80px; margin-top: 50px;">
+                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" class="form-control">
                     </form>  
-                    <li class="nav-item">
-                    <a href="add.php" class="btn btn-primary" style="height: 40px; right: 0px; margin-left: 1590px;">Tambah Data</a>
-                    <a href="export.php" class="btn btn-primary" style="height: 40px; right: 0px;">Export All</a>                                            
-                    </li>   
+                    <div class="container">
+                    <table style="position: sticky;left: 100%">
+                        <th>
+                    <a href="add.php" class="btn btn-primary" style="height: 40px;">Tambah Data</a>
+                    <a href="export.php" class="btn btn-primary" style="height: 40px;">Export All</a>                                            
+                        </th>
+                    </table>
+                    </div>
                     <div class="table-responsive">
                         <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 50px;" cellspacing="0">
                             <thead>
