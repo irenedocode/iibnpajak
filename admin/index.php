@@ -78,7 +78,7 @@
                                 <th onclick="sortTable('alfa',4)">No Plat</th>
                                 <th onclick="sortTable('date',5)">Tahun Pembuatan</th>
                                 <th onclick="sortTable('alfa',6)">Nomor Rangka</th>
-                                <th onclick="sortTable('date',7)">Rilis</th>
+                                <th onclick="sortTable('date',7)">Masa Pajak</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
@@ -103,9 +103,9 @@
                                 <td><?php echo $data["jeniskendaraan"];   ?></td>
                                 <td><?php echo $data["jenismobilmotor"];   ?></td>
                                 <td><?php echo $data["nopolisi"];   ?></td>
-                                <td><?php echo $data["pembuatan"];   ?></td>
+                                <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
                                 <td><?php echo $data["rangka"];   ?></td>
-                                <td><?php echo $data["masapajak"];   ?></td>
+                                <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                 <td class="text-center">
                                     <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
                                     <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
