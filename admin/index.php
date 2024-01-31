@@ -60,7 +60,7 @@
                         <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" class="form-control">
                     </form>  
                     <div class="container">
-                    <table style="position: sticky;left: 100%">
+                    <table style="position: sticky; left: 100%">
                         <th>
                     <a href="add.php" class="btn btn-primary" style="height: 40px;">Tambah Data</a>
                     <a href="export.php" class="btn btn-primary" style="height: 40px;">Export All</a>                                            
@@ -68,7 +68,7 @@
                     </table>
                     </div>
                     <div class="table-responsive">
-                        <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 50px;" cellspacing="0">
+                        <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 5%;" cellspacing="0">
                             <thead>
                             <tr>
                                 <th onclick="sortTable('num',0)">No</th>
