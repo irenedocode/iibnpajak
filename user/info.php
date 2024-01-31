@@ -109,13 +109,13 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                             ?>
                                             <tbody>
                                             <tr>
-                                                <td><?php echo $data["nama"];   ?></td>
-                                                <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                                <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                                <td><?php echo $data["nopolisi"];   ?></td>
-                                                <td><?php echo $data["pembuatan"];   ?></td>
-                                                <td><?php echo $data["rangka"];   ?></td>
-                                                <td><?php echo $data["masapajak"];   ?></td>
+                                            <td><?php echo $data["nama"];   ?></td>
+                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                            <td><?php echo $data["nopolisi"];   ?></td>
+                                            <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
+                                            <td><?php echo $data["rangka"];   ?></td>
+                                            <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                                 <td class="text-center">
                                                 <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block" style="">Riwayat</a>
                                                 </tr>
