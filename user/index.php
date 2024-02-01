@@ -41,7 +41,7 @@
 
 
                <!-- Outer Row -->
-               <div class="vh-100" style="background-color: #353e5f; height: 100%">
+        <div class="" style="background-color: #353e5f;">
             <div class="container py-5" style="width: 100%">
                 <div class="row d-flex align-items-center">
                     <div class="col col-xl-10">
@@ -81,14 +81,11 @@
                     </div>
                 </div>
             </div>
-        
-
-
-
-        <?php
+            <?php
             require "../footer.php"
-        ?>
-        
+            ?>
+        </div>    
+    </body>
     <!-- End of Page Wrapper -->
 
     <!-- Logout Modal-->

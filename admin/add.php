@@ -101,8 +101,8 @@
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
                             Tambahkan
                         </button>
-                        <a href="index.php" class="btn btn-primary btn-user" style="width: 300px; margin-top: 5px">
-                                Kembali</a>
+                        <a href="index.php" class="btn btn-primary btn-user" style="width: 300px;">
+                            Kembali</a>
                         </form>
                     </div>
                 </div>

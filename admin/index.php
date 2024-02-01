@@ -60,7 +60,8 @@
                                         style="
                                         width: 20%; 
                                         margin-left: 5%; 
-                                        border-radius: 30px; 
+                                        border-radius: 10px; 
+                                        border-color: aliceblue;
                                         margin-right: 57%; 
                                         margin-top:2%
                                         ">
