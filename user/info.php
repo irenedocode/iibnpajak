@@ -23,29 +23,6 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
-<style>
-    #customers {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #7992af;
-    color: white;
-}
-</style>
 
 </head>
 
@@ -77,9 +54,13 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
 
                 <!-- Begin Page Content -->
         
-                <div class="row">     
-                        <div class="table-responsive" style="margin-top: 100px; margin-left: 50px; margin-right: 50px">
-                        <table id="customers" width="100%" cellspacing="0">                                
+
+                        <div class="table-responsive-lg" 
+                        style="
+                        margin-top: 100px; 
+                        margin-left: 50px; 
+                        margin-right: 70px">
+                        <table width="100%" cellspacing="0" class="table table-bordered">                                
                             <thead>
                                 <tr>
                                     <th>Nama Pemilik</th>
@@ -117,7 +98,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                             <td><?php echo $data["rangka"];   ?></td>
                                             <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                                 <td class="text-center">
-                                                <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block" style="">Riwayat</a>
+                                                <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block">Riwayat</a>
                                                 </tr>
                                                 </button>
                                                 </td>
@@ -131,38 +112,23 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     
                         </div>
                     
-                    <a href="index.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-top: 100px; width: 20%">
-                        Kembali
+                        <a href="index.php" class="btn btn-primary btn-user btn-block" 
+                            style="
+                            margin-left: 50px; 
+                            margin-top: 100px; 
+                            width: 20%">
+                            Kembali
                         </a>
-                </div>
+                
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <style>
-            .footer {
-            position: static;
-            margin-top: 350px;
-            height: 150px;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-            background-color: #353e5f;
-            color: #f8f8f8;
-            text-align: center;
-            padding: 20px;
-            }
-            </style>
+            
 
             <!-- Footer -->
-            <div class="footer">
-                <div  class="container my-auto justify-content-center" style="margin-top: 20px">
-                    <div class="copyright text-center my-auto" style="line-height: 120px">
-                        <span>Copyright &copy; 2024 Institut Indobaru Nasional. All Rights Reserved</span>
-                    </div>
-                </div>    
-            </footer>
+            <?php
+                include "../footer.php"
+            ?>
 <!-- End of Footer -->
             <!-- End of Footer -->
 

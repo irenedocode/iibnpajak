@@ -21,6 +21,8 @@
 
 <body id="page-top">
 
+
+
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
                     <a class="navbar-brand" href="index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
@@ -37,60 +39,56 @@
                 </nav>
                 <!-- End of Topbar -->
 
+
                <!-- Outer Row -->
-               <div class="vh-100" style="background-color: #353e5f;">
-            <div class="container py-5">
+               <div class="vh-100" style="background-color: #353e5f; height: 100%">
+            <div class="container py-5" style="width: 100%">
                 <div class="row d-flex align-items-center">
-                <div class="col col-xl-10">
-                    <div class="card" style="border-radius: 1rem; margin-top: 19px">
-                    <div class="row g-0">
-                        <div class="col-md-6 col-lg-5 d-none d-md-block">
-                        <img src="../img/logovertical.png"
-                            alt="login form" class="img-fluid" style="border-radius: 1rem 1rem;" />
-                        </div>
-                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                        <div class="card-body p-4 p-lg-5 text-black">
+                    <div class="col col-xl-10">
+                        <div class="card" style="border-radius: 1rem; margin-top: 19px">
+                            <div class="row g-0">
+                                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                    <img src="../img/logovertical.png" alt="login form" class="img-fluid" style="border-radius: 1rem 1rem;" />
+                                 </div>
+                                    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                        <div class="card-body p-4 p-lg-5 text-black">
 
-                            <form action="info.php" method="post">
+                                            <form action="info.php" method="post">
 
-                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Cari</h5>
+                                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Cari</h5>
 
-                            <div class="form-outline mb-4">
-                                <input type="text" name="nopolisi" id="form2Example17" class="form-control form-control-lg" placeholder="BP XXXX XX" required/>
-                                <label class="form-label">No Polisi</label>
+                                            <div class="form-outline mb-4">
+                                                <input type="text" name="nopolisi" id="form2Example17" class="form-control form-control-lg" placeholder="BP XXXX XX" required/>
+                                                <label class="form-label">No Polisi</label>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" name="rangka" id="form2Example27" class="form-control form-control-lg" placeholder="17 Campuran Huruf dan Angka" required/>
+                                                <label class="form-label">No Rangka</label>
+                                            </div>
+
+                                            <div class="pt-1 mb-4">
+                                                <button class="btn btn-dark btn-lg btn-block" type="Submit" name="cari" value="cari">Cari</button>
+                                            </div>
+
+                                            
+                                            </form>
+
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="text" name="rangka" id="form2Example27" class="form-control form-control-lg" placeholder="17 Campuran Huruf dan Angka" required/>
-                                <label class="form-label">No Rangka</label>
-                            </div>
-
-                            <div class="pt-1 mb-4">
-                                <button class="btn btn-dark btn-lg btn-block" type="Submit" name="cari" value="cari">Cari</button>
-                            </div>
-
-                            
-                            </form>
-
-                        </div>
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
+        
 
 
 
         <?php
             require "../footer.php"
         ?>
-            
-        </div>
-</div>
-        <!-- End of Content Wrapper -->
-
-    </div>
+        
     <!-- End of Page Wrapper -->
 
     <!-- Logout Modal-->

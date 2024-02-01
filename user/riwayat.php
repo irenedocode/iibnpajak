@@ -23,30 +23,6 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
-    <style>
-    #customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #7992af;
-    color: white;
-}
-</style>
 
 </head>
 
@@ -82,8 +58,12 @@
                 
 
                 <div class="row">
-                        <div class="table-responsive" style="margin-top: 100px; margin-left: 50px; margin-right: 50px">
-                            <table id="customers" width="100%" cellspacing="0">
+                <div class="table-responsive"  
+                style="
+                margin-top: 100px; 
+                margin-left: 50px; 
+                margin-right: 50px">
+                <table width="100%" cellspacing="0" class="table table-bordered">      
                                     <tr>
                                         <th>No Plat</th>
                                         <th>Tahun/Masa Pajak</th>
@@ -116,7 +96,11 @@
                                     ?> 
                             </table>
                         </div>
-                        <a href="index.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-top: 100px; width: 20%">
+                        <a href="index.php" class="btn btn-primary btn-user btn-block" 
+                        style="
+                        margin-left: 50px; 
+                        margin-top: 100px; 
+                        width: 20%">
                         Kembali
                         </a>
                 </div>
