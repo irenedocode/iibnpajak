@@ -2168,6 +2168,14 @@ pre code {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
+.form-cariadmin {
+    width: 20%; 
+    margin-left: 5%; 
+    border-radius: 30px; 
+    margin-right: 58%; 
+    margin-top:2%
+}
+
 @media (prefers-reduced-motion:reduce) {
     .form-control {
         transition: none

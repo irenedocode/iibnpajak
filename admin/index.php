@@ -54,64 +54,81 @@
                 <!-- Begin Page Content -->
                 <div>
                     <div class="row">
-                        <a class="sidebar-brand d-flex align-items-center justify-content-left" href="keterangan.html">
-                        </a>
-                    <form action="" class="form" style="margin-left: 80px; margin-top: 50px;">
-                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" class="form-control">
-                    </form>  
-                    <div class="container">
-                    <table style="position: sticky; left: 100%">
-                        <th>
-                    <a href="add.php" class="btn btn-primary" style="height: 40px;">Tambah Data</a>
-                    <a href="export.php" class="btn btn-primary" style="height: 40px;">Export All</a>                                            
-                        </th>
-                    </table>
+                        <table style="position: sticky; width: 30%;left: ">
+                                <form class="form">
+                                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" 
+                                        style="
+                                        width: 20%; 
+                                        margin-left: 5%; 
+                                        border-radius: 30px; 
+                                        margin-right: 57%; 
+                                        margin-top:2%
+                                        ">
+                                </form>                                                                                                                       
+                                    <a href="add.php" class="btn btn-primary" 
+                                    style="
+                                    height: 40px; 
+                                    margin-top: 2%
+                                    ">Tambah Data</a>
+                                    
+                                    <a href="export.php" class="btn btn-primary" 
+                                    style="
+                                    height: 40px; 
+                                    margin-top: 2%;
+                                    margin-left: 10px
+                                    ">Export All</a>                                            
+                        </table>
                     </div>
                     <div class="table-responsive">
-                        <table class="table1 table-bordered" id="table1" name="#htmltable" style="width: 100%; margin-left: 50px; margin-right: 50px; margin-top: 5%;" cellspacing="0">
-                            <thead>
-                            <tr>
-                                <th onclick="sortTable('num',0)">No</th>
-                                <th onclick="sortTable('alfa',1)">Nama Pemilik</th>
-                                <th onclick="sortTable('alfa',2)">Jenis Kendaraan</th>
-                                <th onclick="sortTable('alfa',3)">Jenis Mobil/Motor</th>
-                                <th onclick="sortTable('alfa',4)">No Plat</th>
-                                <th onclick="sortTable('date',5)">Tahun Pembuatan</th>
-                                <th onclick="sortTable('alfa',6)">Nomor Rangka</th>
-                                <th onclick="sortTable('date',7)">Masa Pajak</th>
-                                <th>Aksi</th>
-                            </tr>
-                            </thead>
-                        <tbody>
-                        <?php
-                            include ('koneksi.php');
-                            if (isset($_POST['nama'])) {
-                                $nama=trim($_POST['nama']);
-                                $sql="select * from kendaraan where nama = '$nama' order by nama asc";
-                                }else {
-                                $sql="select * from kendaraan order by nama asc";
-                                }
-                            $hasil=mysqli_query($con,$sql);
-                            $no=0;
-                            while ($data = mysqli_fetch_array($hasil)) {
-                            $no++;
-                        ?>
-                        <tbody>
-                            <tr>
-                                <td><?php echo $no;?></td>
-                                <td><?php echo $data["nama"];   ?></td>
-                                <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                <td><?php echo $data["nopolisi"];   ?></td>
-                                <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
-                                <td><?php echo $data["rangka"];   ?></td>
-                                <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
-                                <td class="text-center">
-                                    <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                    <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <table class="table1 table-bordered" id="table1" name="#htmltable" 
+                            style="
+                            width: 100%; 
+                            margin-left: 50px; 
+                            margin-right: 50px; 
+                            margin-top: 2%;" 
+                            cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th onclick="sortTable('num',0)">No</th>
+                                        <th onclick="sortTable('alfa',1)">Nama Pemilik</th>
+                                        <th onclick="sortTable('alfa',2)">Jenis Kendaraan</th>
+                                        <th onclick="sortTable('alfa',3)">Jenis Mobil/Motor</th>
+                                        <th onclick="sortTable('alfa',4)">No Plat</th>
+                                        <th onclick="sortTable('date',5)">Tahun Pembuatan</th>
+                                        <th onclick="sortTable('alfa',6)">Nomor Rangka</th>
+                                        <th onclick="sortTable('date',7)">Masa Pajak</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                        <?php
+                                            include ('koneksi.php');
+                                            if (isset($_POST['nama'])) {
+                                                $nama=trim($_POST['nama']);
+                                                $sql="select * from kendaraan where nama = '$nama' order by nama asc";
+                                                }else {
+                                                $sql="select * from kendaraan order by nama asc";
+                                                }
+                                            $hasil=mysqli_query($con,$sql);
+                                            $no=0;
+                                            while ($data = mysqli_fetch_array($hasil)) {
+                                            $no++;
+                                        ?>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $no;?></td>
+                                            <td><?php echo $data["nama"];   ?></td>
+                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                            <td><?php echo $data["nopolisi"];   ?></td>
+                                            <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
+                                            <td><?php echo $data["rangka"];   ?></td>
+                                            <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
+                                            <td class="text-center">
+                                                <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                         <?php
                         }
                         ?>          
