@@ -99,7 +99,7 @@
                         <tbody>
                             <tr>
                                 <td><?php echo $no;?></td>
-                                <td><?php echo $data["nama"];   ?></td>
+                                <td><?php echo ucwords( $data["nama"]);   ?></td>
                                 <td><?php echo $data["jeniskendaraan"];   ?></td>
                                 <td><?php echo $data["jenismobilmotor"];   ?></td>
                                 <td><?php echo $data["nopolisi"];   ?></td>
