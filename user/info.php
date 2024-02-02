@@ -78,11 +78,11 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                         if (isset($_POST['cari'])) {
                                             $nopolisi=trim($_POST['nopolisi']);
                                             $rangka=trim($_POST['rangka']);
-                                            $sql= "select * from kendaraan where rangka = '$rangka' and nopolisi = '$nopolisi'"; }
-                                            if ($rangka && $nopolisi == ['rangka'] && ['nopolisi']) {
-                                                
-                                            
-                    
+                                            $sql= "select * from kendaraan where rangka = '$rangka' and nopolisi = '$nopolisi'";
+
+                                        }else {
+                                            echo "data tidak ditemukan";
+                                        }
                                     
                                         $hasil=mysqli_query($con, $sql);
                                         $no=0;
@@ -105,12 +105,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                             </tr>
                                             </tbody>
                                         <?php     
-                                        
                                         }
-                                    } else {
-                                        echo "data tidak ditemukan";
-                                    }
-                
                                         ?>
                                 </tbody>
                             </table>

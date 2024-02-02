@@ -80,7 +80,7 @@
                                     height: 40px; 
                                     margin-top: 2%;
                                     margin-left: 10px
-                                    ">Export All</a>                                            
+                                    ">Export Tabel</a>                                            
                         </table>
                     </div>
                     <div class="table-responsive">
