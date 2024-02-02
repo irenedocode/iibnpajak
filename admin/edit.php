@@ -65,7 +65,7 @@
 
                 <!-- /.container-fluid -->      
                 <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Edit Data</h1>
                 </div>
                     <div class="p-5">
                         <form action="crud/updatedata.php" method="POST" name="add" class="user">
@@ -104,7 +104,7 @@
                             </div>
                         
                             <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px">
-                                Update
+                                Edit
                             </button>
                                 <a href="index.php" class="btn btn-primary btn-user" style="width: 300px; margin-top: 5px">
                                 Kembali</a>

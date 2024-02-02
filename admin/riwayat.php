@@ -1,3 +1,9 @@
+<?php 
+  
+  include('koneksi.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +15,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Info Admin</title>
+    <title>Riwayat Pembayaran</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -24,6 +31,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -31,17 +39,17 @@
             <div id="content">
 
                 <!-- Topbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                <a class="navbar-brand" href="index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse"  id="navbarNav">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+               <a class="navbar-brand" href="index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"  id="navbarNav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                             <a class="nav-link" href="index.php">Info</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                             <a class="nav-link" href="riwayat.php">Riwayat</a>
                             </li>
                             <li class="nav-item">
@@ -51,97 +59,81 @@
                             </li>
                         </ul>
                     </div>
-            </nav>
-            <!-- End of Topbar -->
+                </nav>
+                <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div>
-                    <div class="row">
-                        <table style="position: sticky; width: 30%;left: ">
+                            <table style="position: sticky; width: 30%; ">
                                 <form class="form">
                                         <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" 
                                         style="
-                                        width: 20%; 
-                                        margin-left: 5%; 
+                                        margin-left: 3%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-right: 57%; 
-                                        margin-top:2%
+                                        right: 57%;
+                                        margin-top: 2%;
                                         ">
-                                </form>                                                                                                                       
-                                    <a href="add.php" class="btn btn-primary" 
-                                    style="
-                                    height: 40px; 
-                                    margin-top: 2%
-                                    ">Tambah Data</a>
-                                    
-                                    <a href="export.php" class="btn btn-primary" 
-                                    style="
-                                    height: 40px; 
-                                    margin-top: 2%;
-                                    margin-left: 10px
-                                    ">Export All</a>                                            
-                        </table>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table1 table-bordered" id="table1" name="#htmltable" 
+                                </form>                                                                           
+                                        <a href="tambahriwayat.php" class="btn btn-primary" 
+                                        style="
+                                        position:relative;
+                                        margin-left: 74%
+                                        ">Tambah Data</a>
+                
+                            </table>
+                        <div class="row">
+                            <div class="table-responsive"  
                             style="
-                            width: 100%; 
+                            margin-top: 100px; 
                             margin-left: 50px; 
-                            margin-right: 50px; 
-                            margin-top: 2%;" 
-                            cellspacing="0">
-                                <thead>
+                            margin-right: 50px">
+                        <table width="100%" id="table1" cellspacing="0" class="table1 table-bordered">      
                                     <tr>
-                                        <th class="text-center" onclick="sortTable('num',0)">No</th>
-                                        <th class="text-center" onclick="sortTable('alfa',1)">Nama Pemilik</th>
-                                        <th class="text-center" onclick="sortTable('alfa',2)">Jenis Kendaraan</th>
-                                        <th class="text-center" onclick="sortTable('alfa',3)">Jenis Mobil/Motor</th>
-                                        <th class="text-center" onclick="sortTable('alfa',4)">No Plat</th>
-                                        <th class="text-center" onclick="sortTable('date',5)">Tahun Pembuatan</th>
-                                        <th class="text-center" onclick="sortTable('alfa',6)">Nomor Rangka</th>
-                                        <th class="text-center" onclick="sortTable('date',7)">Masa Pajak</th>
+                                        <th>ID</th>
+                                        <th class="text-center" onclick="sortTable('alfa',1)">No Plat</th>
+                                        <th class="text-center" onclick="sortTable('date',2)">Masa Pajak</th>
+                                        <th class="text-center" onclick="sortTable('date',3)">Tanggal Bayar</th>
+                                        <th class="text-center" onclick="sortTable('num',4)">NTPN</th>
+                                        <th class="text-center" onclick="sortTable('alfa',5)">Status</th>
                                         <th class="text-center">Aksi</th>
                                     </tr>
-                                </thead>
-                                        <?php
-                                            include ('koneksi.php');
-                                            if (isset($_POST['nama'])) {
-                                                $nama=trim($_POST['nama']);
-                                                $sql="select * from kendaraan where nama = '$nama' order by nama asc";
-                                                }else {
-                                                $sql="select * from kendaraan order by nama asc";
-                                                }
-                                            $hasil=mysqli_query($con,$sql);
-                                            $no=0;
-                                            while ($data = mysqli_fetch_array($hasil)) {
-                                            $no++;
-                                        ?>
-                                    <tbody>
-                                        <tr>
-                                            <td><?php echo $no;?></td>
-                                            <td><?php echo $data["nama"];   ?></td>
-                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                            <td><?php echo $data["nopolisi"];   ?></td>
-                                            <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
-                                            <td><?php echo $data["rangka"];   ?></td>
-                                            <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
-                                            <td class="text-center">
-                                                <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                        <?php
-                        }
-                        ?>          
-                        </tbody>
-                        </table>
-                    </div>
-            </div>
-        
-        <!-- End of Main Content -->
+                                <tbody>
+                                <?php
+                   
+                                    $query = ("SELECT * FROM history");
+
+
+                                    $hasil=mysqli_query($con, $query);
+                                        $no=1;
+                                        while ($data = mysqli_fetch_array($hasil)) {
+                                    ?>
+                                    <tr>        
+                                        <td><?php echo $no++;   ?></td>
+                                        <td><?php echo $data["nopolisi"];   ?></td>
+                                        <td><?php echo date("d-M-y", strtotime($data["masapajak"]));   ?></td>
+                                        <td><?php echo date("d-M-y", strtotime($data["bayar"]));   ?></td>
+                                        <td><?php echo $data["ntpn"];   ?></td>
+                                        <td><?php echo $data["status"];   ?></td>
+                                        <td class="text-center">
+                                        <a href="crud/hapusdatariwayat.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                                    <?php 
+                                        } 
+                                    ?> 
+                            </table>
+                        </div>
+                        <a href="index.php" class="btn btn-primary btn-user btn-block" 
+                        style="
+                        margin-left: 50px; 
+                        margin-top: 100px; 
+                        width: 20%">
+                        Kembali
+                        </a>
+                </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <?php
@@ -157,8 +149,8 @@
 
     
 
-     <!-- Logout Modal-->
-     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -177,8 +169,6 @@
         </div>
     </div>
 
-
-
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -189,7 +179,6 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
-    
     <script>
        function preventBack() {window.history.forward();}
        setTimeout(preventBack(), 0);
@@ -290,10 +279,10 @@
                     document.getElementById("dlink").download = 'Data Pajak.xls';
             
             }
-        })()
+        })() 
 
     </script>   
 
 </body>
 
-</html>
+</html
