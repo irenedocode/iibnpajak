@@ -77,12 +77,12 @@
                                 onfocus="(this.type='date')"
                                 onblur="(this.type='text')" 
                                 class="form-control form-control-user"
-                                id="exampleInputEmail" name="bayar" aria-describedby="emailHelp" required
+                                id="exampleInputEmail" name="bayar" aria-describedby="emailHelp"
                                 placeholder="Tanggal Bayar">
                             </div>
                             <div class="form-group">
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="ntpn" aria-describedby="emailHelp" required
+                                    id="exampleInputEmail" name="ntpn" aria-describedby="emailHelp"
                                     placeholder="NTPN">
                             </div>
                             <div class="form-group">

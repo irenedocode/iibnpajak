@@ -82,7 +82,7 @@
                             <div class="form-group">
                                 <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
                                     id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan.">
+                                    placeholder="Tahun Pembuatan">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
@@ -96,7 +96,7 @@
                             onblur="(this.type='text')"
                             id="date"  class="form-control form-control-user"
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
-                                    placeholder="Masa Pajak.">
+                                    placeholder="Masa Pajak">
                             </div>
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
                             Tambahkan

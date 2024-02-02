@@ -1,6 +1,6 @@
 <?php
 
-include ('../koneksi.php')
+include ('../koneksi.php');
 
 ?>
 
@@ -21,9 +21,9 @@ $query = mysqli_query($con, $sql);
 
     if( $query ) {
     
-    header('Location: ../index.php?status=sukses');
+    header('Location: ../tambahriwayat.php?status=sukses');
     } else {
-    header('Location: ../index.php?status=gagal');
+    header('Location: ../tambahriwayat.php?status=gagal');
     }
 
 

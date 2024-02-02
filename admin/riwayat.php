@@ -65,7 +65,7 @@
                 <!-- Begin Page Content -->
                             <table style="position: sticky; width: 30%; ">
                                 <form class="form">
-                                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" 
+                                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari No Plat" 
                                         style="
                                         margin-left: 3%; 
                                         border-radius: 10px; 
@@ -106,12 +106,13 @@
                                     $hasil=mysqli_query($con, $query);
                                         $no=1;
                                         while ($data = mysqli_fetch_array($hasil)) {
+                                            $bayar = "bayar";
                                     ?>
                                     <tr>        
                                         <td><?php echo $no++;   ?></td>
                                         <td><?php echo $data["nopolisi"];   ?></td>
                                         <td><?php echo date("d-M-y", strtotime($data["masapajak"]));   ?></td>
-                                        <td><?php echo date("d-M-y", strtotime($data["bayar"]));   ?></td>
+                                        <td><?php echo $data["bayar"];   ?></td>
                                         <td><?php echo $data["ntpn"];   ?></td>
                                         <td><?php echo $data["status"];   ?></td>
                                         <td class="text-center">
