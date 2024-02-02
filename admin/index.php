@@ -69,7 +69,7 @@
                                         margin-top:2%
                                         ">
                                 </form>                                                                                                                       
-                                    <a href="add.php" class="btn btn-primary" 
+                                    <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
                                     margin-top: 2%
