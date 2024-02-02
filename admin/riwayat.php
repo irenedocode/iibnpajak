@@ -74,17 +74,12 @@
                                         margin-top: 2%;
                                         ">
                                 </form>                                                                           
-                                        <a href="tambahriwayat.php" class="btn btn-primary" 
-                                        style="
-                                        position:relative;
-                                        margin-left: 74%
-                                        ">Tambah Data</a>
                 
                             </table>
                         <div class="row">
                             <div class="table-responsive"  
                             style="
-                            margin-top: 100px; 
+                            margin-top: 50px; 
                             margin-left: 50px; 
                             margin-right: 50px">
                         <table width="100%" id="table1" cellspacing="0" class="table1 table-bordered">      
@@ -100,13 +95,12 @@
                                 <tbody>
                                 <?php
                    
-                                    $query = ("SELECT * FROM history");
-
+                                    $query = ("SELECT * FROM history WHERE status = 'lunas'");
 
                                     $hasil=mysqli_query($con, $query);
                                         $no=1;
                                         while ($data = mysqli_fetch_array($hasil)) {
-                                            $bayar = "bayar";
+                    
                                     ?>
                                     <tr>        
                                         <td><?php echo $no++;   ?></td>
