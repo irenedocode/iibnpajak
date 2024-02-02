@@ -128,7 +128,7 @@
                                             <td><?php echo $data["rangka"];   ?></td>
                                             <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                             <td class="text-center">
-                                                <a href="update.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+                                                <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
                                                 <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
                                             </td>
                                         </tr>
