@@ -65,7 +65,7 @@
                 <!-- Begin Page Content -->
                             <table style="position: sticky; width: 30%; ">
                                 <form class="form">
-                                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari No Plat" 
+                                        <input type="text" id="1" onkeyup="searchTable(4)" size="20" placeholder="Cari NTPN" 
                                         style="
                                         margin-left: 3%; 
                                         border-radius: 10px; 

@@ -1,0 +1,17 @@
+fitur admin :
+
+search plat (bp, b, kb, dst...) (radio)
+fitur wilayah 
+search wilayah
+jenis kendaraan (radio) (done)
+tambah fitur pencarian 
+foto stnk
+perpanjang masa pajak
+pembayaran ke riwayat
+save / submit
+pop up modal
+pop up kode info untuk pajak yang mau habis reminder
+
+fitur user :
+
+nama pemilik dan no plat / no rangka 5 digit belakang

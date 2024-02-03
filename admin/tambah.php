@@ -64,10 +64,17 @@
                                     id="nama" name="nama" aria-describedby="emailHelp" required
                                     placeholder="Nama Pemilik (Lengkap)">
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="jeniskendaraan" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Kendaraan. Cth: Mobil">
+                            <div class="form-check-inline">
+                                <label for="jeniskendaraan" style="margin-left: 10px; margin-bottom: 10px; font-size: 20px">Jenis Kendaraan : <br>
+                                    <label class="form-check-label" style="font-size: 20px">
+                                        <input type="radio" class="form-check-input" name="jeniskendaraan" value="mobil" required>Mobil
+                                    </label>
+                                </div>
+                                    <div class="form-check-inline">
+                                    <label class="form-check-label" style="font-size: 20px"> <br>
+                                        <input type="radio" class="form-check-input" name="jeniskendaraan" value="motor" required>Motor
+                                    </label>
+                                </label>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
