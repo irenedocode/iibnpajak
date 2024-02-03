@@ -68,7 +68,7 @@
                                         margin-right: 57%; 
                                         margin-top:2%
                                         ">
-                                </form>                                                                                                                       
+                                </form>                                                                                                                   
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
@@ -129,10 +129,28 @@
                                             <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                             <td class="text-center">
                                                 <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
+                                                <a href="#" class="btn btn-sm btn-secondary alert_notif" data-toggle="modal" data-target="#hapusModal">Hapus</a>
                                             </td>
                                         </tr>
                                     </tbody>
+                                    <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body"><?php echo $data['nopolisi'] ?> ?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="../login.php">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
                         <?php
                         }
                         ?>          
@@ -169,6 +187,25 @@
                     </button>
                 </div>
                 <div class="modal-body">Pilih "Logout" untuk keluar dari akun ini.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="../login.php">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body"><?php echo $nopolisi ?> ?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="../login.php">Logout</a>

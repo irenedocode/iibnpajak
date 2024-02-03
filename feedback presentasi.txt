@@ -4,12 +4,12 @@ search plat (bp, b, kb, dst...) (radio)
 fitur wilayah 
 search wilayah
 jenis kendaraan (radio) (done)
-tambah fitur pencarian 
-foto stnk
+tambah fitur pencarian noplat
+foto stnk 
 perpanjang masa pajak
 pembayaran ke riwayat
 save / submit
-pop up modal
+pop up modal hapus
 pop up kode info untuk pajak yang mau habis reminder
 
 fitur user :

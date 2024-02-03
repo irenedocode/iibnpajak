@@ -103,10 +103,10 @@
                                 name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
                         
-                            <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px">
-                                Edit
+                            <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px; margin-right: 10px">
+                                Simpan
                             </button>
-                                <a href="index.php" class="btn btn-primary btn-user" style="width: 300px; margin-top: 5px">
+                                <a href="index.php" class="btn btn-primary btn-user" style="width: 300px">
                                 Kembali</a>
                         </form>
                     </div>
