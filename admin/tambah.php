@@ -105,6 +105,10 @@
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
                                     placeholder="Masa Pajak">
                             </div>
+                            <div class="form-group">
+                                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+                            </div>
+
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
                             Submit
                         </button>
