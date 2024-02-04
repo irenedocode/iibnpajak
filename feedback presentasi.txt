@@ -10,7 +10,7 @@ perpanjang masa pajak (ren kali ya, gatau le) (almost done udah ada kodenya)
 pembayaran ke riwayat (irene) (almost done udah ada kodenya)
 save / submit (laura)
 pop up modal hapus (ren)
-pop up kode info untuk pajak yang mau habis reminder (ren)
+pop up kode info untuk pajak yang mau habis reminder (ren) (almost done udah ada kodenya)
 
 fitur user :
 
