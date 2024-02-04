@@ -79,7 +79,7 @@
                                     style="
                                     height: 40px; 
                                     margin-top: 2%;
-                                    margin-left: 10px
+                                    margin-left: 80px
                                     ">Export Tabel</a>                                            
                         </table>
                     </div>
