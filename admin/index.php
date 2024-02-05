@@ -145,33 +145,9 @@
 
                                                 <!-- Button to trigger delete confirmation modal -->
                                                 <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" nopolisi=<?php echo $data['nopolisi'] ?> class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                                    Lihat Info
-                                                    </button>
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                                                    <div class="modal-dialog" role="document">
-                                                        <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLongTitle">Keterangan Tambahan</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                        <?php echo $data["nama"];   ?> <br>
-                                                        <?php echo $data["jeniskendaraan"];   ?> <br>
-                                                        <?php echo $data["jenismobilmotor"];   ?> <br>
-                                                        <?php echo $data["nopolisi"];   ?> <br>
-                                                        <?php echo date("Y", strtotime($data["pembuatan"]));?> <br>
-                                                        <?php echo $data["rangka"];   ?> <br>
-                                                        <?php echo date("d-M-y", strtotime($data["masapajak"]));?> <br>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>    
-                                            </td>
+                                                    
+                                                <!-- Trigger button to open the popup -->
+                                                <button class="btn btn-sm btn-primary" onclick="openPopup('image1.jpg')">Foto STNK</button>
                                 </tr>
                             </tbody>
                             <!-- Modal for delete confirmation -->
@@ -192,6 +168,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                                         
                                         </tr>
                                     </tbody>
@@ -240,8 +217,13 @@
     </div>
     <!-- Delete Confirmation Modal -->
 
-
-
+        <!-- The overlay and popup container -->
+        <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <img src="" alt="Popup Image" id="popupImage">
+                </div>
+        </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -380,6 +362,27 @@
     selectedCategoryElement.innerText = 'Selected category: ' + category;
   }
 
+  function openPopup(imageSrc) {
+    var overlay = document.getElementById('overlay');
+    var popup = document.getElementById('popup');
+    var popupImage = document.getElementById('popupImage');
+
+    // Set the image source
+    popupImage.src = imageSrc;
+
+    // Display the overlay and popup
+    overlay.style.display = 'flex';
+    popup.style.display = 'block';
+  }
+
+  function closePopup() {
+    var overlay = document.getElementById('overlay');
+    var popup = document.getElementById('popup');
+
+    // Hide the overlay and popup
+    overlay.style.display = 'none';
+    popup.style.display = 'none';
+  }
 
     </script>   
 
