@@ -65,10 +65,25 @@
                                         margin-left: 5%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-right: 57%; 
+                                        margin-right: 2%; 
                                         margin-top:2%
                                         ">
-                                </form>                                                                                                                   
+                                </form>              
+                                
+                                <div class="dropdown">
+                                <button class="btn btn-primary" style="
+                                    margin-right: 900px; 
+                                    margin-top:4%;
+                                    height: 40px; 
+                                    ">Pilih Daerah</button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <a href="#" onclick="selectOption('Option 1')">BP</a>
+                                    <a href="#" onclick="selectOption('Option 2')">B</a>
+                                    <a href="#" onclick="selectOption('Option 3')">KB</a>
+                                    <a href="#" onclick="selectOption('Option 4')">P</a>
+                                    <a href="#" onclick="selectOption('Option 5')">S</a>
+                                </div>
+                                </div>
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
