@@ -57,48 +57,18 @@
             <!-- /.container-fluid -->
            
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Tambah Data Kendaraan</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Tambah Data Riwayat</h1>
                             </div>
                 
                     <div class="p-5">
-                        <form action="crud/addnew.php" method="POST" name="add" class="user">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="nama" name="nama" aria-describedby="emailHelp" required
-                                    placeholder="Nama Pemilik (Lengkap)">
-                            </div>
-                            <div class="form-check-inline">
-                                <label for="jeniskendaraan" style="margin-left: 10px; margin-bottom: 10px; font-size: 20px">Jenis Kendaraan : <br>
-                                    <label class="form-check-label" style="font-size: 20px">
-                                        <input type="radio" class="form-check-input" name="jeniskendaraan" value="mobil" required>Mobil
-                                    </label>
-                                </div>
-                                    <div class="form-check-inline">
-                                    <label class="form-check-label" style="font-size: 20px"> <br>
-                                        <input type="radio" class="form-check-input" name="jeniskendaraan" value="motor" required>Motor
-                                    </label>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="jenismobilmotor" aria-describedby="emailHelp" required
-                                    placeholder="Jenis Mobil/Motor. Cth: SUV, Sport, ATV">
-                            </div>
+                        <form action="crud/addriwayat.php" method="POST" name="add" class="user">
+                        
                             <div class="form-group">
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
                                     placeholder="Nomor Polisi. Cth: BP XXX XX">
                             </div>
-                            <div class="form-group">
-                                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required
-                                    placeholder="Tahun Pembuatan">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
-                                    id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
-                            </div>
+                            
                             <div class="form-group">
                             <input
                             type="text"
@@ -108,14 +78,27 @@
                                     id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
                                     placeholder="Masa Pajak">
                             </div>
+
                             <div class="form-group">
-                                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+                            <input
+                            type="text"
+                            onfocus="(this.type='date')"
+                            onblur="(this.type='text')"
+                            id="date"  class="form-control form-control-user"
+                                    id="exampleInputEmail" name="bayar" aria-describedby="emailHelp" required
+                                    placeholder="Tanggal Bayar">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user"
+                                    id="exampleInputEmail" name="ntpn" aria-describedby="emailHelp" required
+                                    placeholder="NTPN">
                             </div>
 
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
                             Submit
                         </button>
-                        <a href="index.php" class="btn btn-primary btn-user" style="width: 300px;">
+                        <a href="riwayat.php" class="btn btn-primary btn-user" style="width: 300px;">
                             Kembali</a>
                         </form>
                     </div>
