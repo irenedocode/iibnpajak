@@ -145,7 +145,7 @@
                                             <td class="text-center">
                                                 <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
                                                 <!-- Button to trigger delete confirmation modal -->
-                                                <button type="button" class="btn btn-sm btn-secondary alert_notif" data-toggle="modal" data-target="#hapusModal <?php echo $data['nopolisi'] ?>">Hapus</button>
+                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
                                     </td>
                                 </tr>
                             </tbody>
