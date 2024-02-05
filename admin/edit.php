@@ -83,7 +83,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="nopolisi">Nopolisi :</label>
-                                    <input type="text" name="nopolisi" value="<?php echo $row['nopolisi'] ?>" placeholder="Masukkan No Polisi" class="form-control form-control-user" >
+                                    <input type="text" style="text-transform: uppercase"  name="nopolisi" value="<?php echo $row['nopolisi'] ?>" placeholder="Masukkan No Polisi" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
                                 <label for="pembuatan">Tahun Pembuatan :</label>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="rangka">Nomor Rangka :</label>
-                                    <input type="text" name="rangka" value="<?php echo $row['rangka'] ?>" placeholder="Masukkan No Rangka" class="form-control form-control-user" >
+                                    <input type="text" style="text-transform: uppercase"  name="rangka" value="<?php echo $row['rangka'] ?>" placeholder="Masukkan No Rangka" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
                                 <label for="masapajak">Masa Pajak :</label>
