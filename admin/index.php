@@ -75,9 +75,12 @@
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('BP')">BP</a>
-                                    <a href="#" onclick="filterData('B')">B</a>
+                                    <a href="#" onclick="filterData('B 8945 KK')">B</a>
                                     <a href="#" onclick="filterData('KB')">KB</a>
                                 </div>
+                                <p id="selectedCategory">Selected category: All</p>
+
+
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
@@ -329,22 +332,29 @@
         })()
 
         function filterData(category) {
-    var rows = document.querySelectorAll('table tr');
+  var rows = document.querySelectorAll('table tr');
+  var selectedCategoryElement = document.getElementById('selectedCategory');
 
-    for (var i = 1; i < rows.length; i++) {
-      var row = rows[i];
-      var cells = row.getElementsByTagName('td');
-      var cellCategory = cells[1].innerText;
-
-      if (category === 'All' || cellCategory === category) {
-        row.style.display = '';
-      } else {
-        row.style.display = 'none';
-      }
-    }
-
-    document.getElementById('selectedCategory').innerText = 'Selected category: ' + category;
+  if (!selectedCategoryElement) {
+    console.error('Element with ID "selectedCategory" not found.');
+    return;
   }
+
+  for (var i = 1; i < rows.length; i++) {
+    var row = rows[i];
+    var cells = row.getElementsByTagName('td');
+    var cellCategory = cells[4].innerText;
+
+    if (category === 'All' || cellCategory.includes(category) ){
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  }
+
+  selectedCategoryElement.innerText = 'Selected category: ' + category;
+}
+
 
     </script>   
 
