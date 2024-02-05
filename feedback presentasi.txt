@@ -1,15 +1,15 @@
 fitur admin :
 
 search plat (bp, b, kb, dst...) (radio) (vivin)
-fitur wilayah (ren)
-search wilayah (ren)
+fitur wilayah (ren) 
+search wilayah (ren) 
 jenis kendaraan (radio) (ren) (done)
-tambah fitur pencarian noplat (ren)
+tambah fitur pencarian noplat (ren) 
 foto stnk (vivin)
 perpanjang masa pajak (ren kali ya, gatau le) (almost done udah ada kodenya)
 pembayaran ke riwayat (irene) (almost done udah ada kodenya)
 save / submit (laura)
-pop up modal hapus (ren)
+pop up modal hapus (ren) 
 pop up kode info untuk pajak yang mau habis reminder (ren) (almost done udah ada kodenya)
 
 fitur user :

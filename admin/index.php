@@ -105,7 +105,7 @@
                                     </tr>
                                 </thead>
                                         <?php
-                                            include ('koneksi.php');
+                                            $con = mysqli_connect("localhost", "root", "", "data");
                                             if (isset($_POST['nama'])) {
                                                 $nama=trim($_POST['nama']);
                                                 $sql="select * from kendaraan where nama = '$nama' order by nama asc";
@@ -129,28 +129,32 @@
                                             <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                             <td class="text-center">
                                                 <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-                                                <a href="#" class="btn btn-sm btn-secondary alert_notif" data-toggle="modal" data-target="#hapusModal">Hapus</a>
-                                            </td>
+                                                <!-- Button to trigger delete confirmation modal -->
+                                                <button type="button" class="btn btn-sm btn-secondary alert_notif" data-toggle="modal" data-target="#hapusModal <?php echo $data['nopolisi'] ?>">Hapus</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!-- Modal for delete confirmation -->
+                            <div class="modal fade" id="hapusModal <?php echo $data['nopolisi']?> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Yakin Hapus Data?</h5>
+                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
+                                            <!-- Direct user to hapusdata.php with nopolisi parameter -->
+                                            <a class="btn btn-primary" href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi']?>">Hapus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                        
                                         </tr>
                                     </tbody>
-                                    <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body"><?php echo $data['nopolisi'] ?> ?</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../login.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
                         <?php
                         }
                         ?>          
@@ -194,25 +198,9 @@
             </div>
         </div>
     </div>
+    <!-- Delete Confirmation Modal -->
+    
 
-    <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body"><?php echo $nopolisi ?> ?</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../login.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
