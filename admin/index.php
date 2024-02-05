@@ -142,9 +142,36 @@
                                             <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
                                             <td class="text-center">
                                                 <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+
                                                 <!-- Button to trigger delete confirmation modal -->
                                                 <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                    </td>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" nopolisi=<?php echo $data['nopolisi'] ?> class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                                    Lihat Info
+                                                    </button>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Keterangan Tambahan</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <?php echo $data["nama"];   ?> <br>
+                                                        <?php echo $data["jeniskendaraan"];   ?> <br>
+                                                        <?php echo $data["jenismobilmotor"];   ?> <br>
+                                                        <?php echo $data["nopolisi"];   ?> <br>
+                                                        <?php echo date("Y", strtotime($data["pembuatan"]));?> <br>
+                                                        <?php echo $data["rangka"];   ?> <br>
+                                                        <?php echo date("d-M-y", strtotime($data["masapajak"]));?> <br>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>    
+                                            </td>
                                 </tr>
                             </tbody>
                             <!-- Modal for delete confirmation -->
@@ -212,7 +239,6 @@
         </div>
     </div>
     <!-- Delete Confirmation Modal -->
-    
 
 
 
@@ -331,28 +357,28 @@
         })()
 
         function filterData(category) {
-  var rows = document.querySelectorAll('table tr');
-  var selectedCategoryElement = document.getElementById('selectedCategory');
+    var rows = document.querySelectorAll('table tr');
+    var selectedCategoryElement = document.getElementById('selectedCategory');
 
-  if (!selectedCategoryElement) {
-    console.error('Element with ID "selectedCategory" not found.');
-    return;
-  }
-
-  for (var i = 1; i < rows.length; i++) {
-    var row = rows[i];
-    var cells = row.getElementsByTagName('td');
-    var cellCategory = cells[4].innerText;
-
-    if (category === 'All' || cellCategory.includes(category) ){
-      row.style.display = '';
-    } else {
-      row.style.display = 'none';
+    if (!selectedCategoryElement) {
+      console.error('Element with ID "selectedCategory" not found.');
+      return;
     }
-  }
 
-  selectedCategoryElement.innerText = 'Daerah yang Dipilih: ' + category;
-}
+    for (var i = 1; i < rows.length; i++) {
+      var row = rows[i];
+      var cells = row.getElementsByTagName('td');
+      var cellCategory = cells[4];
+
+      if (category === 'All' || cellCategory.innerText.slice(0, 2).toUpperCase() === category.toUpperCase()) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    }
+
+    selectedCategoryElement.innerText = 'Selected category: ' + category;
+  }
 
 
     </script>   
