@@ -36,7 +36,7 @@
                             <a class="nav-link" href="index.php">Info</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="riwayat.php">Riwayat</a>
+                            <a class="nav-link" href="riwayat/riwayat.php">Riwayat</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -61,7 +61,7 @@
                             </div>
                 
                     <div class="p-5">
-                        <form action="crud/addnew.php" method="POST" name="add" class="user">
+                    <form action="crud/tambah.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
                                     id="nama" name="nama" aria-describedby="emailHelp" required
@@ -109,7 +109,7 @@
                                     placeholder="Masa Pajak">
                             </div>
                             <div class="form-group">
-                                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+                            <input type="file" name="my_image">
                             </div>
 
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">

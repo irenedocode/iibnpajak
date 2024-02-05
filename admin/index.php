@@ -42,7 +42,7 @@
                             <a class="nav-link" href="index.php">Info</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="riwayat.php">Riwayat</a>
+                            <a class="nav-link" href="riwayat/riwayat.php">Riwayat</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -57,34 +57,42 @@
                 <!-- Begin Page Content -->
                 <div>
                     <div class="row">
-                        <table style="position: sticky; width: 30%;left: ">
+                        <table style="position: sticky; width: 30%;">
                                 <form class="form">
-                                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari Nama" 
+                                        <input type="text" id="1" onkeyup="searchNama(1)" size="20" placeholder="Cari Nama" 
                                         style="
-                                        width: 20%; 
+                                        width: 13%; 
                                         margin-left: 5%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
                                         margin-right: 2%; 
                                         margin-top:2%
                                         ">
-                                </form>              
+                                </form>    
+                                <form class="form">
+                                    <input type="text" id="4" onkeyup="searchNoplat(4)" size="20" placeholder="Cari No Plat Cth: XX XXXX" 
+                                        style="
+                                        width: 13%; 
+                                        border-radius: 10px; 
+                                        border-color: aliceblue;
+                                        margin-right: 2%; 
+                                        margin-top:2%
+                                        ">
+                                </form>         
                                 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="margin-top: 38px" id="selectedCategory">Daerah yang Dipilih</button>
+                                <button class="btn btn-primary" style="margin-top: 18%" id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('BP')">BP</a>
                                     <a href="#" onclick="filterData('BK')">BK</a>
                                     <a href="#" onclick="filterData('KB')">KB</a>
                                 </div>
-
-
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
-                                    margin-left: 45%;
+                                    margin-left: 36%;
                                     margin-top: 2%;
                                     ">Tambah Data</a>
                                     
@@ -93,7 +101,8 @@
                                     height: 40px; 
                                     margin-top: 2%;
                                     margin-left: 10px;  
-                                    ">Export Tabel</a>                                            
+                                    ">Export Tabel</a>   
+                                    
                         </table>
                     </div>
                     <div class="table-responsive">
@@ -117,68 +126,90 @@
                                         <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
-                                        <?php
-                                            $con = mysqli_connect("localhost", "root", "", "data");
-                                            if (isset($_POST['nama'])) {
-                                                $nama=trim($_POST['nama']);
-                                                $sql="select * from kendaraan where nama = '$nama' order by nama asc";
-                                                }else {
-                                                $sql="select * from kendaraan order by nama asc";
-                                                }
-                                            $hasil=mysqli_query($con,$sql);
-                                            $no=0;
-                                            while ($data = mysqli_fetch_array($hasil)) {
-                                            $no++;
-                                        ?>
-                                    <tbody>
-                                        <tr>
-                                            <td><?php echo $no;?></td>
-                                            <td><?php echo $data["nama"];   ?></td>
-                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                            <td><?php echo $data["nopolisi"];   ?></td>
-                                            <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
-                                            <td><?php echo $data["rangka"];   ?></td>
-                                            <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
-                                            <td class="text-center">
-                                                <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+                                <?php
+$con = mysqli_connect("localhost", "root", "", "data");
+if (isset($_POST['nama'])) {
+    $nama = trim($_POST['nama']);
+    $sql = "select * from kendaraan where nama = '$nama' order by nama asc";
+} else {
+    $sql = "select * from kendaraan order by nama asc";
+}
+$hasil = mysqli_query($con, $sql);
+$no = 0;
+while ($data = mysqli_fetch_array($hasil)) {
+    $no++;
+?>
+<tr>
+    <td><?php echo $no; ?></td>
+    <td><?php echo $data["nama"]; ?></td>
+    <td><?php echo $data["jeniskendaraan"]; ?></td>
+    <td><?php echo $data["jenismobilmotor"]; ?></td>
+    <td><?php echo $data["nopolisi"]; ?></td>
+    <td><?php echo date("Y", strtotime($data["pembuatan"])); ?></td>
+    <td><?php echo $data["rangka"]; ?></td>
+    <td><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
+    <td class="text-center">
+        <button class="btn btn-sm btn-primary lihat_btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Lihat STNK</button>
+        <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
+        <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button>
+    </td>
+</tr>
 
-                                                <!-- Button to trigger delete confirmation modal -->
-                                                <a href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
-                                                    
-                                                <!-- Trigger button to open the popup -->
-                                                <button class="btn btn-sm btn-primary" onclick="openPopup('image1.jpg')">Foto STNK</button>
-                                </tr>
-                            </tbody>
-                            <!-- Modal for delete confirmation -->
-                            <div class="modal fade" id="hapusModal <?php echo $data['nopolisi']?> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Yakin Hapus Data?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                                            <!-- Direct user to hapusdata.php with nopolisi parameter -->
-                                            <a class="btn btn-primary" href="crud/hapusdata.php?nopolisi=<?php echo $data['nopolisi']?>">Hapus</a>
-                                        </div>
+
+
+                        <!-- Konfirmasi Hapus -->
+                        <div class="modal fade" id="hapusModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="font-size: 20px">Hapus Data<br>
+                                                <?php echo $data['nama']; ?> <br>
+                                                <?php echo $data['nopolisi']; ?>
+                                               ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" type="button" data-dismiss="modal">Tidak</button>
+                                        <a class="btn btn-danger" href="crud/hapus.php?nopolisi=<?php echo $data['nopolisi']; ?>">Hapus</a>
                                     </div>
                                 </div>
                             </div>
-                            
-                                        
-                                        </tr>
-                                    </tbody>
+                        </div>
+
+                        <div class="modal fade" id="lihatModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="font-size: 20px">Hapus Data<br>
+                                                <?php echo $data['nama']; ?> <br>
+                                                <?php echo $data['nopolisi']; ?>
+                                               ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" type="button" data-dismiss="modal">Tidak</button>
+                                        <a class="btn btn-danger" href="crud/hapus.php?nopolisi=<?php echo $data['nopolisi']; ?>">Hapus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
                         <?php
                         }
-                        ?>          
+                        ?> 
                         </tbody>
                         </table>
                     </div>
-            </div>
+                </div>
         
         <!-- End of Main Content -->
 
@@ -215,15 +246,7 @@
             </div>
         </div>
     </div>
-    <!-- Delete Confirmation Modal -->
 
-        <!-- The overlay and popup container -->
-        <div class="overlay" id="overlay">
-                <div class="popup" id="popup">
-                <span class="close-btn" onclick="closePopup()">&times;</span>
-                <img src="" alt="Popup Image" id="popupImage">
-                </div>
-        </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -247,7 +270,7 @@
             headerCol[i]=cols[i].textContent;
         }
             
-        function searchTable(col) {
+        function searchNama(col) {
         var input, filter, table, tr, td, i;
         input = document.getElementById(col);
         filter = input.value.toUpperCase();
@@ -265,6 +288,26 @@
             }     
         }
         }
+
+        function searchNoplat(col) {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById(col);
+        filter = input.value.toUpperCase();
+        table = document.getElementById("table1");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            if(col=='4') td = tr[i].getElementsByTagName("td")[4];
+            else if(col=='3') td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }     
+        }
+        }
+
         function resetHeader(){
             var c = document.getElementById('table1').rows[0].cells;
             for (var i = 0; i < (c.length); i++) {
@@ -362,27 +405,36 @@
     selectedCategoryElement.innerText = 'Selected category: ' + category;
   }
 
-  function openPopup(imageSrc) {
-    var overlay = document.getElementById('overlay');
-    var popup = document.getElementById('popup');
-    var popupImage = document.getElementById('popupImage');
 
-    // Set the image source
-    popupImage.src = imageSrc;
+  document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function() {
+         
+            const nopolisi = this.getAttribute('data-nopolisi');
+            
+            openModal('hapusModal' + nopolisi);
+        });
+    });
 
-    // Display the overlay and popup
-    overlay.style.display = 'flex';
-    popup.style.display = 'block';
-  }
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            $(modal).modal('show'); 
+        }
+    }
 
-  function closePopup() {
-    var overlay = document.getElementById('overlay');
-    var popup = document.getElementById('popup');
+    var lihatButtons = document.querySelectorAll('.lihat_btn');
 
-    // Hide the overlay and popup
-    overlay.style.display = 'none';
-    popup.style.display = 'none';
-  }
+    lihatButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var nopolisi = this.getAttribute('data-nopolisi');
+
+            var modalId = 'lihatModal' + nopolisi;
+        
+            $(modalId).modal('show');
+        });
+    });
+
+
 
     </script>   
 

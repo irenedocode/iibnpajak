@@ -68,7 +68,7 @@
                                 <h1 class="h4 text-gray-900 mb-4">Edit Data</h1>
                 </div>
                     <div class="p-5">
-                        <form action="crud/updatedata.php" method="POST" name="add" class="user">
+                        <form action="crud/update.php" method="POST" name="add" class="user">
                             <div class="form-group">
                                 <label for="nama">Nama Pemilik (lengkap) :</label>
                                     <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >

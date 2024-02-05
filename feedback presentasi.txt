@@ -2,15 +2,16 @@ fitur admin :
 
 search plat (bp, b, kb, dst...) (radio) (vivin)                   (done)
 jenis kendaraan (radio) (ren)                                     (done)
-tambah fitur pencarian noplat (ren) 
+tambah fitur pencarian noplat (ren)                               (done)
 foto stnk (vivin)                                                 (done)
-perpanjang masa pajak (ren kali ya, gatau le)                     (almost done udah ada kodenya)
-pembayaran ke riwayat (irene)                                     (almost done udah ada kodenya)
+perpanjang masa pajak (ren kali ya, gatau le)                     (done)
+pembayaran ke riwayat (irene)                                     (done)
 save / submit (laura)                                             (done)
 pop up modal hapus (ren)                                          (done)
 pop up kode info untuk pajak yang mau habis reminder (ren)        (almost done udah ada kodenya)
-buat popup image stnk (vivin)                                     (back end belum)
+buat popup image stnk (vivin)                                     (back end belum) (guasah make popup, so ribetin, ntar bikin page baru
+                                                                    dengan fetch data beserta data kendaraannya, kalo ada foto mobil juga bole)
 
 fitur user :
 
-nama pemilik dan no plat / no rangka 5 digit belakang (laura)
+nama pemilik dan no plat / no rangka 5 digit belakang (laura)      

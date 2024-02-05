@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="sb-admin-2.min.css" rel="stylesheet">
+    <link href="../sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -36,7 +36,7 @@
                             <a class="nav-link" href="index.php">Info</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="riwayat.php">Riwayat</a>
+                            <a class="nav-link" href="riwayat/riwayat.php">Riwayat</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -61,7 +61,7 @@
                             </div>
                 
                     <div class="p-5">
-                        <form action="crud/addriwayat.php" method="POST" name="add" class="user">
+                        <form action="koneksi.php" method="POST" name="add" class="user">
                         
                             <div class="form-group">
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"

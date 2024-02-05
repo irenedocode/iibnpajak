@@ -1,6 +1,6 @@
 <?php 
   
-  include('koneksi.php');
+  include('../koneksi.php');
 
 ?>
 
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="sb-admin-2.min.css" rel="stylesheet">
+    <link href="../sb-admin-2.min.css" rel="stylesheet">
 
 
 </head>
@@ -47,7 +47,7 @@
                 <div class="collapse navbar-collapse"  id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="index.php">Info</a>
+                            <a class="nav-link" href="../index.php">Info</a>
                             </li>
                             <li class="nav-item active">
                             <a class="nav-link" href="riwayat.php">Riwayat</a>
@@ -74,7 +74,7 @@
                                         margin-top: 2%;
                                         ">
                                 </form>                                                                           
-                                <a href="tambahriwayat.php" class="btn btn-primary" 
+                                <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     margin-left: 77%;
                                     ">Tambah Data</a>  
@@ -135,7 +135,7 @@
 
             <!-- Footer -->
             <?php
-            require "../footer.php"
+            require "../../footer.php"
             ?>
             <!-- End of Footer -->
 
