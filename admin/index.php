@@ -74,9 +74,9 @@
                                 <button class="btn btn-primary">Select a Category</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
-                                    <a href="#" onclick="filterData('a')">Category 1</a>
-                                    <a href="#" onclick="filterData('b')">Category 2</a>
-                                    <a href="#" onclick="filterData('c')">Category 3</a>
+                                    <a href="#" onclick="filterData('BP')">BP</a>
+                                    <a href="#" onclick="filterData('B')">B</a>
+                                    <a href="#" onclick="filterData('KB')">KB</a>
                                 </div>
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
