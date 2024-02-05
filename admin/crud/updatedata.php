@@ -2,7 +2,7 @@
 
 include('../koneksi.php');
 
-
+if (isset($_POST['submit'])) {
 $nopolisi = $_POST['nopolisi'];
   
 $query = "SELECT * FROM kendaraan WHERE nopolisi = '$nopolisi'";
@@ -30,6 +30,7 @@ if($con->query($query)) {
 } else {
    
     echo "Data Gagal Di Update!";
+}
 }
 
 ?>
