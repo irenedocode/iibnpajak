@@ -71,30 +71,26 @@
                                 </form>              
                                 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="
-                                    margin-right: 900px; 
-                                    margin-top:4%;
-                                    height: 40px; 
-                                    ">Pilih Daerah</button>
+                                <button class="btn btn-primary">Select a Category</button>
                                 <div class="dropdown-content" id="myDropdown">
-                                    <a href="#" onclick="selectOption('Option 1')">BP</a>
-                                    <a href="#" onclick="selectOption('Option 2')">B</a>
-                                    <a href="#" onclick="selectOption('Option 3')">KB</a>
-                                    <a href="#" onclick="selectOption('Option 4')">P</a>
-                                    <a href="#" onclick="selectOption('Option 5')">S</a>
+                                    <a href="#" onclick="filterData('All')">All</a>
+                                    <a href="#" onclick="filterData('a')">Category 1</a>
+                                    <a href="#" onclick="filterData('b')">Category 2</a>
+                                    <a href="#" onclick="filterData('c')">Category 3</a>
                                 </div>
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
-                                    margin-top: 2%
+                                    margin-left: 50%;
+                                    margin-top: 2%;
                                     ">Tambah Data</a>
                                     
                                     <a href="export.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
                                     margin-top: 2%;
-                                    margin-left: 80px
+                                    margin-left: 10px;
                                     ">Export Tabel</a>                                            
                         </table>
                     </div>
@@ -331,6 +327,24 @@
             
             }
         })()
+
+        function filterData(category) {
+    var rows = document.querySelectorAll('table tr');
+
+    for (var i = 1; i < rows.length; i++) {
+      var row = rows[i];
+      var cells = row.getElementsByTagName('td');
+      var cellCategory = cells[1].innerText;
+
+      if (category === 'All' || cellCategory === category) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    }
+
+    document.getElementById('selectedCategory').innerText = 'Selected category: ' + category;
+  }
 
     </script>   
 
