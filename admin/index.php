@@ -71,21 +71,20 @@
                                 </form>              
                                 
                                 <div class="dropdown">
-                                <button class="btn btn-primary">Select a Category</button>
+                                <button class="btn btn-primary" style="margin-top: 38px" id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('BP')">BP</a>
-                                    <a href="#" onclick="filterData('B 8945 KK')">B</a>
+                                    <a href="#" onclick="filterData('BK')">BK</a>
                                     <a href="#" onclick="filterData('KB')">KB</a>
                                 </div>
-                                <p id="selectedCategory">Selected category: All</p>
 
 
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
-                                    margin-left: 50%;
+                                    margin-left: 45%;
                                     margin-top: 2%;
                                     ">Tambah Data</a>
                                     
@@ -93,7 +92,7 @@
                                     style="
                                     height: 40px; 
                                     margin-top: 2%;
-                                    margin-left: 10px;
+                                    margin-left: 10px;  
                                     ">Export Tabel</a>                                            
                         </table>
                     </div>
@@ -352,7 +351,7 @@
     }
   }
 
-  selectedCategoryElement.innerText = 'Selected category: ' + category;
+  selectedCategoryElement.innerText = 'Daerah yang Dipilih: ' + category;
 }
 
 
