@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Polisi. Cth: BP XXXX XX">
+                                    placeholder="Nomor Polisi. Cth: BP XXX XX">
                             </div>
                             <div class="form-group">
                                 <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user"
@@ -92,9 +92,9 @@
                                     placeholder="Tahun Pembuatan">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user"
+                                <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
                                     id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required
-                                    placeholder="Nomor Rangka/Mesin">
+                                    placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
                             </div>
                             <div class="form-group">
                             <input
@@ -110,7 +110,7 @@
                             </div>
 
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
-                            Tambahkan
+                            Submit
                         </button>
                         <a href="index.php" class="btn btn-primary btn-user" style="width: 300px;">
                             Kembali</a>
