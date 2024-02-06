@@ -63,7 +63,7 @@
                                             </div>
 
                                             <div class="form-outline mb-4">
-                                                <input type="text" style="text-transform: uppercase"  name="nopolisi" id="form2Example17" class="form-control form-control-lg" placeholder="XXXX XX" required/>
+                                                <input type="text" style="text-transform: uppercase"  name="nopolisi" id="form2Example17" class="form-control form-control-lg" placeholder="XX XXXX XX" required/>
                                                 <label class="form-label">No Polisi</label>
                                             </div>
 
