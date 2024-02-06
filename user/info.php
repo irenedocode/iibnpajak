@@ -112,7 +112,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     
                         </div>
                     
-                        <a href="info.php" class="btn btn-primary btn-user btn-block" 
+                        <a href="index.php" class="btn btn-primary btn-user btn-block" 
                             style="
                             margin-left: 50px; 
                             margin-top: 100px; 
