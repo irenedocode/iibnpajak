@@ -11,6 +11,7 @@ pop up modal hapus (ren)                                          (done)
 pop up kode info untuk pajak yang mau habis reminder (ren)        (done)
 buat popup image stnk (vivin)                                     (back end belum) (guasah make popup, so ribetin, ntar bikin page baru
                                                                   dengan fetch data beserta data kendaraannya, kalo ada foto mobil juga bole)
+                                                                    (done)
 di bagian tmbah riwayat, ntar mau pas ditulis nopolisi,
 dia bakal otomatis keluarin masa pajak, atauuu, di formnya,
 masa pajak di hilangin aja                                        (done)

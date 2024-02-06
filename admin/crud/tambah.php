@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
   
 
-		$file = $_FILES['file']['tmp_name'];
+		$file = $_FILES['image']['tmp_name'];
 		$fileContent = file_get_contents($file);
 		$escapedFileContent = mysqli_real_escape_string($con, $fileContent);
 
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
     // Insert into Database
     $sql = "INSERT INTO kendaraan(nama, jeniskendaraan, jenismobilmotor, nopolisi, pembuatan, rangka, masapajak, image) 
-            VALUES('$nama', '$jeniskendaraan', '$jenismobilmotor', '$nopolisi', '$pembuatan', '$rangka', '$masapajak', '$base64Image')";
+            VALUES('$nama', '$jeniskendaraan', '$jenismobilmotor', '$nopolisi', '$pembuatan', '$rangka', '$masapajak', '$escapedFileContent')";
 
     if (mysqli_query($con, $sql)) {
         header("Location: ../info.php");
