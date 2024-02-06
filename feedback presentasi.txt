@@ -14,9 +14,9 @@ buat popup image stnk (vivin)                                     (back end belu
                                                                     (done)
 di bagian tmbah riwayat, ntar mau pas ditulis nopolisi,
 dia bakal otomatis keluarin masa pajak, atauuu, di formnya,
-masa pajak di hilangin aja                                        (done)
+masa pajak di hilangin aja (ren)                                       (done)
 
 fitur user :
 
 nama pemilik dan no plat / no rangka 5 digit belakang (laura)     
-setelah diisi akan otomatis ngisi data wilayah nopolisi           (done)
+setelah diisi akan otomatis ngisi data wilayah nopolisi (ren)          (done)
