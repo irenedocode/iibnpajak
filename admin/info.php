@@ -163,10 +163,6 @@ while($data = $hasil->fetch_assoc()) {
     </td>
 </tr>
 
-
-
-
-
                         <!-- Konfirmasi Hapus -->
                         <div class="modal fade" id="hapusModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -188,29 +184,6 @@ while($data = $hasil->fetch_assoc()) {
                                 </div>
                             </div>
                         </div>
-
-                        <div class="modal fade" id="lihatModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body" style="font-size: 20px">Hapus Data<br>
-                                                <?php echo $data['nama']; ?> <br>
-                                                <?php echo $data['nopolisi']; ?>
-                                               ?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-primary" type="button" data-dismiss="modal">Tidak</button>
-                                        <a class="btn btn-danger" href="crud/hapus.php?nopolisi=<?php echo $data['nopolisi']; ?>">Hapus</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                        
                         <?php
                         }

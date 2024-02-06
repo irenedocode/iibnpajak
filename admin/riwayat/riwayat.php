@@ -40,7 +40,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="info.php"> <img src="../../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+               <a class="navbar-brand" href="../info.php"> <img src="../../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -113,14 +113,33 @@
                                         <td><?php echo $data["ntpn"];   ?></td>
                                         <td><?php echo $data["status"];   ?></td>
                                         <td class="text-center">
-                                        <a href="crud/hapusdatariwayat.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-secondary alert_notif">Hapus</a>
+                                        <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button> </td>
                                         </td>
                                     </tr>
-                                </tbody>
+                                    <div class="modal fade" id="hapusModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="font-size: 20px">Hapus Data<br>
+                                                <?php echo $data['nopolisi']; ?>
+                                               ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" type="button" data-dismiss="modal">Tidak</button>
+                                        <a class="btn btn-danger" href="../crud/hapusdatariwayat.php?nopolisi=<?php echo $data['nopolisi']; ?>">Hapus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                                 
                                     <?php 
                                         } 
                                     ?> 
+                                    </tbody>
                             </table>
                         </div>
                 </div>
@@ -161,8 +180,8 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -271,6 +290,22 @@
             
             }
         })() 
+
+        document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function() {
+         
+            const nopolisi = this.getAttribute('data-nopolisi');
+            
+            openModal('hapusModal' + nopolisi);
+        });
+    });
+
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            $(modal).modal('show'); 
+        }
+    }
 
     </script>   
 

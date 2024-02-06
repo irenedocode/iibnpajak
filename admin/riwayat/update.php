@@ -42,7 +42,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                    <a class="navbar-brand" href="info.php"> <img src="../../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                    <a class="navbar-brand" href="../info.php"> <img src="../../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -68,7 +68,7 @@
                                 <h1 class="h4 text-gray-900 mb-4">Edit Data</h1>
                 </div>
                 <div class="p-5">
-                        <form action="crud/updateriwayat.php" method="POST" name="add" class="user">
+                        <form action="../crud/updateriwayat.php" method="POST" name="add" class="user">
                         
                             <div class="form-group">
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"

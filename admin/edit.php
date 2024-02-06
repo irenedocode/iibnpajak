@@ -68,7 +68,7 @@
                                 <h1 class="h4 text-gray-900 mb-4">Edit Data</h1>
                 </div>
                     <div class="p-5">
-                        <form action="crud/update.php" method="POST" name="add" class="user">
+                        <form action="crud/update.php" method="POST" name="add" class="user" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="nama">Nama Pemilik (lengkap) :</label>
                                     <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
@@ -111,7 +111,7 @@
                                 name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <input type="file" name="image" id="image">
+                            <input type="file" name="image">
                             </div>
 
                             <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px; margin-right: 10px">
