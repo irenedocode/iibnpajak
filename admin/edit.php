@@ -111,7 +111,7 @@
                                 name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+                            <input type="file" name="image" id="image">
                             </div>
 
                             <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px; margin-right: 10px">

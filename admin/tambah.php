@@ -109,7 +109,7 @@
                                     placeholder="Masa Pajak">
                             </div>
                             <div class="form-group">
-                            <input type="file" name="my_image">
+                            <input type="file" name="image" id="image">
                             </div>
 
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">

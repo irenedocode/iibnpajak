@@ -8,11 +8,13 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT image_data FROM images";
-$result = $conn->query($sql);
+
+$nopolisi = $_GET['nopolisi'];
+    $query = "SELECT image_data FROM kendaraan WHERE nopolisi = '$nopolisi'";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($result);
 
 ?>
-
 
 
 <?php

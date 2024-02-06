@@ -157,7 +157,7 @@ while($data = $hasil->fetch_assoc()) {
     <td><?php echo $data["rangka"]; ?></td>
     <td><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
     <td class="text-center">
-        <a href="stnk.php?nopolisi=<?php echo $data['nopolisi'] ?>">Lihat STNK</a>
+        <a href="showfoto.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Lihat STNK</a>
         <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
         <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button>
     </td>
@@ -172,7 +172,6 @@ while($data = $hasil->fetch_assoc()) {
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
                                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
