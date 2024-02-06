@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
+$con = mysqli_connect("localhost", "root", "", "data"); //ganti ke iibn1 ntar
 
 ?>
 
@@ -37,15 +37,15 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <!-- Main Content -->
             <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="info.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+                    <a class="navbar-brand" href="info.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -53,83 +53,91 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-        
 
-                        <div class="table-responsive-lg" 
-                        style="
-                        margin-top: 100px; 
-                        margin-left: 50px; 
-                        margin-right: 70px">
-                        <table width="100%" cellspacing="0" class="table table-bordered">                                
-                            <thead>
-                                <tr>
-                                    <th>Nama Pemilik</th>
-                                    <th>Jenis Kendaraan</th>
-                                    <th>Jenis Mobil/Motor</th>
-                                    <th>No Plat</th>
-                                    <th>Tahun Pembuatan</th>
-                                    <th>Nomor Rangka/Mesin</th>
-                                    <th>Masa Pajak</th>
-                                    <th></th>
-                                </tr>
-                            </thead>                                
+
+                <div class="table-responsive-lg" style="margin-top: 100px; margin-left: 50px; margin-right: 70px">
+                    <table width="100%" cellspacing="0" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Nama Pemilik</th>
+                                <th>Jenis Kendaraan</th>
+                                <th>Jenis Mobil/Motor</th>
+                                <th>No Plat</th>
+                                <th>Wilayah</th>
+                                <th>Tahun Pembuatan</th>
+                                <th>Nomor Rangka/Mesin</th>
+                                <th>Masa Pajak</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            if (isset($_POST['cari'])) {
+                                $nama = trim($_POST['nama']);
+                                $nopolisi = trim($_POST['nopolisi']);
+
+                                // Determine wilayah based on nopolisi
+                                if (substr($nopolisi, 0, 2) === "BP") {
+                                    $wilayah = "Batam";
+                                } elseif (substr($nopolisi, 0, 2) === "BB") { //yang 2 huruf, diduluankan, baru satu huruf
+                                    $wilayah = "Sumatera Utara";          
+                                } elseif (substr($nopolisi, 0, 1) === "B") {
+                                    $wilayah = "Jakarta";
+                                } elseif (substr($nopolisi, 0, 1) === "D") {
+                                    $wilayah = "Bandung";
+                                } elseif (substr($nopolisi, 0, 1) === "L") {
+                                    $wilayah = "Surabaya";      
+                                } else {
+                                    $wilayah = "Unknown";
+                                }
+
+                                $sql = "SELECT * FROM kendaraan WHERE nama = '$nama' AND nopolisi = '$nopolisi'";
+                            } else {
+                                echo "data tidak ditemukan";
+                            }
+
+                            $hasil = mysqli_query($con, $sql);
+                            $no = 0;
+                            while ($data = mysqli_fetch_array($hasil)) {
+                            ?>
                                 <tbody>
-                                    <?php
-                                        if (isset($_POST['cari'])) {
-                                            $nama=trim($_POST['nama']);
-                                            $nopolisi=trim($_POST['nopolisi']);
-                                            $sql= "select * from kendaraan where nama = '$nama' and nopolisi = '$nopolisi'";
+                                    <tr>
 
-                                        }else {
-                                            echo "data tidak ditemukan";
-                                        }
-                                    
-                                        $hasil=mysqli_query($con, $sql);
-                                        $no=0;
-                                        while ($data = mysqli_fetch_array($hasil)) {
-                                            ?>
-                                            <tbody>
-                                            <tr>
-                                            <td><?php echo $data["nama"];   ?></td>
-                                            <td><?php echo $data["jeniskendaraan"];   ?></td>
-                                            <td><?php echo $data["jenismobilmotor"];   ?></td>
-                                            <td><?php echo $data["nopolisi"];   ?></td>
-                                            <td><?php echo date("Y", strtotime($data["pembuatan"]));?>
-                                            <td><?php echo $data["rangka"];   ?></td>
-                                            <td><?php echo date("d-M-y", strtotime($data["masapajak"]));?>
-                                                <td class="text-center">
-                                                <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi']?>" class="btn btn-primary btn-user btn-block">Riwayat</a>
-                                                </tr>
-                                                </button>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        <?php     
-                                        }
-                                        ?>
+                                        <td><?php echo $data["nama"];   ?></td>
+                                        <td><?php echo $data["jeniskendaraan"];   ?></td>
+                                        <td><?php echo $data["jenismobilmotor"];   ?></td>
+                                        <td><?php echo $data["nopolisi"];   ?></td>
+                                        <td><?php echo $wilayah; ?></td>
+                                        <td><?php echo date("Y", strtotime($data["pembuatan"])); ?></td>
+                                        <td><?php echo $data["rangka"];   ?></td>
+                                        <td><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
+                                        <td class="text-center">
+                                            <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-primary btn-user btn-block">Riwayat</a>
+                                        </td>
+                                    </tr>
+                                    </button>
+                                    </td>
+                                    </tr>
                                 </tbody>
-                            </table>
-                    
-                        </div>
-                    
-                        <a href="index.php" class="btn btn-primary btn-user btn-block" 
-                            style="
-                            margin-left: 50px; 
-                            margin-top: 100px; 
-                            width: 20%">
-                            Kembali
-                        </a>
-                
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <a href="index.php" class="btn btn-primary btn-user btn-block" style="margin-left: 50px; margin-top: 100px; width: 20%"> Kembali </a>
+
             </div>
             <!-- End of Main Content -->
 
-            
 
             <!-- Footer -->
             <?php
-                include "../footer.php"
+            include "../footer.php"
             ?>
-<!-- End of Footer -->
+            <!-- End of Footer -->
             <!-- End of Footer -->
 
         </div>
@@ -138,9 +146,8 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     </div>
     <!-- End of Page Wrapper -->
 
-     <!-- Logout Modal-->
-     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -169,12 +176,15 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
     <script src="../js/sb-admin-2.min.js"></script>
 
     <script>
-       function preventBack() {window.history.forward();}
-       setTimeout(preventBack(), 0);
-       window.onunload = function() {null};
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout(preventBack(), 0);
+        window.onunload = function() {
+            null
+        };
     </script>
 
 </body>
 
 </html>
-

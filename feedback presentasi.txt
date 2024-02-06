@@ -19,4 +19,4 @@ masa pajak di hilangin aja                                        (done)
 fitur user :
 
 nama pemilik dan no plat / no rangka 5 digit belakang (laura)     
-setelah diisi akan otomatis ngisi data wilayah nopolisi           (irene)
+setelah diisi akan otomatis ngisi data wilayah nopolisi           (done)

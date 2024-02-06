@@ -65,7 +65,7 @@
                 <!-- Begin Page Content -->
                             <table style="position: sticky; width: 30%; ">
                                 <form class="form">
-                                        <input type="text" id="1" onkeyup="searchTable(4)" size="20" placeholder="Cari NTPN" 
+                                        <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari No Plat" 
                                         style="
                                         margin-left: 3%; 
                                         border-radius: 10px; 
@@ -108,8 +108,8 @@
                                     <tr>        
                                         <td><?php echo $no++;   ?></td>
                                         <td><?php echo $data["nopolisi"];   ?></td>
-                                        <td><?php echo date("d-M-y", strtotime($data["masapajak"]));   ?></td>
-                                        <td><?php echo $data["bayar"];   ?></td>
+                                        <td><?php echo date("d-M-Y", strtotime($data["masapajak"]));   ?></td>
+                                        <td><?php echo date("d-M-Y", strtotime($data["bayar"]));   ?></td>
                                         <td><?php echo $data["ntpn"];   ?></td>
                                         <td><?php echo $data["status"];   ?></td>
                                         <td class="text-center">
