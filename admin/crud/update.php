@@ -18,10 +18,10 @@ $nopolisi           = $_POST['nopolisi'];
 $pembuatan          = $_POST['pembuatan'];
 $rangka             = $_POST['rangka'];
 $masapajak          = $_POST['masapajak'];
-
+$image              = $_POST['image'];
 
 $query = "UPDATE kendaraan SET nama = '$nama', jeniskendaraan = '$jeniskendaraan', jenismobilmotor = '$jenismobilmotor', nopolisi = '$nopolisi', 
-pembuatan = '$pembuatan', rangka = '$rangka' ,masapajak = '$masapajak' WHERE nopolisi = '$nopolisi'";
+pembuatan = '$pembuatan', rangka = '$rangka' ,masapajak = '$masapajak', image = '$image' WHERE nopolisi = '$nopolisi'";
 
 
 if($con->query($query)) {
