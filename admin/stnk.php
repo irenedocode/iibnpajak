@@ -7,11 +7,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to fetch image data from the database
+
 $sql = "SELECT image_data FROM images";
 $result = $conn->query($sql);
 
-// Display images in an HTML table
+?>
+
+
+
+<?php
 if ($result->num_rows > 0) {
     echo "<table border='1'>";
     while ($row = $result->fetch_assoc()) {

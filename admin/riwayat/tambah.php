@@ -26,14 +26,14 @@
 
             <!-- Topbar -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-                <a class="navbar-brand" href="index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+                <a class="navbar-brand" href="info.php"> <img src="../../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse"  id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="index.php">Info</a>
+                            <a class="nav-link" href="info.php">Info</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="riwayat/riwayat.php">Riwayat</a>
@@ -69,15 +69,6 @@
                                     placeholder="Nomor Polisi. Cth: BP XXX XX">
                             </div>
                             
-                            <div class="form-group">
-                            <input
-                            type="text"
-                            onfocus="(this.type='date')"
-                            onblur="(this.type='text')"
-                            id="date"  class="form-control form-control-user"
-                                    id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
-                                    placeholder="Masa Pajak">
-                            </div>
 
                             <div class="form-group">
                             <input
@@ -143,7 +134,25 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+    $(document).ready(function() {
+        $('#exampleInputEmail').on('change', function() {
+            var nopolisi = $(this).val();
+            $.ajax({
+                type: 'POST',
+                url: 'fetch_masa_pajak.php', // Update with your server-side script URL
+                data: {
+                    nopolisi: nopolisi
+                },
+                success: function(response) {
+                    // Update the masapajak field with the fetched data
+                    $('#masapajak').val(response);
+                }
+            });
+        });
+    });
+
        function preventBack() {window.history.forward();}
        setTimeout(preventBack(), 0);
        window.onunload = function() {null};

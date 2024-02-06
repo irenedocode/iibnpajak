@@ -22,10 +22,10 @@ if (isset($_POST['submit'])) {
 				$sql = "INSERT INTO kendaraan(nama, jeniskendaraan, jenismobilmotor, nopolisi, pembuatan, rangka, masapajak, image_data) 
 				        VALUES('$nama', '$jeniskendaraan', '$jenismobilmotor', '$nopolisi', '$pembuatan', '$rangka', '$masapajak','$new_img_name')";
 				mysqli_query($con, $sql);
-				header("Location: ../index.php");
+				header("Location: ../info.php");
 			}else {
 				$em = "Error";
-		        header("Location: ../index.php?error=$em");
+		        header("Location: ../info.php?error=$em");
 			}
 
 

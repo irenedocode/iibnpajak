@@ -38,7 +38,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
             <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-               <a class="navbar-brand" href="index.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
+               <a class="navbar-brand" href="info.php"> <img src="../img/72ppi/Artboard 1.png" alt="" style="width: 180px"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -112,7 +112,7 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                     
                         </div>
                     
-                        <a href="index.php" class="btn btn-primary btn-user btn-block" 
+                        <a href="info.php" class="btn btn-primary btn-user btn-block" 
                             style="
                             margin-left: 50px; 
                             margin-top: 100px; 

@@ -12,14 +12,27 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nopolisi = $_POST["nopolisi"];
-    $masapajak = $_POST["masapajak"];
     $bayar = $_POST["bayar"];
     $ntpn = $_POST["ntpn"];
     $status = "lunas";
    
     $pembayaran_sukses = true;
 
+    $sql_masapajak = "SELECT masapajak FROM kendaraan WHERE nopolisi = '$nopolisi'";
+    $result_masapajak = $conn->query($sql_masapajak);
+
+    if ($result_masapajak->num_rows > 0) {
+       
+        $row = $result_masapajak->fetch_assoc();
+        $masapajak = $row["masapajak"];
+    } else {
+        
+        $masapajak = ""; 
+    }
+
+
     if ($pembayaran_sukses) {
+
         // Simpan informasi pembayaran ke tabel pembayaran_pajak
         $sql_pembayaran = "INSERT INTO history (nopolisi, masapajak, bayar, ntpn, status) 
                            VALUES ('$nopolisi', '$masapajak', '$bayar', '$ntpn', '$status')";
