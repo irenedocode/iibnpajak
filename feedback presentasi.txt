@@ -10,8 +10,12 @@ save / submit (laura)                                             (done)
 pop up modal hapus (ren)                                          (done)
 pop up kode info untuk pajak yang mau habis reminder (ren)        (almost done udah ada kodenya)
 buat popup image stnk (vivin)                                     (back end belum) (guasah make popup, so ribetin, ntar bikin page baru
-                                                                    dengan fetch data beserta data kendaraannya, kalo ada foto mobil juga bole)
+                                                                  dengan fetch data beserta data kendaraannya, kalo ada foto mobil juga bole)
+di bagian tmbah riwayat, ntar mau pas ditulis nopolisi,
+dia bakal otomatis keluarin masa pajak, atauuu, di formnya,
+masa pajak di hilangin aja                                        (iren)
 
 fitur user :
 
-nama pemilik dan no plat / no rangka 5 digit belakang (laura)      
+nama pemilik dan no plat / no rangka 5 digit belakang (laura)     
+setelah diisi akan otomatis ngisi data wilayah nopolisi           (irene)

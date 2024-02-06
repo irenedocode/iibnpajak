@@ -82,7 +82,7 @@
                             onfocus="(this.type='date')"
                             onblur="(this.type='text')"
                             id="date"  class="form-control form-control-user"
-                                    id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required
+                                    id="exampleInputEmail" name="masapajak" value="<?php echo $row['masapajak'] ?> aria-describedby="emailHelp" required
                                     placeholder="Masa Pajak">
                             </div>
 

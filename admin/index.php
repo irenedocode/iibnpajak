@@ -17,6 +17,13 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+    .closest-expire {
+        background-color: #ffcccc; /* Red background color */
+    }
+    </style>
+
+
 </head>
 
 <body id="page-top">
@@ -84,9 +91,10 @@
                                 <button class="btn btn-primary" style="margin-top: 18%" id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
-                                    <a href="#" onclick="filterData('BP')">BP</a>
-                                    <a href="#" onclick="filterData('BK')">BK</a>
-                                    <a href="#" onclick="filterData('KB')">KB</a>
+                                    <a href="#" onclick="filterData('B')">B</a>
+                                    <a href="#" onclick="filterData('L')">L</a>
+                                    <a href="#" onclick="filterData('C')">C</a>
+                                    <a href="#" onclick="filterData('D')">D</a>
                                 </div>
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
@@ -136,9 +144,9 @@ if (isset($_POST['nama'])) {
 }
 $hasil = mysqli_query($con, $sql);
 $no = 0;
-while ($data = mysqli_fetch_array($hasil)) {
+while($data = $hasil->fetch_assoc()) {
     $no++;
-?>
+?>  
 <tr>
     <td><?php echo $no; ?></td>
     <td><?php echo $data["nama"]; ?></td>
@@ -154,6 +162,8 @@ while ($data = mysqli_fetch_array($hasil)) {
         <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button>
     </td>
 </tr>
+
+
 
 
 
@@ -395,15 +405,20 @@ while ($data = mysqli_fetch_array($hasil)) {
       var cells = row.getElementsByTagName('td');
       var cellCategory = cells[4];
 
-      if (category === 'All' || cellCategory.innerText.slice(0, 2).toUpperCase() === category.toUpperCase()) {
-        row.style.display = '';
-      } else {
-        row.style.display = 'none';
-      }
-    }
+      if (category === 'All' || 
+    (cellCategory.innerText.charAt(0, 1).toUpperCase() === category.toUpperCase()) ||
+    (cellCategory.innerText.charAt(2, 3).toUpperCase() === category.toUpperCase())
+    ) {
+    row.style.display = '';
+} else {
+    row.style.display = 'none';
+}
+
+
 
     selectedCategoryElement.innerText = 'Selected category: ' + category;
   }
+}
 
 
   document.querySelectorAll('.delete-btn').forEach(button => {
@@ -421,18 +436,6 @@ while ($data = mysqli_fetch_array($hasil)) {
             $(modal).modal('show'); 
         }
     }
-
-    var lihatButtons = document.querySelectorAll('.lihat_btn');
-
-    lihatButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var nopolisi = this.getAttribute('data-nopolisi');
-
-            var modalId = 'lihatModal' + nopolisi;
-        
-            $(modalId).modal('show');
-        });
-    });
 
 
 
