@@ -58,13 +58,13 @@
                                             <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Cari</h5>
 
                                             <div class="form-outline mb-4">
-                                                <input type="text" style="text-transform: uppercase"  name="nopolisi" id="form2Example17" class="form-control form-control-lg" placeholder="BP XXX XX" required/>
-                                                <label class="form-label">No Polisi</label>
+                                                <input type="text"  name="nama" id="form2Example27" class="form-control form-control-lg" placeholder="Nama" required/>
+                                                <label class="form-label">Nama</label>
                                             </div>
 
                                             <div class="form-outline mb-4">
-                                                <input type="text" style="text-transform: uppercase"  name="rangka" id="form2Example27" class="form-control form-control-lg" placeholder="17 Digit Huruf dan Angka" required/>
-                                                <label class="form-label">No Rangka</label>
+                                                <input type="text" style="text-transform: uppercase"  name="nopolisi" id="form2Example17" class="form-control form-control-lg" placeholder="BP XXX XX" required/>
+                                                <label class="form-label">No Polisi</label>
                                             </div>
 
                                             <div class="pt-1 mb-4">

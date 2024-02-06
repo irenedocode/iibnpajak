@@ -76,9 +76,9 @@ $con = mysqli_connect("localhost","root","","data"); //ganti ke iibn1 ntar
                                 <tbody>
                                     <?php
                                         if (isset($_POST['cari'])) {
+                                            $nama=trim($_POST['nama']);
                                             $nopolisi=trim($_POST['nopolisi']);
-                                            $rangka=trim($_POST['rangka']);
-                                            $sql= "select * from kendaraan where rangka = '$rangka' and nopolisi = '$nopolisi'";
+                                            $sql= "select * from kendaraan where nama = '$nama' and nopolisi = '$nopolisi'";
 
                                         }else {
                                             echo "data tidak ditemukan";
