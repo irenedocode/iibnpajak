@@ -123,13 +123,6 @@
                                     ?> 
                             </table>
                         </div>
-                        <a href="info.php" class="btn btn-primary btn-user btn-block" 
-                        style="
-                        margin-left: 50px; 
-                        margin-top: 100px; 
-                        width: 20%">
-                        Kembali
-                        </a>
                 </div>
             <!-- End of Main Content -->
 
