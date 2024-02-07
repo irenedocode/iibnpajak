@@ -49,7 +49,7 @@ include 'koneksi.php'
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Masa Pajak Sudah Hampir Habis!</h2>
+        <h2>Masa Pajak Sudah Hampir Habis / Telah Habis!</h2>
         <p>Berikut datanya..</p>
     <table>
         <thead>
@@ -58,10 +58,9 @@ include 'koneksi.php'
                     <th class="text-center" onclick="sortTable('alfa',2)">Jenis Kendaraan</th>
                     <th class="text-center" onclick="sortTable('alfa',3)">Jenis Mobil/Motor</th>
                     <th class="text-center" onclick="sortTable('alfa',4)">No Plat</th>
-                    <th class="text-center" onclick="sortTable('alfa',5)">Wilayah</th>
-                    <th class="text-center" onclick="sortTable('date',6)">Tahun Pembuatan</th>
-                    <th class="text-center" onclick="sortTable('alfa',7)">Nomor Rangka</th>
-                    <th class="text-center" onclick="sortTable('date',8)">Masa Pajak</th>           
+                    <th class="text-center" onclick="sortTable('date',5)">Tahun Pembuatan</th>
+                    <th class="text-center" onclick="sortTable('alfa',6)">Nomor Rangka</th>
+                    <th class="text-center" onclick="sortTable('date',7)">Masa Pajak</th>           
                 </tr>
         </thead>
        <tbody>
