@@ -75,7 +75,7 @@ $con = mysqli_connect("localhost", "root", "", "data"); //ganti ke iibn1 ntar
                             if (isset($_POST['cari'])) {
                                 $nama = trim($_POST['nama']);
                                 $nopolisi = trim($_POST['nopolisi']);
-
+                                
                                 if (substr($nopolisi, 0, 2) === "BP") {
                                     $wilayah = "Batam";
                                 } elseif (substr($nopolisi, 0, 2) === "BB") { //yang 2 huruf, diduluankan, baru satu huruf

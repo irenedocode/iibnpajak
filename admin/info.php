@@ -86,18 +86,19 @@
                                         margin-top:2%
                                         ">
                                 </form>         
-                                
+
                                 <div class="dropdown">
                                 <button class="btn btn-primary" style="margin-top: 18%" id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
-                                    <a href="#" onclick="filterData('BP')">Batam</a>
-                                    <a href="#" onclick="filterData('BB')">Sumatra Utara</a>
-                                    <a href="#" onclick="filterData('B')">Jakarta</a>
-                                    <a href="#" onclick="filterData('D')">Bandung</a>
-                                    <a href="#" onclick="filterData('L')">Surabaya</a>
+                                    <a href="#" onclick="filterData('Batam')">Batam</a>
+                                    <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
+                                    <a href="#" onclick="filterData('Jakarta')">Jakarta</a>
+                                    <a href="#" onclick="filterData('Bandung')">Bandung</a>
+                                    <a href="#" onclick="filterData('Surabaya')">Surabaya</a>
                                 </div>
                                 </div>
+                                
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
@@ -137,13 +138,21 @@
                                     </tr>
                                 </thead>
                                 <?php
+
 $con = mysqli_connect("localhost", "root", "", "data");
-if (isset($_POST['nama'])) {
-    $nama = trim($_POST['nama']);
- 
+$sql = "SELECT * FROM kendaraan";
+$hasil = mysqli_query($con, $sql);
+$no = 0;
+
+while ($data = $hasil->fetch_assoc()) {
+    $no++;
+    // Extracting the nopolisi value directly from the database result
+    $nopolisi = $data['nopolisi'];
+
+    // Determine the wilayah based on the $nopolisi value
     if (substr($nopolisi, 0, 2) === "BP") {
         $wilayah = "Batam";
-    } elseif (substr($nopolisi, 0, 2) === "BB") { //yang 2 huruf, diduluankan, baru satu huruf
+    } elseif (substr($nopolisi, 0, 2) === "BB") {
         $wilayah = "Sumatera Utara";          
     } elseif (substr($nopolisi, 0, 1) === "B") {
         $wilayah = "Jakarta";
@@ -153,34 +162,27 @@ if (isset($_POST['nama'])) {
         $wilayah = "Surabaya";      
     } else {
         $wilayah = "Unknown";
-    
     }
-    $sql = "select * from kendaraan where nama = '$nama' order by nama asc";
-} else {
-    $sql = "select * from kendaraan order by nama asc";
-}
-$hasil = mysqli_query($con, $sql);
-$no = 0;
-while($data = $hasil->fetch_assoc()) {
-    $no++;
 
-?>  
-<tr>
-    <td><?php echo $no; ?></td>
-    <td><?php echo $data["nama"]; ?></td>
-    <td><?php echo $data["jeniskendaraan"]; ?></td>
-    <td><?php echo $data["jenismobilmotor"]; ?></td>
-    <td><?php echo $data["nopolisi"]; ?></td>
-    <td><?php echo $wilayah; ?></td>
-    <td><?php echo date("Y", strtotime($data["pembuatan"])); ?></td>
-    <td><?php echo $data["rangka"]; ?></td>
-    <td><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
-    <td class="text-center">
-        <a href="showfoto.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Lihat STNK</a>
-        <a href="edit.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-sm btn-primary alert_notif">Edit</a>
-        <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button>
-    </td>
-</tr>
+    // Output the table row with the determined wilayah
+    echo "<tr>";
+    echo "<td>" . $no . "</td>";
+    echo "<td>" . $data["nama"] . "</td>";
+    echo "<td>" . $data["jeniskendaraan"] . "</td>";
+    echo "<td>" . $data["jenismobilmotor"] . "</td>";
+    echo "<td>" . $data["nopolisi"] . "</td>";
+    echo "<td>" . $wilayah . "</td>";
+    echo "<td>" . date("Y", strtotime($data["pembuatan"])) . "</td>";
+    echo "<td>" . $data["rangka"] . "</td>";
+    echo "<td>" . date("d-M-y", strtotime($data["masapajak"])) . "</td>";
+    echo "<td class='text-center'>";
+    echo "<a href='showfoto.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif'>Lihat STNK</a>";
+    echo "<a href='edit.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif'>Edit</a>";
+    echo "<button class='btn btn-sm btn-danger delete-btn' data-nopolisi='" . $data['nopolisi'] . "'>Hapus</button>";
+    echo "</td>";
+    echo "</tr>";
+
+?>
 
                         <!-- Konfirmasi Hapus -->
                         <div class="modal fade" id="hapusModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -383,33 +385,30 @@ while($data = $hasil->fetch_assoc()) {
         })()
 
         function filterData(category) {
-    var rows = document.querySelectorAll('table tr');
-    var selectedCategoryElement = document.getElementById('selectedCategory');
+  var rows = document.querySelectorAll('table tr');
+  var selectedCategoryElement = document.getElementById('selectedCategory');
 
-    if (!selectedCategoryElement) {
-      console.error('Element with ID "selectedCategory" not found.');
-      return;
-    }
-
-    for (var i = 1; i < rows.length; i++) {
-      var row = rows[i];
-      var cells = row.getElementsByTagName('td');
-      var cellCategory = cells[4];
-
-      if (category === 'All' || 
-    (cellCategory.innerText.charAt(0, 1).toUpperCase() === category.toUpperCase()) ||
-    (cellCategory.innerText.charAt(2, 3).toUpperCase() === category.toUpperCase())
-    ) {
-    row.style.display = '';
-} else {
-    row.style.display = 'none';
-}
-
-
-
-    selectedCategoryElement.innerText = 'Selected category: ' + category;
+  if (!selectedCategoryElement) {
+    console.error('Element with ID "selectedCategory" not found.');
+    return;
   }
+
+  for (var i = 1; i < rows.length; i++) {
+    var row = rows[i];
+    var cells = row.getElementsByTagName('td');
+    var cellCategory = cells[5];
+
+    if (category === 'All' || 
+        (cellCategory.innerText.charAt(0).toUpperCase() === category.toUpperCase())) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  }
+
+  selectedCategoryElement.innerText = 'Selected category: ' + category;
 }
+
 
 
   document.querySelectorAll('.delete-btn').forEach(button => {
