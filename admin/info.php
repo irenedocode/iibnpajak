@@ -409,7 +409,7 @@ while ($data = $hasil->fetch_assoc()) {
         }
     }
 
-    selectedCategoryElement.innerText = 'Selected category: ' + category;
+    selectedCategoryElement.innerText = 'Kategori: ' + category;
 }
 
 
