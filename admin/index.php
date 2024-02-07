@@ -98,7 +98,6 @@ include 'koneksi.php'
             echo "<td>".$data["jeniskendaraan"]."</td>";
             echo "<td>".$data["jenismobilmotor"]."</td>";
             echo "<td>".$data["nopolisi"]."</td>";
-            echo "<td>".$wilayah."</td>";
             echo "<td>".date("Y", strtotime($data["pembuatan"]))."</td>";
             echo "<td>".$data["rangka"]."</td>";
             echo "<td>".date("Y-M-d", strtotime($data["masapajak"]))."</td>";

@@ -76,7 +76,6 @@ $con = mysqli_connect("localhost", "root", "", "data"); //ganti ke iibn1 ntar
                                 $nama = trim($_POST['nama']);
                                 $nopolisi = trim($_POST['nopolisi']);
 
-                                // Determine wilayah based on nopolisi
                                 if (substr($nopolisi, 0, 2) === "BP") {
                                     $wilayah = "Batam";
                                 } elseif (substr($nopolisi, 0, 2) === "BB") { //yang 2 huruf, diduluankan, baru satu huruf

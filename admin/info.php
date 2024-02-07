@@ -140,6 +140,21 @@
 $con = mysqli_connect("localhost", "root", "", "data");
 if (isset($_POST['nama'])) {
     $nama = trim($_POST['nama']);
+ 
+    if (substr($nopolisi, 0, 2) === "BP") {
+        $wilayah = "Batam";
+    } elseif (substr($nopolisi, 0, 2) === "BB") { //yang 2 huruf, diduluankan, baru satu huruf
+        $wilayah = "Sumatera Utara";          
+    } elseif (substr($nopolisi, 0, 1) === "B") {
+        $wilayah = "Jakarta";
+    } elseif (substr($nopolisi, 0, 1) === "D") {
+        $wilayah = "Bandung";
+    } elseif (substr($nopolisi, 0, 1) === "L") {
+        $wilayah = "Surabaya";      
+    } else {
+        $wilayah = "Unknown";
+    
+    }
     $sql = "select * from kendaraan where nama = '$nama' order by nama asc";
 } else {
     $sql = "select * from kendaraan order by nama asc";
@@ -148,6 +163,7 @@ $hasil = mysqli_query($con, $sql);
 $no = 0;
 while($data = $hasil->fetch_assoc()) {
     $no++;
+
 ?>  
 <tr>
     <td><?php echo $no; ?></td>
