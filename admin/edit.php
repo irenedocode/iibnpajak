@@ -73,17 +73,9 @@
                                 <label for="nama">Nama Pemilik (lengkap) :</label>
                                     <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
                             </div>
-                            <div class="form-check-inline">
-                                <label for="jeniskendaraan" style="margin-left: 10px; margin-bottom: 10px; font-size: 20px">Jenis Kendaraan : <br>
-                                    <label class="form-check-label" style="font-size: 20px">
-                                        <input type="radio" class="form-check-input" name="jeniskendaraan" value="mobil" required>Mobil
-                                    </label>
-                                </div>
-                                    <div class="form-check-inline">
-                                    <label class="form-check-label" style="font-size: 20px"> <br>
-                                        <input type="radio" class="form-check-input" name="jeniskendaraan" value="motor" required>Motor
-                                    </label>
-                                </label>
+                            <div class="form-group">
+                                <label for="rangka">Jenis Kendaraan :</label>
+                                    <input type="text"  name="jeniskendaraan" value="<?php echo $row['jeniskendaraan'] ?>" placeholder="Masukkan Jenis Kendaraan (Mobil/Motor)" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
                                 <label for="jenismobil/motor">Jenis Mobil/Motor :</label>

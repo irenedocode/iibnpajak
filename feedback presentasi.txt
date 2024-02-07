@@ -20,3 +20,6 @@ fitur user :
 
 nama pemilik dan no plat / no rangka 5 digit belakang (laura)     
 setelah diisi akan otomatis ngisi data wilayah nopolisi (ren)          (done)
+
+Di bagian admin, taru wilayah (cth jakarta dst..) 
+lalu di bagian sortir pake dorpdown, itu wilayah aja, gausah bp dkk

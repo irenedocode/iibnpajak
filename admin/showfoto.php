@@ -57,8 +57,7 @@ if ($row) {
                     <th class="text-center" onclick="sortTable('alfa',4)">No Plat</th>
                     <th class="text-center" onclick="sortTable('date',5)">Tahun Pembuatan</th>
                     <th class="text-center" onclick="sortTable('alfa',6)">Nomor Rangka</th>
-                    <th class="text-center" onclick="sortTable('date',7)">Masa Pajak</th>
-                                      
+                    <th class="text-center" onclick="sortTable('date',7)">Masa Pajak</th>                                  
                 </tr>
                 <tr class="text-center">
                     <?php
