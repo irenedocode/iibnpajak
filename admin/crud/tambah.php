@@ -10,8 +10,6 @@ if (isset($_POST['submit'])) {
     $rangka             = $_POST['rangka'];
     $masapajak          = $_POST['masapajak'];
 
-  
-
 		$file = $_FILES['image']['tmp_name'];
 		$fileContent = file_get_contents($file);
 		$escapedFileContent = mysqli_real_escape_string($con, $fileContent);

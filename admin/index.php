@@ -58,10 +58,10 @@ include 'koneksi.php'
                     <th class="text-center" onclick="sortTable('alfa',2)">Jenis Kendaraan</th>
                     <th class="text-center" onclick="sortTable('alfa',3)">Jenis Mobil/Motor</th>
                     <th class="text-center" onclick="sortTable('alfa',4)">No Plat</th>
-                    <th class="text-center" onclick="sortTable('date',5)">Tahun Pembuatan</th>
-                    <th class="text-center" onclick="sortTable('alfa',6)">Nomor Rangka</th>
-                    <th class="text-center" onclick="sortTable('date',7)">Masa Pajak</th>
-                                      
+                    <th class="text-center" onclick="sortTable('alfa',5)">Wilayah</th>
+                    <th class="text-center" onclick="sortTable('date',6)">Tahun Pembuatan</th>
+                    <th class="text-center" onclick="sortTable('alfa',7)">Nomor Rangka</th>
+                    <th class="text-center" onclick="sortTable('date',8)">Masa Pajak</th>           
                 </tr>
         </thead>
        <tbody>
@@ -98,6 +98,7 @@ include 'koneksi.php'
             echo "<td>".$data["jeniskendaraan"]."</td>";
             echo "<td>".$data["jenismobilmotor"]."</td>";
             echo "<td>".$data["nopolisi"]."</td>";
+            echo "<td>".$wilayah."</td>";
             echo "<td>".date("Y", strtotime($data["pembuatan"]))."</td>";
             echo "<td>".$data["rangka"]."</td>";
             echo "<td>".date("Y-M-d", strtotime($data["masapajak"]))."</td>";

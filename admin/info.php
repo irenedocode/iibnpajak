@@ -91,10 +91,11 @@
                                 <button class="btn btn-primary" style="margin-top: 18%" id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
-                                    <a href="#" onclick="filterData('B')">B</a>
-                                    <a href="#" onclick="filterData('L')">L</a>
-                                    <a href="#" onclick="filterData('C')">C</a>
-                                    <a href="#" onclick="filterData('D')">D</a>
+                                    <a href="#" onclick="filterData('BP')">Batam</a>
+                                    <a href="#" onclick="filterData('BB')">Sumatra Utara</a>
+                                    <a href="#" onclick="filterData('B')">Jakarta</a>
+                                    <a href="#" onclick="filterData('D')">Bandung</a>
+                                    <a href="#" onclick="filterData('L')">Surabaya</a>
                                 </div>
                                 </div>
                                     <a href="tambah.php" class="btn btn-primary" 
@@ -128,9 +129,10 @@
                                         <th class="text-center" onclick="sortTable('alfa',2)">Jenis Kendaraan</th>
                                         <th class="text-center" onclick="sortTable('alfa',3)">Jenis Mobil/Motor</th>
                                         <th class="text-center" onclick="sortTable('alfa',4)">No Plat</th>
-                                        <th class="text-center" onclick="sortTable('date',5)">Tahun Pembuatan</th>
-                                        <th class="text-center" onclick="sortTable('alfa',6)">Nomor Rangka</th>
-                                        <th class="text-center" onclick="sortTable('date',7)">Masa Pajak</th>
+                                        <th class="text-center" onclick="sortTable('alfa',5)">Wilayah</th>
+                                        <th class="text-center" onclick="sortTable('date',6)">Tahun Pembuatan</th>
+                                        <th class="text-center" onclick="sortTable('alfa',7)">Nomor Rangka</th>
+                                        <th class="text-center" onclick="sortTable('date',8)">Masa Pajak</th>  
                                         <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
@@ -153,6 +155,7 @@ while($data = $hasil->fetch_assoc()) {
     <td><?php echo $data["jeniskendaraan"]; ?></td>
     <td><?php echo $data["jenismobilmotor"]; ?></td>
     <td><?php echo $data["nopolisi"]; ?></td>
+    <td><?php echo $wilayah; ?></td>
     <td><?php echo date("Y", strtotime($data["pembuatan"])); ?></td>
     <td><?php echo $data["rangka"]; ?></td>
     <td><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
