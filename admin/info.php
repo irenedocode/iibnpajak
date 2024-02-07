@@ -69,7 +69,7 @@
                                         <input type="text" id="1" onkeyup="searchNama(1)" size="20" placeholder="Cari Nama" 
                                         style="
                                         width: 13%; 
-                                        margin-left: 5%; 
+                                        margin-left: 3%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
                                         margin-right: 2%; 
@@ -102,7 +102,7 @@
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
-                                    margin-left: 36%;
+                                    margin-left: 35%;
                                     margin-top: 2%;
                                     ">Tambah Data</a>
                                     
@@ -385,29 +385,34 @@ while ($data = $hasil->fetch_assoc()) {
         })()
 
         function filterData(category) {
-  var rows = document.querySelectorAll('table tr');
-  var selectedCategoryElement = document.getElementById('selectedCategory');
+    var rows = document.querySelectorAll('table tr');
+    var selectedCategoryElement = document.getElementById('selectedCategory');
 
-  if (!selectedCategoryElement) {
-    console.error('Element with ID "selectedCategory" not found.');
-    return;
-  }
-
-  for (var i = 1; i < rows.length; i++) {
-    var row = rows[i];
-    var cells = row.getElementsByTagName('td');
-    var cellCategory = cells[5];
-
-    if (category === 'All' || 
-        (cellCategory.innerText.charAt(0).toUpperCase() === category.toUpperCase())) {
-      row.style.display = '';
-    } else {
-      row.style.display = 'none';
+    if (!selectedCategoryElement) {
+        console.error('Element with ID "selectedCategory" not found.');
+        return;
     }
-  }
 
-  selectedCategoryElement.innerText = 'Selected category: ' + category;
+    console.log("Filtering category: ", category);
+
+    for (var i = 1; i < rows.length; i++) {
+        var row = rows[i];
+        var cells = row.getElementsByTagName('td');
+        var cellCategory = cells[5]; // Assuming the category is in the 6th column (index 5)
+
+        console.log("Row ", i, " Category: ", cellCategory.innerText);
+
+        if (category === 'All' || (cellCategory.innerText.trim().toUpperCase() === category.toUpperCase())) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    }
+
+    selectedCategoryElement.innerText = 'Selected category: ' + category;
 }
+
+
 
 
 
