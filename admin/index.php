@@ -49,7 +49,7 @@ include 'koneksi.php'
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Masa Pajak Sudah Hampir Habis!</h2>
+        <h2>Masa Pajak Sudah Hampir Habis / Telah Habis!</h2>
         <p>Berikut datanya..</p>
     <table>
         <thead>

@@ -102,7 +102,7 @@
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px; 
-                                    margin-left: 35%;
+                                    margin-left: 25%;
                                     margin-top: 2%;
                                     ">Tambah Data</a>
                                     
@@ -175,7 +175,7 @@ while ($data = $hasil->fetch_assoc()) {
     echo "<td>" . date("Y", strtotime($data["pembuatan"])) . "</td>";
     echo "<td>" . $data["rangka"] . "</td>";
     echo "<td>" . date("d-M-y", strtotime($data["masapajak"])) . "</td>";
-    echo "<td class='text-center'>";
+    echo "<td class='text-center'style='margin: 10px'>";
     echo "<a href='showfoto.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif'>Lihat STNK</a>";
     echo "<a href='edit.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif'>Edit</a>";
     echo "<button class='btn btn-sm btn-danger delete-btn' data-nopolisi='" . $data['nopolisi'] . "'>Hapus</button>";
