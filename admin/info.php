@@ -69,10 +69,10 @@
                                         <input type="text" id="1" onkeyup="searchNama(1)" size="20" placeholder="Cari Nama" 
                                         style="
                                         width: 13%; 
-                                        margin-left: 3%; 
+                                        margin-left: 5%; 
+                                        margin-right: 10px;
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-right: 2%; 
                                         margin-top:2%
                                         ">
                                 </form>    
@@ -82,13 +82,13 @@
                                         width: 13%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-right: 2%; 
+                                        margin-right: 10px; 
                                         margin-top:2%
                                         ">
                                 </form>         
 
-                                <div class="dropdown">
-                                <button class="btn btn-primary" style="margin-top: 18%" id="selectedCategory">Daerah yang Dipilih</button>
+                                <div class="dropdown" style="margin-right: 39.3%">
+                                <button class="btn btn-primary" style="margin-top: 18%;" id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
@@ -101,19 +101,20 @@
                                 
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
-                                    height: 40px; 
-                                    margin-left: 25%;
+                                    height: 40px;
                                     margin-top: 2%;
                                     ">Tambah Data</a>
                                     
-                                    <a href="export.php" class="btn btn-primary" 
+                                    <a href="export.php" class="btn" 
                                     style="
+                                    background-color: limegreen;
+                                    color: white;
                                     height: 40px; 
                                     margin-top: 2%;
-                                    margin-left: 10px;  
+                                    margin-left:3px;
                                     ">Export Tabel</a>   
-                                    
-                        </table>
+                        </table>            
+                    
                     </div>
                     <div class="table-responsive">
                         <table class="table1 table-bordered" id="table1" name="#htmltable" 
@@ -175,9 +176,9 @@ while ($data = $hasil->fetch_assoc()) {
     echo "<td>" . date("Y", strtotime($data["pembuatan"])) . "</td>";
     echo "<td>" . $data["rangka"] . "</td>";
     echo "<td>" . date("d-M-y", strtotime($data["masapajak"])) . "</td>";
-    echo "<td class='text-center'style='margin: 10px'>";
-    echo "<a href='showfoto.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif'>Lihat STNK</a>";
-    echo "<a href='edit.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif'>Edit</a>";
+    echo "<td class='text-center'>";
+    echo "<a href='showfoto.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm alert_notif' style='background-color: gray; color: white; margin-right:10px'>Lihat STNK</a>";
+    echo "<a href='edit.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif' style='margin-right:10px'>Edit</a>";
     echo "<button class='btn btn-sm btn-danger delete-btn' data-nopolisi='" . $data['nopolisi'] . "'>Hapus</button>";
     echo "</td>";
     echo "</tr>";
