@@ -21,13 +21,13 @@ if (isset($_POST['submit'])) {
             VALUES('$nama', '$jeniskendaraan', '$jenismobilmotor', '$nopolisi', '$pembuatan', '$rangka', '$masapajak', '$escapedFileContent')";
 
     if (mysqli_query($con, $sql)) {
-        header("Location: ../info.php");
+        header("Location: ../index.php");
     } else {
         $em = "Error";
-        header("Location: ../info.php?error=$em");
+        header("Location: ../index.php?error=$em");
     }
 } else {
     $em = "Error";
-    header("Location: ../info.php?error=$em");
+    header("Location: ../index.php?error=$em");
 }
 ?>

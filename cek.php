@@ -27,7 +27,7 @@ if($cek > 0){
 		$_SESSION['email'] = $email;
 		$_SESSION['role'] = "user";
 		// alihkan ke halaman dashboard admin
-		header("location:user/../info.php");
+		header("location:user/../index.php");
 
 	// cek jika user login sebagai pegawai
 	}else if($data['role']=="pegawai"){
@@ -48,12 +48,12 @@ if($cek > 0){
 	}else{
 
 		// alihkan ke halaman login kembali
-		header("location:../info.php?pesan=gagal");
+		header("location:../index.php?pesan=gagal");
 	}
 
 	
 }else{
-	header("location:../info.php?pesan=gagal");
+	header("location:../index.php?pesan=gagal");
 }
 
       unset($_SESSION['logged_in']);  

@@ -43,7 +43,7 @@ if ($row) {
     // Output the image data as an image
     
     ?>
-            <button onclick="location.href='info.php'" class="btn-primary" type="button" style="width: 100px; margin-left: 1500px">
+            <button onclick="location.href='index.php'" class="btn-primary" type="button" style="width: 100px; margin-left: 1500px">
                         <span aria-hidden="true">×</span>
             </button>
             <div class="container" style="margin-left: 500px; width: 100px">

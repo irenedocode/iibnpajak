@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         $query = "UPDATE kendaraan SET nama = '$nama', jeniskendaraan = '$jeniskendaraan', jenismobilmotor = '$jenismobilmotor', pembuatan = '$pembuatan', rangka = '$rangka' ,masapajak = '$masapajak', image = '$escapedFileContent' WHERE nopolisi = '$nopolisi'";
 
         if ($con->query($query)) {
-            header("location: ../info.php");
+            header("location: ../index.php");
             exit(); // Terminate script after redirect
         } else {
             echo "Data Gagal Di Update!";

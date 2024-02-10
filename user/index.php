@@ -53,7 +53,7 @@
                                     <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                         <div class="card-body p-4 p-lg-5 text-black">
 
-                                            <form action="info.php" method="post">
+                                            <form action="index.php" method="post">
 
                                             <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Cari</h5>
 
