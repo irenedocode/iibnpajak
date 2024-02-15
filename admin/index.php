@@ -173,7 +173,7 @@
                 <!-- Begin Page Content -->
                 <div>
                     <div class="row">
-                        <table style="position: sticky; width: 30%;">
+                        <table style="width: 30%;">
                                 <form class="form">
                                         <input type="text" id="1" onkeyup="searchNama(1)" size="20" placeholder="Cari Nama" 
                                         style="
@@ -196,8 +196,9 @@
                                         ">
                                 </form>         
 
-                                <div class="dropdown" style="margin-right: 39.3%">
-                                <button class="btn btn-primary" style="margin-top: 18%;" id="selectedCategory">Daerah yang Dipilih</button>
+                                <div class="dropdown">
+                                <button class="btn btn-primary" style="top: 50%; position: absolute; width: 200px; margin-left:5%;" 
+                                id="selectedCategory">Daerah yang Dipilih</button>
                                 <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
@@ -212,15 +213,18 @@
                                     style="
                                     height: 40px;
                                     margin-top: 2%;
+                                    position: absolute;
+                                    margin-left:84.5%;
                                     ">Tambah Data</a>
                                     
                                     <a href="export.php" class="btn" 
                                     style="
-                                    background-color: limegreen;
+                                    background-color: #64af7f;
                                     color: white;
                                     height: 40px; 
                                     margin-top: 2%;
-                                    margin-left:3px;
+                                    margin-left:92%;
+                                    position: absolute;
                                     ">Export Tabel</a>   
                         </table>            
                     
