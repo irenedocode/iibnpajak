@@ -225,7 +225,9 @@
                                     margin-top: 2%;
                                     margin-left:92%;
                                     position: absolute;
-                                    ">Export Tabel</a>   
+                                    "> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-xlsx" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM7.86 14.841a1.13 1.13 0 0 0 .401.823q.195.162.479.252.284.091.665.091.507 0 .858-.158.355-.158.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.188-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.777.15-.336.149-.527.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.326.5.5 0 0 1-.085.29.56.56 0 0 1-.255.193q-.168.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.249-.115.58.58 0 0 1-.255-.384zm-3.726-2.909h.893l-1.274 2.007 1.254 1.992h-.908l-.85-1.415h-.035l-.853 1.415H1.5l1.24-2.016-1.228-1.983h.931l.832 1.438h.036zm1.923 3.325h1.697v.674H5.266v-3.999h.791zm7.636-3.325h.893l-1.274 2.007 1.254 1.992h-.908l-.85-1.415h-.035l-.853 1.415h-.861l1.24-2.016-1.228-1.983h.931l.832 1.438h.036z"/>
+                                    </svg> Export Tabel</a>   
                         </table>            
                     
                     </div>
@@ -290,7 +292,7 @@ while ($data = $hasil->fetch_assoc()) {
     echo "<td>" . $data["rangka"] . "</td>";
     echo "<td>" . date("d-M-y", strtotime($data["masapajak"])) . "</td>";
     echo "<td class='text-center'>";
-    echo "<a href='showfoto.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm alert_notif' style='background-color: gray; color: white; margin-right:10px'>Lihat STNK</a>";
+    echo "<button class='btn btn-sm show-btn' data-nopolisi='" . $data['nopolisi'] . "' style='background-color: gray; color: white; margin-right:10px;'>Lihat STNK</button>";
     echo "<a href='edit.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif' style='margin-right:10px'>Edit</a>";
     echo "<button class='btn btn-sm btn-danger delete-btn' data-nopolisi='" . $data['nopolisi'] . "'>Hapus</button>";
     echo "</td>";
@@ -316,6 +318,57 @@ while ($data = $hasil->fetch_assoc()) {
                                         <button class="btn btn-primary" type="button" data-dismiss="modal">Tidak</button>
                                         <a class="btn btn-danger" href="crud/hapus.php?nopolisi=<?php echo $data['nopolisi']; ?>">Hapus</a>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Foto -->
+                        <div class="modal fade" id="showfotoModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <?php
+                                    include('koneksi.php');
+                                    // Check connection
+                                    if ($con->connect_error) {
+                                        die("Connection failed: " . $con->connect_error);
+                                    }
+                                    // Prepare the SQL statement
+                                    $query = "SELECT * FROM kendaraan WHERE nopolisi = ?";
+                                    $stmt = $con->prepare($query);
+
+                                    // Bind parameters
+                                    $stmt->bind_param('s', $nopolisi);
+
+                                    // Execute the statement
+                                    $stmt->execute();
+                                    // Get the result
+                                    $result = $stmt->get_result();
+                                    // Fetch the row
+                                    $row = $result->fetch_array();
+
+                                    // Check if the row is not empty
+                                    if ($row) {
+                                        // Output the image data as an image
+                                        
+                                        ?>
+                                               
+                                                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>'; ?>    
+                                    
+                                        
+                                        <?php }
+
+                                    // Close statement
+                                    $stmt->close();
+
+                                    // Close connection
+                                    $con->close();
+                                    ?>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -569,6 +622,15 @@ window.onclick = function(event) {
             const nopolisi = this.getAttribute('data-nopolisi');
             
             openModal('hapusModal' + nopolisi);
+        });
+    });
+
+    document.querySelectorAll('.show-btn').forEach(button => {
+        button.addEventListener('click', function() {
+         
+            const nopolisi = this.getAttribute('data-nopolisi');
+            
+            openModal('showfotoModal' + nopolisi);
         });
     });
 
