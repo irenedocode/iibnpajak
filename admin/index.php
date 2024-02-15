@@ -375,10 +375,9 @@ while ($data = $hasil->fetch_assoc()) {
 
 function filterData(category) {
     var rows = document.querySelectorAll('table tr');
-    var selectedCategoryElement = document.getElementById('selectedCategory');
 
-    if (!selectedCategoryElement) {
-        console.error('Element with ID "selectedCategory" not found.');
+    if (!category) {
+        console.error('Category is undefined or null.');
         return;
     }
 
@@ -389,9 +388,11 @@ function filterData(category) {
         var cells = row.getElementsByTagName('td');
         var cellCategory = cells[5]; // Assuming the category is in the 6th column (index 5)
 
-        console.log("Row ", i, " Category: ", cellCategory.innerText);
+        console.log("Row ", i, " Cells: ", cells); // Debugging: Log cells array
+        console.log("Row ", i, " Cell category: ", cellCategory); // Debugging: Log cellCategory
 
         if (cellCategory) {
+            console.log("Row ", i, " Category: ", cellCategory.innerText); // Debugging: Log innerText
             if (category === 'All' || (cellCategory.innerText.trim().toUpperCase() === category.toUpperCase())) {
                 row.style.display = '';
             } else {
@@ -402,26 +403,35 @@ function filterData(category) {
         }
     }
 
-    selectedCategoryElement.innerText = 'Kategori: ' + category;
+    updateSelectedCategoryText(category);
 }
+
+
+function updateSelectedCategoryText(category) {
+    var selectedCategoryElement = document.getElementById('selectedCategory');
+
+    if (!selectedCategoryElement) {
+        console.error('Element with ID "selectedCategory" not found.');
+        return;
+    }
+
+    selectedCategoryElement.innerText = 'Daerah yang Dipilih: ' + category;
+}
+
 
 
 var modal = document.getElementById("myModal");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the page loads, display the modal
 window.onload = function() {
     modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
