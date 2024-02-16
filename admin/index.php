@@ -142,7 +142,8 @@
                                         margin-right: 10px;
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-top:2%
+                                        margin-top:2%;
+                                        height: 41px
                                         ">
                                 </form>    
                                 <form class="form">
@@ -152,14 +153,15 @@
                                         border-radius: 10px; 
                                         border-color: aliceblue;
                                         margin-right: 10px; 
-                                        margin-top:2%
+                                        margin-top:2%;
+                                        height: 41px
                                         ">
                                 </form>         
 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="text-align: left;top: 50%; position: absolute; width: 230px; margin-left:5%;" 
-                                id="selectedCategory">Daerah yang Dipilih</button>
-                                <div class="dropdown-content" id="myDropdown" style="top: 50%">
+                                <button class="btn btn-primary" style="top: 50%; text-align: left ;position: absolute; width: 250px; margin-left:5%;" 
+                                id="selectedCategory">Daerah Yang Dipilih:</button>
+                                <div class="dropdown-content" id="myDropdown">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
@@ -432,7 +434,7 @@ function updateSelectedCategoryText(category) {
         return;
     }
 
-    selectedCategoryElement.innerText = 'Daerah yang Dipilih: ' + category;
+    selectedCategoryElement.innerText = 'Daerah: ' + category;
 }
 
 
