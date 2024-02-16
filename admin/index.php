@@ -161,7 +161,7 @@
                                 <div class="dropdown">
                                 <button class="btn btn-primary" style="top: 50%; text-align: left ;position: absolute; width: 250px; margin-left:5%;" 
                                 id="selectedCategory">Daerah Yang Dipilih:</button>
-                                <div class="dropdown-content" id="myDropdown">
+                                <div class="dropdown-content" id="myDropdown" style="top: 100%">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
@@ -174,7 +174,7 @@
                                     <a href="tambah.php" class="btn btn-primary" 
                                     style="
                                     height: 40px;
-                                    margin-top: 2%;
+                                    margin-top: 2%;      
                                     position: absolute;
                                     margin-left:83%;
                                     ">Tambah Data</a>
