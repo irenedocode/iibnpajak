@@ -17,47 +17,7 @@
     <!-- Custom styles for this template-->
     <link href="sb-admin-2.min.css" rel="stylesheet">
 
-    <style>
-/* Modal container */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9999; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-}
-
-/* Modal content */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    max-width: 80%; /* Adjust as needed */
-    max-height: 80%; /* Adjust as needed */
-    overflow-y: auto; /* Enable vertical scroll if needed */
-}
-
-/* Close button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-    </style>
+    
 
 
 </head>
@@ -197,9 +157,9 @@
                                 </form>         
 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="top: 50%; position: absolute; width: 200px; margin-left:5%;" 
+                                <button class="btn btn-primary" style="text-align: left;top: 50%; position: absolute; width: 230px; margin-left:5%;" 
                                 id="selectedCategory">Daerah yang Dipilih</button>
-                                <div class="dropdown-content" id="myDropdown">
+                                <div class="dropdown-content" id="myDropdown" style="top: 50%">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>

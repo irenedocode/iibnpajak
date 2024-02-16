@@ -61,9 +61,9 @@
                         </div>
 
                         <div class="p-5">
-                            <form action="crud/tambah.php" method="POST" enctype="multipart/form-data">
+                            <form action="crud/tambah.php" method="POST" enctype="multipart/form-data" name="add" class="user">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="nama" name="nama" aria-describedby="emailHelp" required placeholder="Nama Pemilik (Lengkap)">
+                                    <input type="text" class="form-control form-control-user" id="nama" name="nama" required placeholder="Nama Pemilik (Lengkap)">
                                 </div>
                                 <div class="form-check-inline">
                                     <label for="jeniskendaraan" style="margin-left: 10px; margin-bottom: 10px; font-size: 20px">Jenis Kendaraan : <br>
