@@ -182,7 +182,8 @@
                                         margin-right: 10px;
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-top:2%
+                                        margin-top:2%;
+                                        height: 41px
                                         ">
                                 </form>    
                                 <form class="form">
@@ -192,7 +193,8 @@
                                         border-radius: 10px; 
                                         border-color: aliceblue;
                                         margin-right: 10px; 
-                                        margin-top:2%
+                                        margin-top:2%;
+                                        height: 41px
                                         ">
                                 </form>         
 
