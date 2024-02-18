@@ -70,33 +70,33 @@
                     <div class="p-5">
                         <form action="crud/update.php" method="POST" name="add" class="user" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="nama">Nama Pemilik (lengkap) :</label>
+                                <label for="nama">Nama Pemilik (lengkap) </label>
                                     <input type="text" name="nama" value="<?php echo $row['nama'] ?>" placeholder="Masukkan Nama" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <label for="rangka">Jenis Kendaraan :</label>
+                                <label for="rangka">Jenis Kendaraan </label>
                                     <input type="text"  name="jeniskendaraan" value="<?php echo $row['jeniskendaraan'] ?>" placeholder="Masukkan Jenis Kendaraan (Mobil/Motor)" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <label for="jenismobil/motor">Jenis Mobil/Motor :</label>
+                                <label for="jenismobil/motor">Jenis Mobil/Motor </label>
                                     <input type="text" name="jenismobilmotor" value="<?php echo $row['jenismobilmotor'] ?>" placeholder="Masukkan Mobil Motor" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <label for="nopolisi">Nopolisi :</label>
+                                <label for="nopolisi">Nopolisi </label>
                                     <input type="text" style="text-transform: uppercase"  name="nopolisi" value="<?php echo $row['nopolisi'] ?>" placeholder="Masukkan No Polisi" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <label for="pembuatan">Tahun Pembuatan :</label>
+                                <label for="pembuatan">Tahun Pembuatan </label>
                                     <input type="text"
                                     onfocus="(this.type='date')"
                                     onblur="(this.type='text')" name="pembuatan" value="<?php echo $row['pembuatan'] ?>" placeholder="Masukkan Tanggal Pembuatan" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <label for="rangka">Nomor Rangka :</label>
+                                <label for="rangka">Nomor Rangka </label>
                                     <input type="text" style="text-transform: uppercase"  name="rangka" value="<?php echo $row['rangka'] ?>" placeholder="Masukkan No Rangka" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                                <label for="masapajak">Masa Pajak :</label>
+                                <label for="masapajak">Masa Pajak </label>
                                 <input type="text"
                                 onfocus="(this.type='date')"
                                 onblur="(this.type='text')"
