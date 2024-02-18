@@ -89,10 +89,10 @@
                                 <input type="file" name="image" id="image">
                             </div>
 
-                        <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">
+                        <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px; margin-left:38%;">
                             Submit
                         </button>
-                        <a href="riwayat.php" class="btn btn-primary btn-user" style="width: 300px;">
+                        <a href="riwayat.php" class="btn btn-primary btn-user" style="width: 300px;margin-left:70%;margin-top: -7%; ">
                             Kembali</a>
                         </form>
                     </div>
