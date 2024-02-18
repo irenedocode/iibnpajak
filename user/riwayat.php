@@ -82,12 +82,12 @@
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
-                                    <tr class="text-center">        
+                                    <tr>        
                                         <td><?php echo $data["nopolisi"];   ?></td>
-                                        <td><?php echo $data["masapajak"];   ?></td>
+                                        <td class="text-center"><?php echo $data["masapajak"];   ?></td>
                                         <td><?php echo $data["bayar"];   ?></td>
                                         <td><?php echo $data["ntpn"];   ?></td>
-                                        <td><?php echo $data["status"];   ?></td>
+                                        <td class="text-center"><?php echo $data["status"];   ?></td>
                                     </tr>
                                 </tbody>
                                 

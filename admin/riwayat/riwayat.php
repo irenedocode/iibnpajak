@@ -86,7 +86,7 @@
                             margin-left: 50px; 
                             margin-right: 50px">
                         <table width="100%" id="table1" cellspacing="0" class="table1 table-bordered">      
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>ID</th>
                                         <th class="text-center" onclick="sortTable('alfa',1)">No Plat</th>
                                         <th class="text-center" onclick="sortTable('date',2)">Masa Pajak</th>
@@ -108,10 +108,10 @@
                                     <tr>        
                                         <td><?php echo $no++;   ?></td>
                                         <td><?php echo $data["nopolisi"];   ?></td>
-                                        <td><?php echo date("d-M-Y", strtotime($data["masapajak"]));   ?></td>
-                                        <td><?php echo date("d-M-Y", strtotime($data["bayar"]));   ?></td>
+                                        <td class="text-center"><?php echo date("d-M-Y", strtotime($data["masapajak"]));   ?></td>
+                                        <td class="text-center"><?php echo date("d-M-Y", strtotime($data["bayar"]));   ?></td>
                                         <td><?php echo $data["ntpn"];   ?></td>
-                                        <td><?php echo $data["status"];   ?></td>
+                                        <td class="text-center"><?php echo $data["status"];   ?></td>
                                         <td class="text-center">
                                         <?php echo "<button class='btn btn-sm show-btn' data-nopolisi='" . $data['nopolisi'] . "' style='background-color: gray; color: white; margin-right:10px;'>Bukti Pembayaran</button>"; ?>
                                         <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button> </td>

@@ -242,9 +242,9 @@ while ($data = $hasil->fetch_assoc()) {
     echo "<td>" . $data["jenismobilmotor"] . "</td>";
     echo "<td>" . $data["nopolisi"] . "</td>";
     echo "<td>" . $wilayah . "</td>";
-    echo "<td>" . date("Y", strtotime($data["pembuatan"])) . "</td>";
+    echo "<td class='text-center'>" . date("Y", strtotime($data["pembuatan"])) . "</td>";
     echo "<td>" . $data["rangka"] . "</td>";
-    echo "<td>" . date("d-M-y", strtotime($data["masapajak"])) . "</td>";
+    echo "<td class='text-center'>" . date("d-M-y", strtotime($data["masapajak"])) . "</td>";
     echo "<td class='text-center'>";
     echo "<button class='btn btn-sm show-btn' data-nopolisi='" . $data['nopolisi'] . "' style='background-color: gray; color: white; margin-right:10px;'>Lihat STNK</button>";
     echo "<a href='edit.php?nopolisi=" . $data['nopolisi'] . "' class='btn btn-sm btn-primary alert_notif' style='margin-right:10px'>Edit</a>";
