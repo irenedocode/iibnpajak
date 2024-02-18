@@ -15,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bayar = $_POST["bayar"];
     $ntpn = $_POST["ntpn"];
     $status = "lunas";
+
+        $file = $_FILES['image']['tmp_name'];
+		$fileContent = file_get_contents($file);
+		$escapedFileContent = mysqli_real_escape_string($con, $fileContent);
    
     $pembayaran_sukses = true;
 
@@ -34,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($pembayaran_sukses) {
 
         // Simpan informasi pembayaran ke tabel pembayaran_pajak
-        $sql_pembayaran = "INSERT INTO history (nopolisi, masapajak, bayar, ntpn, status) 
-                           VALUES ('$nopolisi', '$masapajak', '$bayar', '$ntpn', '$status')";
+        $sql_pembayaran = "INSERT INTO history (nopolisi, masapajak, bayar, ntpn, status, image) 
+                           VALUES ('$nopolisi', '$masapajak', '$bayar', '$ntpn', '$status, '$escapedFileContent')";
         $result_pembayaran = $conn->query($sql_pembayaran);
 
         // Perpanjang masa pajak selama 1 tahun setelah pembayaran sukses
