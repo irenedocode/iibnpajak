@@ -1,0 +1,30 @@
+TO DO LIST!! irene
+
+
+1. di bagian cari kendaraan, gausah pakai nama, dst. cuman perlu nomor polisi dan nomor rangka
+
+2. nanti bagian nama dan lainnya, muncul pas udah cari dan data2nya bakal keluar, so it's unecessary.
+
+3. untuk front end, toloh yah iren yang baik hati, rajin, dan tidak sombong, DIRAPIKAN. pelis, butuh header deh atleast. haiyaa.
+
+4. funcitionnya hahah pelis, aku tau kamu setress dengan itu, namun percayalah, pasti bisa.
+
+5. ntar coba konsul ama pak ronal, gimana tampilannya sama fungsinya. kek websitenya itu ribet? ato simple? dari segi penempatan button, tulisan dll
+
+6. irene, i want it to be finish in monday alr? if you can', than you're a LOSER! TRULY A LOSER.
+
+7. dan satu lagi, masalahnya gimana biar emailnya bekerja??
+
+8. and another one lagi haha, i know you still not satisfied with how it looks, maybe you could change the color?
+
+9. and satu lagi, we need some hiburan i guess, something cute but funcitional, idk what that is.
+
+10. try to learn how to manage databases
+
+11. make a model popup (ask darrel lah ya)
+
+12. for the javascript, please learn it.
+
+13. nanya pak ronal cara kerja web kantor tu cemana lol
+
+ 

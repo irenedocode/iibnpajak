@@ -32,7 +32,7 @@ $stmt->bind_param('s', $nopolisi);
 // Execute the statement
 $stmt->execute();
 
-// Get the result
+// Get the result q
 $result = $stmt->get_result();
 
 // Fetch the row

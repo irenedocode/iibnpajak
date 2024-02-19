@@ -69,18 +69,16 @@
 
                                             <div class="pt-1 mb-4">
                                                 <button class="btn btn-dark btn-lg btn-block" type="Submit" name="cari" value="cari">Cari</button>
-                                            </div>
-
-                                            
+                                            </div>      
                                             </form>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <?php
             require "../footer.php"
             ?>
