@@ -136,6 +136,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="modal fade" id="showfotoModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -186,14 +187,12 @@
                             </div>
                         </div>
 
-                        
-                                
                                     <?php 
                                         } 
                                     ?> 
                                     </tbody>
                             </table>
-                        </div>
+                    
                 </div>
             <!-- End of Main Content -->
 
@@ -206,7 +205,7 @@
         </div>
         <!-- End of Content Wrapper -->
 
-    </div>
+   
     <!-- End of Page Wrapper -->
 
     <!-- Modal Foto -->

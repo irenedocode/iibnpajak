@@ -61,7 +61,7 @@
                             </div>
                 
                     <div class="p-5">
-                        <form action="koneksi.php" method="POST" name="add" class="user">
+                        <form action="koneksi.php" method="POST" name="add" class="user" enctype="multipart/form-data">
                         
                             <div class="form-group">
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
