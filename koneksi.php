@@ -16,7 +16,7 @@ if(isset($_POST['Login'])) {
     $hitung = mysqli_num_rows($cekuser);//max 1 min 0
     if($hitung == 0){
         echo "login gagal";
-        header('location:login');
+        header('location:login.php');
     }else{
         if($role == 'user'){
             header('location:user');
