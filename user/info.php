@@ -58,7 +58,7 @@ $con = mysqli_connect("localhost", "root", "", "data"); //ganti ke iibn1 ntar
                 <div class="table-responsive-lg" style="margin-top: 100px; margin-left: 50px; margin-right: 70px">
                     <table width="100%" cellspacing="0" class="table table-bordered">
                         <thead>
-                            <tr>
+                            <tr class="text-center">
                                 <th>Nama Pemilik</th>
                                 <th>Jenis Kendaraan</th>
                                 <th>Jenis Mobil/Motor</th>
@@ -100,7 +100,7 @@ $con = mysqli_connect("localhost", "root", "", "data"); //ganti ke iibn1 ntar
                                 while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
                                     <tbody>
-                                        <tr>
+                                        <tr class="text-center">
                                             <td><?php echo $data["nama"];   ?></td>
                                             <td><?php echo $data["jeniskendaraan"];   ?></td>
                                             <td><?php echo $data["jenismobilmotor"];   ?></td>

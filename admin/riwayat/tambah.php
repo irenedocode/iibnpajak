@@ -67,8 +67,7 @@
                                 <input type="text" style="text-transform: uppercase" class="form-control form-control-user"
                                     id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required
                                     placeholder="Nomor Polisi. Cth: BP XXX XX">
-                            </div>
-                            
+                            </div>   
 
                             <div class="form-group">
                             <input
@@ -84,6 +83,10 @@
                                 <input type="text" class="form-control form-control-user"
                                     id="exampleInputEmail" name="ntpn" aria-describedby="emailHelp" required
                                     placeholder="NTPN">
+                            </div>
+                            <div class="form-group">
+                                <h5>Bukti Pembayaran:</h5>
+                                <input type="file" name="image" id="image">
                             </div>
 
                         <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px;" display="flex">

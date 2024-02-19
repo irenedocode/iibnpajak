@@ -64,7 +64,7 @@
                 margin-left: 50px; 
                 margin-right: 50px">
                 <table width="100%" cellspacing="0" class="table table-bordered">      
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>No Plat</th>
                                         <th>Tahun/Masa Pajak</th>
                                         <th>Tanggal Bayar</th>
@@ -82,7 +82,7 @@
                                         $no=0;
                                         while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
-                                    <tr>        
+                                    <tr class="text-center">        
                                         <td><?php echo $data["nopolisi"];   ?></td>
                                         <td><?php echo $data["masapajak"];   ?></td>
                                         <td><?php echo $data["bayar"];   ?></td>

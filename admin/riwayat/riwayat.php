@@ -113,6 +113,7 @@
                                         <td><?php echo $data["ntpn"];   ?></td>
                                         <td><?php echo $data["status"];   ?></td>
                                         <td class="text-center">
+                                        <?php echo "<button class='btn btn-sm show-btn' data-nopolisi='" . $data['nopolisi'] . "' style='background-color: gray; color: white; margin-right:10px;'>Bukti Pembayaran</button>"; ?>
                                         <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button> </td>
                                         </td>
                                     </tr>
@@ -157,7 +158,53 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    
+    <!-- Modal Foto -->
+    <div class="modal fade" id="showfotoModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <?php
+                                    include('koneksi.php');
+                                    // Check connection
+                                    if ($con->connect_error) {
+                                        die("Connection failed: " . $con->connect_error);
+                                    }
+                                    // Prepare the SQL statement
+                                    $query = "SELECT * FROM kendaraan WHERE nopolisi = ?";
+                                    $stmt = $con->prepare($query);
+
+                                    // Bind parameters
+                                    $stmt->bind_param('s', $nopolisi);
+
+                                    // Execute the statement
+                                    $stmt->execute();
+                                    // Get the result
+                                    $result = $stmt->get_result();
+                                    // Fetch the row
+                                    $row = $result->fetch_array();
+
+                                    // Check if the row is not empty
+                                    if ($row) {
+                                        // Output the image data as an image
+                                        
+                                        ?>
+                                                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>'; ?>    
+                                        <?php }
+
+                                    // Close statement
+                                    $stmt->close();
+
+                                    // Close connection
+                                    $con->close();
+                                    ?>
+                                    
+                                </div>
+                            </div>
+                        </div>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -299,6 +346,16 @@
             openModal('hapusModal' + nopolisi);
         });
     });
+
+    document.querySelectorAll('.show-btn').forEach(button => {
+        button.addEventListener('click', function() {
+         
+            const nopolisi = this.getAttribute('data-nopolisi');
+            
+            openModal('showfotoModal' + nopolisi);
+        });
+    });
+
 
     function openModal(modalId) {
         var modal = document.getElementById(modalId);
