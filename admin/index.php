@@ -174,9 +174,7 @@
                                     style="
                                     height: 40px;
                                     margin-top: 2%;   
-                                    margin-left: 1%;
-                                    
-                                   
+                                    margin-left: 39%;
                                     ">Tambah Data</a>
                                     
                                     <a href="export.php" class="btn" 
