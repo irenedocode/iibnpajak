@@ -16,8 +16,8 @@ if (isset($_POST['submit'])) {
     $rangka = $_POST['rangka'];
     $masapajak = $_POST['masapajak'];
 
-    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-        $file = $_FILES['image']['tmp_name'];
+    if (isset($_FILES['new_image']) && $_FILES['new_image']['error'] === UPLOAD_ERR_OK) {
+        $file = $_FILES['new_image']['tmp_name'];
         $fileContent = file_get_contents($file);
         $escapedFileContent = mysqli_real_escape_string($con, $fileContent);
 

@@ -63,6 +63,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
+                
                             <table style="position: sticky; width: 30%; ">
                                 <form class="form">
                                         <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari No Plat" 
@@ -117,6 +118,8 @@
                                         <button class="btn btn-sm btn-danger delete-btn" data-nopolisi="<?php echo $data['nopolisi']; ?>">Hapus</button> </td>
                                         </td>
                                     </tr>
+
+                        <!-- modal hapus -->
                         <div class="modal fade" id="hapusModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -137,14 +140,22 @@
                             </div>
                         </div>
                         
+                        <!-- modal foto -->
                         <div class="modal fade" id="showfotoModal<?php echo $data['nopolisi']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <h5 class="modal-title" id="exampleModalLabel">Bukti Pembayaran</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?php
+                                        $imageData = $data['image'];
+                                        echo '<img src="data:image/jpeg;base64,'.base64_encode($imageData).'" class="img-fluid" alt="Bukti Pembayaran">';
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,6 +167,7 @@
                             </table>
                     
                 </div>
+                        </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
@@ -285,29 +297,21 @@
         if (dir == "desc") {col_header.textContent = headerCol[n] + " \u2193";}
         }
 
-        var tableToExcel = (function() {
-            var uri = 'data:application/vnd.ms-excel;base64,', 
-            template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>',
-            base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) },
-            format = function(s, c) { 
-                return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) 
-            }
-            return function(table, name) {
-                if (!table.nodeType) table = document.getElementById(table)
-                    var ctx = {worksheet: name || 'Worksheet'}
-                    //window.location.href = uri + base64(format(template, ctx))
-                    document.getElementById("dlink").href = uri + base64(format(template, ctx));
-                    document.getElementById("dlink").download = 'Data Pajak.xls';
-            
-            }
-        })() 
-
         document.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', function() {
          
             const nopolisi = this.getAttribute('data-nopolisi');
             
             openModal('hapusModal' + nopolisi);
+        });
+    });
+
+    document.querySelectorAll('.show-btn').forEach(button => {
+        button.addEventListener('click', function() {
+         
+            const nopolisi = this.getAttribute('data-nopolisi');
+            
+            openModal('showfotoModal' + nopolisi);
         });
     });
 

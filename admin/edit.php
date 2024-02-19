@@ -61,7 +61,7 @@
                 <div class="backgroundtambahdata">
                     <div class="container">
                         <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0" style="height: 1025px";>
+                    <div class="card-body p-0" style="height: 1525px";>
 
                 <!-- /.container-fluid -->      
                 <div class="text-center">
@@ -103,8 +103,13 @@
                                 name="masapajak" value="<?php echo $row['masapajak'] ?>" placeholder="Masukkan Masa Pajak" class="form-control form-control-user" >
                             </div>
                             <div class="form-group">
-                            <input type="file" name="image">
+                                <label for="image">Foto STNK</label><br>
+                                <img src="data:image/jpeg;base64,<?php echo base64_encode($row['image']); ?>" alt="Current STNK Image" style="width: 300px"><br>
+                                <label for="new_image">Upload STNK baru</label> <br>
+                                <input type="file" name="new_image" id="new_image">
                             </div>
+
+
 
                             <button type="submit" name="submit" class="btn btn-primary btn-user" style="width: 300px; margin-right: 10px">
                                 Simpan
