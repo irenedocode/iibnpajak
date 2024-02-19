@@ -35,16 +35,17 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="container">
-                        <div class="card o-hidden border-0 shadow-lg my-5" style="height: 800px">
+                        <div class="card o-hidden border-0 shadow-lg my-5" style="height: 700px">
                             <div class="card-body p-0">
                                 <!-- Nested Row within Card Body -->
                                 <div class="row">
                                     <div class="col-lg-5 d-none d-lg-block">
-                                        <img class="bg-login-image" src="img/logovertical.png" alt=""> </div>
+                                        <img class="bg-login-image" style="width: 300px; margin-left: 100px" src="img/logovertical.png" alt=""> </div>
                                         <div class="col-lg-7">
                                             <div class="p-5">
                                                 <div class="text-center">
-                                                    <h1 style="position: relative; top: 100px;" class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
+                                                    <h1 style="position: relative; top: 100px;" class="h2 text-gray-900 mb-4">Selamat Datang!</h1>
+                                                    <h2 style="position: relative; top: 100px;" class="h4 text-gray-900 mb-4">Website Pajak Kendaraan</h2>
                                                 </div>
                                             <a href="login.php" class="btn btn-user btn-block btnindex">
                                                 <i style="position: relative; bottom: 100px;"></i>Login
@@ -69,26 +70,6 @@
 
     </div>
     <!-- End of Page Wrapper -->
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin Logout?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" untuk keluar dari akun ini.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

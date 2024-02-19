@@ -39,7 +39,7 @@ require 'koneksi.php';
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                         <div class="card-body p-4 p-lg-5 text-black">
                         <div class="text-center">
-                                        <h1 class="h2 text-gray-900 mb-4" style="margin-top: -4%;" >Website Masa Pajak</h1>
+                                        <h1 class="h2 text-gray-900 mb-4" style="margin-top: -4%;" >Masuk</h1>
                                     </div>
 
                             <form action="koneksi.php" method="post">

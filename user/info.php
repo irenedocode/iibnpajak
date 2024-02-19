@@ -100,15 +100,15 @@ $con = mysqli_connect("localhost", "root", "", "data"); //ganti ke iibn1 ntar
                                 while ($data = mysqli_fetch_array($hasil)) {
                                     ?>
                                     <tbody>
-                                        <tr class="text-center">
+                                        <tr>
                                             <td><?php echo $data["nama"];   ?></td>
                                             <td><?php echo $data["jeniskendaraan"];   ?></td>
                                             <td><?php echo $data["jenismobilmotor"];   ?></td>
                                             <td><?php echo $data["nopolisi"];   ?></td>
                                             <td><?php echo $wilayah; ?></td>
-                                            <td><?php echo date("Y", strtotime($data["pembuatan"])); ?></td>
+                                            <td class="text-center"><?php echo date("Y", strtotime($data["pembuatan"])); ?></td>
                                             <td><?php echo $data["rangka"];   ?></td>
-                                            <td><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
+                                            <td class="text-center"><?php echo date("d-M-y", strtotime($data["masapajak"])); ?></td>
                                             <td class="text-center">
                                                 <a href="riwayat.php?nopolisi=<?php echo $data['nopolisi'] ?>" class="btn btn-primary btn-user btn-block">Riwayat</a>
                                             </td>
