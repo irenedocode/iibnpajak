@@ -74,11 +74,12 @@
                                         right: 57%;
                                         margin-top: 2%;
                                         ">
-                                </form>                                                                           
-                                <a href="tambah.php" class="btn btn-primary" 
+                                </form>                                                                     
+                                <a style="position: relative; margin-left: 73%" href="tambah.php" class="btn btn-primary" 
                                     style="
                                     margin-left: 77%;
                                     ">Tambah Data</a>  
+                                
                             </table>
                         <div class="row">
                             <div class="table-responsive"  

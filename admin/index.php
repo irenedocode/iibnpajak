@@ -160,7 +160,7 @@
                                 </form>           
                                 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="text-align: left; width: 250px; margin-top: 39px;"  
+                                <button class="btn btn-primary" style="text-align: left; width: 250px; margin-top: 13%;"  
                                 id="selectedCategory">Daerah Yang Dipilih:</button>
                                 <div class="dropdown-content" id="myDropdown" style="top: 100%">
                                     <a href="#" onclick="filterData('All')">All</a>
