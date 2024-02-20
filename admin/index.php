@@ -172,10 +172,11 @@
                                 </div>
                                 </div>
                                 </tr>
-                                <td class="responsive-buttons">
-                                    <a href="tambah.php" class="btn btn-primary responsive-btn">Tambah Data</a>
-                                    <a href="export.php" class="btn btn-success responsive-btn">Export Tabel</a>
+                                <td class="responsive-buttons" style="position: relative; left: 0; top: 0;">
+                                    <a href="tambah.php" class="btn btn-primary responsive-btn" style="position: relative;">Tambah Data</a>
+                                    <a href="export.php" class="btn btn-success responsive-btn" style="position: relative;">Export Tabel</a>
                                 </td>
+
                             </table>
                         </div>
                         
