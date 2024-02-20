@@ -133,36 +133,32 @@
                 <!-- Begin Page Content -->
                 <div>
                     <div class="row">
-                        <table style="width: 30%;">
-                        <tr>
-                                 <form class="form">
                                         <input type="text" id="1" onkeyup="searchNama(1)" size="20" placeholder="Cari Nama" 
                                         style="
-                                        width: 13%; 
-                                        margin-left: 3%; 
-                                        margin-right: 10px;
+                                        width: 15%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
                                         margin-top:2%;
-                                        height: 41px
+                                        height: 41px;
+                                        position: relative;
+                                        margin-left: 50px;
                                         ">
-                                </form>    
-                                <form class="form">
+                                
                                     <input type="text" id="4" onkeyup="searchNoplat(4)" size="20" placeholder="Cari No Plat Cth: XX XXXX" 
                                         style=" 
-                                        width: 13%; 
+                                        width: 15%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
-                                        margin-right: 10px; 
                                         margin-top:2%;
-                                        height: 41px
-                                        ">
-                                </form>           
+                                        height: 41px;
+                                        position: relative;
+                                        margin-left: 50px;
+                                        ">       
                                 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="text-align: left; width: 250px; margin-top: 13%;"  
+                                <button class="btn btn-primary" style="text-align: left; width: 100%; position: relative; margin-left: 50px; margin-top: 16%"  
                                 id="selectedCategory">Daerah Yang Dipilih:</button>
-                                <div class="dropdown-content" id="myDropdown" style="top: 100%">
+                                <div class="dropdown-content" id="myDropdown" style=" left: -540px">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
@@ -171,13 +167,10 @@
                                     <a href="#" onclick="filterData('Surabaya')">Surabaya</a>
                                 </div>
                                 </div>
-                                </tr>
-                                <td class="responsive-buttons" style="position: relative; left: 0; top: 0;">
-                                    <a href="tambah.php" class="btn btn-primary responsive-btn" style="position: relative;">Tambah Data</a>
-                                    <a href="export.php" class="btn btn-success responsive-btn" style="position: relative;">Export Tabel</a>
-                                </td>
-
-                            </table>
+                                <div class="button" style="position: absolute; margin-top: 37px; margin-left: 80%;">
+                                        <a href="tambah.php" class="btn btn-primary" style="height: 40px">Tambah Data</a>
+                                        <a href="export.php" class="btn btn-success" style="height: 40px">Export Tabel</a>
+                                </div>
                         </div>
                         
                     <div class="table-responsive">
