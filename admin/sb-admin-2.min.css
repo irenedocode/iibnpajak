@@ -2156,6 +2156,18 @@ pre code {
     border: 0
 }
 
+.responsive-buttons {
+    text-align: center;
+}
+
+.responsive-btn {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px; /* Adjust the max-width as needed */
+}
+
+
 .form-control {
     display: block;
     width: 100%;
