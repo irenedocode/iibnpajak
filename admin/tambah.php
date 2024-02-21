@@ -115,13 +115,13 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required placeholder="Nomor Polisi. Cth: BP XXX XX">
+                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" name="nopolisi" aria-describedby="emailHelp" required placeholder="Nomor Polisi. Cth: BP XXX XX">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user" id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required placeholder="Tahun Pembuatan">
+                                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user" name="pembuatan" aria-describedby="emailHelp" required placeholder="Tahun Pembuatan">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
+                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" name="rangka" aria-describedby="emailHelp" required placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" class="form-control form-control-user" id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required placeholder="Tanggal Jatuh Tempo Masa Pajak Tahunan">

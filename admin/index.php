@@ -156,9 +156,9 @@
                                         ">       
                                 
                                 <div class="dropdown">
-                                <button class="btn btn-primary" style="text-align: left; width: 100%; position: relative; margin-left: 50px; margin-top: 16%"  
+                                <button class="btn btn-primary" style="text-align: left; width: 100%; position: relative; margin-left: 20px; margin-top: 39px"  
                                 id="selectedCategory">Daerah Yang Dipilih:</button>
-                                <div class="dropdown-content" id="myDropdown" style=" left:50px">
+                                <div class="dropdown-content" id="myDropdown" style=" left:20px">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
