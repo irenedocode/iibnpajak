@@ -68,14 +68,15 @@
                                 <form class="form">
                                         <input type="text" id="1" onkeyup="searchTable(1)" size="20" placeholder="Cari No Plat" 
                                         style="
-                                        margin-left: 3%; 
+                                        margin-left: 4%; 
                                         border-radius: 10px; 
                                         border-color: aliceblue;
                                         right: 57%;
                                         margin-top: 2%;
+                                        height: 41px;
                                         ">
                                 </form>                                                                     
-                                <a style="position: relative; margin-left: 73%" href="tambah.php" class="btn btn-primary" 
+                                <a style="position: relative; margin-left: 70%" href="tambah.php" class="btn btn-primary" 
                                     style="
                                     margin-left: 77%;
                                     ">Tambah Data</a>  
@@ -84,9 +85,9 @@
                         <div class="row">
                             <div class="table-responsive"  
                             style="
-                            margin-top: 50px; 
-                            margin-left: 50px; 
-                            margin-right: 50px">
+                            margin-top: 2%;
+                            margin-left: 82px; 
+                            margin-right: 42px">
                         <table width="100%" id="table1" cellspacing="0" class="table1 table-bordered">      
                                     <tr class="text-center">
                                         <th>ID</th>

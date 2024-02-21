@@ -141,7 +141,7 @@
                                         margin-top:2%;
                                         height: 41px;
                                         position: relative;
-                                        margin-left: 50px;
+                                        margin-left: 90px;
                                         ">
                                 
                                     <input type="text" id="4" onkeyup="searchNoplat(4)" size="20" placeholder="Cari No Plat Cth: XX XXXX" 
@@ -152,13 +152,13 @@
                                         margin-top:2%;
                                         height: 41px;
                                         position: relative;
-                                        margin-left: 50px;
+                                        margin-left: 20px;
                                         ">       
                                 
                                 <div class="dropdown">
                                 <button class="btn btn-primary" style="text-align: left; width: 100%; position: relative; margin-left: 50px; margin-top: 16%"  
                                 id="selectedCategory">Daerah Yang Dipilih:</button>
-                                <div class="dropdown-content" id="myDropdown" style=" left: -540px">
+                                <div class="dropdown-content" id="myDropdown" style=" left: 50px">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
