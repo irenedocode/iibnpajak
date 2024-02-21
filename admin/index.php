@@ -141,7 +141,7 @@
                                         margin-top:2%;
                                         height: 41px;
                                         position: relative;
-                                        margin-left: 50px;
+                                        margin-left: 90px;
                                         ">
                                 
                                     <input type="text" id="4" onkeyup="searchNoplat(4)" size="20" placeholder="Cari No Plat Cth: XX XXXX" 
@@ -152,7 +152,7 @@
                                         margin-top:2%;
                                         height: 41px;
                                         position: relative;
-                                        margin-left: 50px;
+                                        margin-left: 20px;
                                         ">       
                                 
                                 <div class="dropdown">
