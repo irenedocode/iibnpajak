@@ -115,10 +115,10 @@
                     <div class="collapse navbar-collapse"  id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                            <a class="nav-link" href="index.php">Info</a>
+                            <a class="nav-link" href="index.php">Info Kendaraan</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="riwayat/riwayat.php">Riwayat</a>
+                            <a class="nav-link" href="riwayat/riwayat.php">Riwayat Pajak</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -158,7 +158,7 @@
                                 <div class="dropdown">
                                 <button class="btn btn-primary" style="text-align: left; width: 100%; position: relative; margin-left: 50px; margin-top: 16%"  
                                 id="selectedCategory">Daerah Yang Dipilih:</button>
-                                <div class="dropdown-content" id="myDropdown" style=" left: 50px">
+                                <div class="dropdown-content" id="myDropdown" style=" left:50px">
                                     <a href="#" onclick="filterData('All')">All</a>
                                     <a href="#" onclick="filterData('Batam')">Batam</a>
                                     <a href="#" onclick="filterData('Sumatera Utara')">Sumatera Utara</a>
