@@ -124,7 +124,7 @@
                                     <input type="text" style="text-transform: uppercase" class="form-control form-control-user" id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" class="form-control form-control-user" id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required placeholder="Masa Pajak">
+                                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" class="form-control form-control-user" id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required placeholder="Tanggal Jatuh Tempo Masa Pajak Tahunan">
                                 </div>
                                 <div class="form-group">
                                     <input type="file" name="image" id="image">
