@@ -41,6 +41,10 @@ if (isset($_POST['submit'])) {
     $stmt = $con->prepare("INSERT INTO kendaraan(nama, jeniskendaraan, jenismobilmotor, nopolisi, pembuatan, rangka, masapajak, image) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssssss", $nama, $jeniskendaraan, $jenismobilmotor, $nopolisi, $pembuatan, $rangka, $masapajak, $escapedFileContent);
 
+    $masapajakberikutnya = "UPDATE kendaraan SET masapajak = DATE_ADD(masapajak, INTERVAL 1 YEAR) 
+                         WHERE nopolisi = '$nopolisi'";
+    $hasil_perpanjangan = $con->query($masapajakberikutnya);
+
     if ($stmt->execute()) {
         header("Location: ../index.php");
         exit();
