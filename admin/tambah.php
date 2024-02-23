@@ -31,19 +31,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="riwayat/riwayat.php">Riwayat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
-                            Logout
-                        </a>
-                    </li>
-                </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                            <a class="nav-link" href="index.php">Informasi Kendaraan</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="riwayat/riwayat.php">Riwayat Pajak</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                                Logout
+                            </a>
+                            </li>
+                        </ul>
             </div>
         </nav>
         <!-- End of Topbar -->
@@ -115,13 +115,13 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" id="exampleInputEmail" name="nopolisi" aria-describedby="emailHelp" required placeholder="Nomor Polisi. Cth: BP XXX XX">
+                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" name="nopolisi" aria-describedby="emailHelp" required placeholder="Nomor Polisi. Cth: BP XXX XX">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user" id="exampleInputEmail" name="pembuatan" aria-describedby="emailHelp" required placeholder="Tahun Pembuatan">
+                                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control form-control-user" name="pembuatan" aria-describedby="emailHelp" required placeholder="Tahun Pembuatan">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" id="exampleInputEmail" name="rangka" aria-describedby="emailHelp" required placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
+                                    <input type="text" style="text-transform: uppercase" class="form-control form-control-user" name="rangka" aria-describedby="emailHelp" required placeholder="Nomor Rangka(17 digit). Cth:MHYKZE82C34J55067">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" class="form-control form-control-user" id="exampleInputEmail" name="masapajak" aria-describedby="emailHelp" required placeholder="Jatuh tempo pajak tahun ini">
