@@ -14,9 +14,13 @@ if(isset($_POST['Login'])) {
     $role = mysqli_fetch_assoc($cekuser)["role"];
 
     $hitung = mysqli_num_rows($cekuser);//max 1 min 0
-    if($hitung == 0){
-        echo "login gagal";
-        header('location:login.php');
+    if ($cekNopolisi == 0) {
+        echo '<script language="javascript">';
+        echo 'alert("User tidak ditemukan");';
+        echo 'window.location.href = "../index.php";';
+        echo '</script>';
+        exit();
+    }
     }else{
         if($role == 'user'){
             header('location:user');
